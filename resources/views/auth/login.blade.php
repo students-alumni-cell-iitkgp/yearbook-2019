@@ -44,14 +44,14 @@
   <div class="clock-toogle__toogle"></div>
 </div>           
 <br>
-Welcome to<b> Yearbook'20</b> Portal </h3>
-
-   <form method="post" action="{{ route('login') }}" class="form main-title center">
+Welcome to<b> Yearbook'20</b> Portal </h3><br>
+<p> The Yearbook Portal has been closed. </p>
+   <!-- <form method="post" class="form main-title center">
 
                 {{ csrf_field() }}
 
-                <div class="row" style="margin-bottom: 0px;"> <br> <br> 
-
+                <div class="row" style="margin-bottom: 0px; text-align : center">
+                   
                     <div class="input-field col s12 l6 m12 " >                   
                         <input name="rollno" id="rollno" autofocus placeholder="Roll Number" type="text" style="margin-top: 5px;" required>
                         <label for="rollno"><h5 style="font-size: 140%;  color: #004d33;">Roll Number (16THXXXXX)</h5></label>
@@ -66,7 +66,7 @@ Welcome to<b> Yearbook'20</b> Portal </h3>
                         <button type="submit" id="submit" name="submit" class="waves-effect waves-light btn" style="font-size: 15px;" required >Submit</button>
                     </div>
                 </div>
-            </form>
+            </form> -->
 
             <p class=" center sub-title main-title" >Contact us at:<br> <a href="mailto:iitkgpyearbook2020@gmail.com"> iitkgpyearbook2020@gmail.com<a><i class="material-icons">error_outline</i><span class="tooltip">If you are not graduating this year, but want to write about your friends who are graduating, send us the testimonials via mail at iitkgpyearbook2019@gmail.com</span></a></p>
 
