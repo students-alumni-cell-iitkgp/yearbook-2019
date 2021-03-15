@@ -1,4 +1,4 @@
-<div class="col-sm-4">
+<!-- <div class="col-sm-4">
   @php
   $myview = App\Bucket::where('roll', Auth::user()->rollno)->where('list', 16)->get()->toArray();
   @endphp
@@ -33,4 +33,4 @@
     </div>
   </aside><br>
   @endif
-</div>
+</div> -->

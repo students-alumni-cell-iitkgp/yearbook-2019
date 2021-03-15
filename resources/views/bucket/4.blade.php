@@ -1,12 +1,12 @@
-<div class="col-sm-4">
+<!-- <div class="col-sm-4">
   @php
   $myview = App\Bucket::where('roll', Auth::user()->rollno)->where('list', 10)->get()->toArray();
   @endphp
   @if(!empty($myview))
   <aside class="profile-card" style="background: url({{$myview[0]['pic']}}); background-size: 100% 100%; background-repeat: no-repeat;">
     <header>
-      <h1>Trek</h1><i class="fa fa-check-circle" style="color: #5cb85c; font-size: 30px;" title="Task Completed!"></i>
-      <h2>Trek to Gangtok</h2>
+      <h1>GC</h1><i class="fa fa-check-circle" style="color: #5cb85c; font-size: 30px;" title="Task Completed!"></i>
+      <h2>The competition must go</h2><br><h2>on.</h2>
     </header>
     <div class="profile-bio" style="text-align: center;">
       <form action="{{ url('/bucketpost/10')}}" method="post" enctype="multipart/form-data">
@@ -20,8 +20,8 @@
   @else
   <aside class="profile-card" style="background: url(https://s-media-cache-ak0.pinimg.com/736x/3a/1f/02/3a1f02c10700daa80655a302c5a27acf.jpg);">
     <header>
-      <h1>Trek</h1>
-      <h2>Trek to Gangtok</h2>
+      <h1>GC</h1>
+      <h2>The competition must go</h2><br><h2>on.</h2>
     </header>
     <div class="profile-bio" style="text-align: center;">
       <form action="{{ url('/bucketpost/10')}}" method="post" enctype="multipart/form-data">
@@ -42,8 +42,8 @@
   @if(!empty($myview))
   <aside class="profile-card" style="background: url({{$myview[0]['pic']}}); background-size: 100% 100%; background-repeat: no-repeat;">
     <header>
-      <h1>Local Train</h1><i class="fa fa-check-circle" style="color: #5cb85c; font-size: 30px;" title="Task Completed!"></i>
-      <h2>Voyage on local train</h2>
+      <h1>KTJ</h1><i class="fa fa-check-circle" style="color: #5cb85c; font-size: 30px;" title="Task Completed!"></i>
+      <h2>Let the </h2>
     </header>
     <div class="profile-bio" style="text-align: center;">
       <form action="{{ url('/bucketpost/11')}}" method="post" enctype="multipart/form-data">
@@ -57,8 +57,8 @@
   @else
   <aside class="profile-card" style="background: url(https://s-media-cache-ak0.pinimg.com/736x/3a/1f/02/3a1f02c10700daa80655a302c5a27acf.jpg);">
     <header>
-      <h1>Local Train</h1>
-      <h2>Voyage on local train</h2>
+      <h1>KTJ</h1>
+      <h2>Let the </h2>
     </header>
     <div class="profile-bio" style="text-align: center;">
       <form action="{{ url('/bucketpost/11')}}" method="post" enctype="multipart/form-data">
@@ -79,9 +79,10 @@
   @if(!empty($myview))
   <aside class="profile-card" style="background: url({{$myview[0]['pic']}}); background-size: 100% 100%; background-repeat: no-repeat;">
     <header>
-      <h1>2.2</h1><i class="fa fa-check-circle" style="color: #5cb85c; font-size: 30px;" title="Task Completed!"></i>
-      <h2>Sing Along with friends</h2><br> 
-      <h2>on 2.2</h2>
+      <h1>Salsa/Prom</h1><i class="fa fa-check-circle" style="color: #5cb85c; font-size: 30px;" title="Task Completed!"></i>
+      <h2>Roses are red, violets are </h2><br> 
+      <h2>blue..prom date me</h2><br> 
+      <h2>and you?</h2>
     </header>
     <div class="profile-bio" style="text-align: center;">
       <form action="{{ url('/bucketpost/12')}}" method="post" enctype="multipart/form-data">
@@ -95,9 +96,10 @@
   @else
   <aside class="profile-card" style="background: url(https://s-media-cache-ak0.pinimg.com/736x/3a/1f/02/3a1f02c10700daa80655a302c5a27acf.jpg);">
     <header>
-      <h1>2.2</h1>
-      <h2>Sing Along with friends</h2><br> 
-      <h2>on 2.2</h2>
+      <h1>Salsa/Prom</h1>
+      <h2>Roses are red, violets are </h2><br> 
+      <h2>blue..prom date me</h2><br> 
+      <h2>and you?</h2>
     </header>
     <div class="profile-bio" style="text-align: center;">
       <form action="{{ url('/bucketpost/12')}}" method="post" enctype="multipart/form-data">
@@ -109,4 +111,4 @@
     </div>
   </aside><br>
   @endif
-</div>
+</div> -->

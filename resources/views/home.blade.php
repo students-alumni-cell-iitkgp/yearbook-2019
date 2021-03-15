@@ -60,6 +60,7 @@
           right: 30px;
           z-index: 99;
           font-size: 12px;
+          font-family: 'Montserrat', sans-serif;
           border: none;
           outline: none;
           color: white;
@@ -80,6 +81,7 @@
     cursor: pointer;
     padding: 14px 16px;
     font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
     width: 50%;
 }
 

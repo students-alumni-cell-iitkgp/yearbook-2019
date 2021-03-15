@@ -53,7 +53,7 @@ h1 {
   margin-bottom: 20px;
 }
 h4 { 
-  font-family: 'Abhaya Libre', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   font-weight: 100;
   line-height: 40px;
@@ -61,7 +61,7 @@ h4 {
   margin-bottom: 20px;
 }
 .top-cart{
-  font-family: 'Abhaya Libre', serif !important;
+  font-family: 'Montserrat', sans-serif; !important;
   font-size: 18px;
 } 
 
@@ -120,6 +120,7 @@ h4 {
 .demo-box h4 {
     color: #505050;
     font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
     margin-top: 20px;
     font-size: 18px;
 }
@@ -160,6 +161,7 @@ separator_second_circle {
 @media only screen and (max-width: 768px){
 	.demo .section-title-bold {
 	  font-size: 17px !important;
+    font-family: 'Montserrat', sans-serif;
 	}
 }
 
@@ -189,7 +191,7 @@ footer {
   border-top: 1px solid #eee !important;
 }
 .footerWhite .copyRightWrapper .copyRightText p {
-  font-family: 'Abhaya Libre', serif;	
+  font-family: 'Montserrat', sans-serif;
   color: #848484;
   font-size: 17px;
 }
@@ -204,6 +206,7 @@ footer {
     color: #848484;
     border-color: #e5e5e5;
     font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
     padding: 0;
     width: 38px;
     height: 38px;

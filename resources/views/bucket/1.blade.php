@@ -5,9 +5,8 @@
   @if(!empty($myview))
   <aside class="profile-card" style="background: url({{$myview[0]['pic']}}); background-size: 100% 100%; background-repeat: no-repeat;">
     <header>
-      <h1>SF Salsa</h1><i class="fa fa-check-circle" style="color: #5cb85c; font-size: 30px;" title="Task Completed!"></i>
-      <h2>Swayed to the beats</h2><br>
-      <h2> of Salsa in SF</h2>
+      <h1>TREAT</h1><i class="fa fa-check-circle" style="color: #5cb85c; font-size: 30px;" title="Task Completed!"></i>
+      <h2>Its all about foodie.</h2><br>
     </header>
     <div class="profile-bio" style="text-align: center;">
       <form action="{{ url('/bucketpost/1')}}" method="post" enctype="multipart/form-data">
@@ -22,9 +21,8 @@
   @else
   <aside class="profile-card" style="background: url(https://s-media-cache-ak0.pinimg.com/736x/3a/1f/02/3a1f02c10700daa80655a302c5a27acf.jpg);">
     <header>
-      <h1>SF Salsa</h1>
-      <h2>Swayed to the beats</h2><br>
-      <h2> of Salsa in SF</h2>
+      <h1>TREAT</h1>
+      <h2>Its all about foodie.</h2><br>
     </header>
     <div class="profile-bio" style="text-align: center;">
       <form action="{{ url('/bucketpost/1')}}" method="post" enctype="multipart/form-data">
@@ -45,9 +43,9 @@
   @if(!empty($myview))
   <aside class="profile-card" style="background: url({{$myview[0]['pic']}}); background-size: 100% 100%; background-repeat: no-repeat;">
     <header>
-      <h1>Old Archi Building</h1><i class="fa fa-check-circle" style="color: #5cb85c; font-size: 30px;" title="Task Completed!"></i>
-      <h2>Felt the horror in Old</h2><br>
-      <h2> Archi Building</h2>
+      <h1>2.2</h1><i class="fa fa-check-circle" style="color: #5cb85c; font-size: 30px;" title="Task Completed!"></i>
+      <h2>Happiness is a complete</h2><br>
+      <h2> circle, it has no end.</h2>
     </header>
     <div class="profile-bio" style="text-align: center;">
       <form action="{{ url('/bucketpost/2')}}" method="post" enctype="multipart/form-data">
@@ -61,9 +59,9 @@
   @else
   <aside class="profile-card" style="background: url(https://s-media-cache-ak0.pinimg.com/736x/3a/1f/02/3a1f02c10700daa80655a302c5a27acf.jpg);">
     <header>
-      <h1>Old Archi Building</h1>
-      <h2>Felt the horror in Old</h2><br>
-      <h2> Archi Building</h2>
+      <h1>2.2</h1>
+      <h2>Happiness is a complete</h2><br>
+      <h2> circle, it has no end.</h2>
     </header>
     <div class="profile-bio" style="text-align: center;">
       <form action="{{ url('/bucketpost/2')}}" method="post" enctype="multipart/form-data">
@@ -84,8 +82,8 @@
   @if(!empty($myview))
   <aside class="profile-card" style="background: url({{$myview[0]['pic']}}); background-size: 100% 100%; background-repeat: no-repeat;">
     <header>
-      <h1>Graffitis</h1><i class="fa fa-check-circle" style="color: #5cb85c; font-size: 30px;" title="Task Completed!"></i>
-      <h2>Sketched graffiti in hall.</h2>
+      <h1>TREK </h1><i class="fa fa-check-circle" style="color: #5cb85c; font-size: 30px;" title="Task Completed!"></i>
+      <h2>Measuring the miles.</h2>
     </header>
     <div class="profile-bio" style="text-align: center;">
       <form action="{{ url('/bucketpost/3')}}" method="post" enctype="multipart/form-data">
@@ -99,8 +97,8 @@
   @else
   <aside class="profile-card" style="background: url(https://s-media-cache-ak0.pinimg.com/736x/3a/1f/02/3a1f02c10700daa80655a302c5a27acf.jpg);">
     <header>
-      <h1>Graffitis</h1>
-      <h2>Sketched graffiti in hall.</h2>
+      <h1>TREK</h1>
+      <h2>Measuring the miles.</h2>
     </header>
     <div class="profile-bio" style="text-align: center;">
       <form action="{{ url('/bucketpost/3')}}" method="post" enctype="multipart/form-data">
