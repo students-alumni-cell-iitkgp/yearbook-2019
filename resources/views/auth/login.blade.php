@@ -45,8 +45,8 @@
 </div>           
 <br>
 Welcome to<b> Yearbook'20</b> Portal </h3><br>
-<p> The Yearbook Portal has been closed. </p>
-   <!-- <form method="post" class="form main-title center">
+<!-- <p> The Yearbook Portal has been closed. </p> -->
+   <form method="post" class="form main-title center">
 
                 {{ csrf_field() }}
 
@@ -66,7 +66,7 @@ Welcome to<b> Yearbook'20</b> Portal </h3><br>
                         <button type="submit" id="submit" name="submit" class="waves-effect waves-light btn" style="font-size: 15px;" required >Submit</button>
                     </div>
                 </div>
-            </form> -->
+            </form>
 
             <p class=" center sub-title main-title" >Contact us at:<br> <a href="mailto:iitkgpyearbook2020@gmail.com"> iitkgpyearbook2020@gmail.com<a><i class="material-icons">error_outline</i><span class="tooltip">If you are not graduating this year, but want to write about your friends who are graduating, send us the testimonials via mail at iitkgpyearbook2020@gmail.com</span></a></p>
 
@@ -75,10 +75,10 @@ Welcome to<b> Yearbook'20</b> Portal </h3><br>
 
 <!-- You can add more ".slideshow-image" elements, but remember to update the "$items" variable on SCSS -->
 <div class="slideshow">
-  <div class="slideshow-image" style="background-image: url('21.jpeg')"></div>
-  <div class="slideshow-image" style="background-image: url('12.jpg')"></div>
-  <div class="slideshow-image" style="background-image: url('2.jpg')"></div>
-  <div class="slideshow-image" style="background-image: url('50.jpg')"></div>
+  <div class="slideshow-image" style="background-image: url('oldbuilding.jpg')"></div>
+  <div class="slideshow-image" style="background-image: url('toat_work.jpg')"></div>
+  <div class="slideshow-image" style="background-image: url('kalidas.jpg')"></div>
+  <div class="slideshow-image" style="background-image: url('vikramshila.jpg')"></div>
 </div>
   
 

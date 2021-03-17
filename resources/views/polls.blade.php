@@ -72,7 +72,7 @@
                                     <form action="{{ url('/polls/1') }}" method="POST">
                                         {{ csrf_field() }}
                                         <div class="media_body">
-                                            <p><b>Maggu of the Batch</b></p>
+                                            <p><b>Raees of the batch</b></p>
                                             <div class="row" style="display: inline-block;">
                                                 <div class="col-sm-8  ">
                                                 <div class="">
@@ -160,7 +160,7 @@
                                     <form action="{{ url('/polls/2') }}" method="POST">
                                         {{ csrf_field() }}
                                         <div class="media_body">
-                                            <p><b>Stud of the batch</b></p>
+                                            <p><b>Khabri of the batch</b></p>
                                             <div class="row" style="display: inline-block;">
                                                 <div class="col-sm-8">
                                                 <div class="">
@@ -248,7 +248,7 @@
                                     <form action="{{ url('/polls/3') }}" method="POST">
                                         {{ csrf_field() }}
                                         <div class="media_body">
-                                            <p><b>Batch ka crush</b></p>
+                                            <p><b>Funda gawd</b></p>
                                             <div class="row" style="display: inline-block;">
                                                 <div class="col-sm-8">
                                                 <div class="">
@@ -336,7 +336,7 @@
                                     <form action="{{ url('/polls/4') }}" method="POST">
                                         {{ csrf_field() }}
                                         <div class="media_body">
-                                            <p><b>Baba of the batch</b></p>
+                                            <p><b>Krantikari of the batch</b></p>
                                             <div class="row" style="display: inline-block;">
                                                 <div class="col-sm-8">
                                                 <div class="">
@@ -424,7 +424,7 @@
                                     <form action="{{ url('/polls/5') }}" method="POST">
                                         {{ csrf_field() }}
                                         <div class="media_body">
-                                            <p><b>Jugaadu of the batch</b></p>
+                                            <p><b>2.2 waasi</b></p>
                                             <div class="row" style="display: inline-block;">
                                                 <div class="col-sm-8">
                                                 <div class="">
@@ -512,7 +512,7 @@
                                     <form action="{{ url('/polls/6') }}" method="POST">
                                         {{ csrf_field() }}
                                         <div class="media_body">
-                                            <p><b>Gabbar of the Batch</b></p>
+                                            <p><b>Crush of the batch</b></p>
                                             <div class="row" style="display: inline-block;">
                                                 <div class="col-sm-8  ">
                                                 <div class="">
@@ -601,7 +601,7 @@
                                     <form action="{{ url('/polls/7') }}" method="POST">
                                         {{ csrf_field() }}
                                         <div class="media_body">
-                                            <p><b>Monica Geller of The Batch</b></p>
+                                            <p><b>Rancho</b></p>
                                             <div class="row" style="display: inline-block;">
                                                 <div class="col-sm-8  ">
                                                 <div class="">
@@ -690,7 +690,7 @@
                                     <form action="{{ url('/polls/8') }}" method="POST">
                                         {{ csrf_field() }}
                                         <div class="media_body">
-                                            <p><b>Nightingale of The Batch</b></p>
+                                            <p><b>Jugaadu</b></p>
                                             <div class="row" style="display: inline-block;">
                                                 <div class="col-sm-8  ">
                                                 <div class="">
@@ -779,7 +779,7 @@
                                     <form action="{{ url('/polls/9') }}" method="POST">
                                         {{ csrf_field() }}
                                         <div class="media_body">
-                                            <p><b>Rancho of The Batch</b></p>
+                                            <p><b>Mr. late lateef</b></p>
                                             <div class="row" style="display: inline-block;">
                                                 <div class="col-sm-8  ">
                                                 <div class="">
@@ -868,7 +868,7 @@
                                     <form action="{{ url('/polls/10') }}" method="POST">
                                         {{ csrf_field() }}
                                         <div class="media_body">
-                                            <p><b>Mr.Bean of The Batch</b></p>
+                                            <p><b>Lekhakh mahoday/mahodaya</b></p>
                                             <div class="row" style="display: inline-block;">
                                                 <div class="col-sm-8  ">
                                                 <div class="">
@@ -957,7 +957,7 @@
                                     <form action="{{ url('/polls/11') }}" method="POST">
                                         {{ csrf_field() }}
                                         <div class="media_body">
-                                            <p><b>High on Life</b></p>
+                                            <p><b>Jhonny Bravo of the batch</b></p>
                                             <div class="row" style="display: inline-block;">
                                                 <div class="col-sm-8  ">
                                                 <div class="">
@@ -1046,7 +1046,7 @@
                                     <form action="{{ url('/polls/12') }}" method="POST">
                                         {{ csrf_field() }}
                                         <div class="media_body">
-                                            <p><b>Mr.Late Lateef</b></p>
+                                            <p><b>Maggu of the batch</b></p>
                                             <div class="row" style="display: inline-block;">
                                                 <div class="col-sm-8  ">
                                                 <div class="">
@@ -1129,7 +1129,7 @@
                                 </div>                                
                             </li>   
 
-                            <li>
+                            <!-- <li>
                                 <div class="media first_child">
                                    <img src="{{ asset('img/ques.png') }}" alt="" class="img-responsive img-circle">
                                     <form action="{{ url('/polls/13') }}" method="POST">
@@ -1305,7 +1305,7 @@
                                         </div>
                                     </form>
                                 </div>                                
-                            </li>                    
+                            </li>                     --> -->
                         </ul>
                     </div>
                 </div>
