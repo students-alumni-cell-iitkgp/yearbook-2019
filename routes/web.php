@@ -21,6 +21,11 @@ Auth::routes()
 	Route::get('/', function () {
 		return view('auth.login');
 	});
+
+	Route::get('/Testimonial_public', function () {
+		return view('auth.Testimonial_public');
+	});
+
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout'); //Just added to fix issue
 Route::get('/home', 'HomeController@index2');
 Route::get('/profile_index', 'profile@index');
