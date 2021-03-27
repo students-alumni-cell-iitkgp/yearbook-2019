@@ -46,7 +46,7 @@
 <br>
 Welcome to<b> Yearbook'21</b> Portal </h3><br>
 <!-- <p> The Yearbook Portal has been closed. </p> -->
-   <form method="post" class="form main-title center">
+   <form method="post" class="form main-title center" action="{{ route('login') }}">
 
                 {{ csrf_field() }}
 
