@@ -68,6 +68,31 @@ class ViewsController extends Controller
         
         return redirect('/profile_index/'.$roll) ;
     }
+
+    public function writeoutside()
+    {
+
+
+        views::create([
+            'depmate' => request('rollno'),
+            'views' => request('viewf'),
+            'user' => request('user'),
+            'approval' => '0',
+            
+        ]);
+
+
+        // $mydata = User::where('rollno',$roll)->get();
+
+        // $myviews = views::where('depmate',$roll)->get();
+        
+
+        
+        // return redirect('/profile_index/'.$roll) ;
+        return view('auth.Testimonial_public');
+    }
+
+
     public function read($id)
     {
        $post = views::find($id);

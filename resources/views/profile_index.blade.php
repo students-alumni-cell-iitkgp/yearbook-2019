@@ -168,10 +168,9 @@
               foreach($myviews as $view)
               {
                 $id=$view['id'];
-                $pic = App\User::where('name', $view['user'])->pluck('pro_pic');
                 echo '<li>
                 <div class="media first_child" style="margin-left: -17px; opacity: 0.96"> 
-                <img src="'.$pic[0].'" alt="" class="img-responsive img-circle">  
+                <img src="index.png" alt="" class="img-responsive img-circle">  
                 <div class="media_body">
                 <p><b>'.$view['user'].'</b> wrote for you: </p>
                 <p>"'.$view['views'].'"</p>

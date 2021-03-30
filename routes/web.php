@@ -42,6 +42,7 @@ FileController
 */
 	Route::post('/upload_pic_moto','FileController@upload_pic_moto');
 	Route::post('/writetestimony/{roll}','ViewsController@write');
+	Route::post('/writetestimonyngb','ViewsController@writeoutside');
 	Route::get('/upload_pic_moto','HomeController@index');
 	Route::get('/upload1','ImageController@index1');
 	Route::post('/upload1','ImageController@upload1');

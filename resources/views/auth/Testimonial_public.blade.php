@@ -50,7 +50,7 @@
 <!-- <p> The Yearbook Portal has been closed. </p> -->
 
 
-   <form method="post" class="form main-title center">              
+   <form action="{{ url('/writetestimonyngb') }}" onSubmit="alert('Your views will be added in their yearbook after their registration and approval');" method="POST" class="form main-title center">              
                 {{ csrf_field() }}
 
                 <div style="text-align : left">Sender Details:</div>
@@ -58,21 +58,13 @@
 
                    
                     <div class="input-field col s12 l6 m12 " >                   
-                        <input name="rollno" id="rollno" autofocus placeholder="Name" type="text" style="margin-top: 5px;" required>
-                        <label for="rollno"><h5 style="font-size: 140%;  color: #004d33;">Name</h5></label>
-                    </div>
-                    <div class="input-field col s12 l6 m12 " >                   
-                        <input name="rollno" id="rollno" autofocus placeholder="Roll Number" type="text" style="margin-top: 5px;" required>
-                        <label for="rollno"><h5 style="font-size: 140%;  color: #004d33;">Roll Number (16THXXXXX)</h5></label>
+                        <input name="user" id="user" autofocus placeholder="Name" type="text" style="margin-top: 5px;" required>
+                        <label for="user"><h5 style="font-size: 140%;  color: #004d33;">Name</h5></label>
                     </div>
                 </div>
                 
                 <div style="text-align : left">To:</div>
                 <div class="row" style="margin-bottom: 0px; text-align : center">
-                    <div class="input-field col s12 l6 m12 " >                   
-                        <input name="rollno" id="rollno" autofocus placeholder="Name" type="text" style="margin-top: 5px;" required>
-                        <label for="rollno"><h5 style="font-size: 140%;  color: #004d33;">Name</h5></label>
-                    </div>
                     <div class="input-field col s12 l6 m12 " >                   
                         <input name="rollno" id="rollno" autofocus placeholder="Roll Number" type="text" style="margin-top: 5px;" required>
                         <label for="rollno"><h5 style="font-size: 140%;  color: #004d33;">Roll Number (16THXXXXX)</h5></label>

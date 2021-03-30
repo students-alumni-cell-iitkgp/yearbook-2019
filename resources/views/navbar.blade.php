@@ -118,10 +118,9 @@
 									@foreach($notifications as $notification)
 									<a href="{{ url('/read/'.$notification['id']) }}" class="dropdown-item notify-item">
 										@php
-										$pic = App\User::where('name',$notification['user'])->pluck('pro_pic');
 										@endphp
 										<div class="notify-icon">
-											<img src="../{{$pic[0]}}" class="img-responsive img-circle" style="width: 35px; height: 35px">
+											<img src="{{ asset('index.png') }}" class="img-responsive img-circle" style="width: 35px; height: 35px">
 										</div>
 										<p class="notify-details" style="font-family: Verdana">
 											<strong>{{$notification['user']}}</strong> wrote :<br>
