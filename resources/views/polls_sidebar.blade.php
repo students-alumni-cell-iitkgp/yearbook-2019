@@ -1,3 +1,11 @@
+<style>
+  @media screen and (min-width: 768px){
+    .carousel-indicators {
+        bottom: 20px;
+        top: 113%;
+    }
+  }
+</style>
 <div class="col-md-3 back" style="padding-top: 2.8%;" >
       <div style="margin-right: 5%">
       <div class="panel panel-primary" style = "border-width : 0px">
