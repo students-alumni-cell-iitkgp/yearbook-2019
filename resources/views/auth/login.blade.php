@@ -67,7 +67,8 @@
                         <button type="submit" id="submit" name="submit" class="waves-effect waves-light btn" style="font-size: 15px;" required >Submit</button>
                     </div>
                 </div>
-            </form> 
+            </form>
+
         <p class=" center sub-title main-title" ><a href="{{ url('/Testimonial_public') }}"> Write Testimonials<a><i class="material-icons">error_outline</i><span class="tooltip">If you are not graduating this year, but want to write about your friends who are graduating, you can click on this link.</span></a></p>
         <p class=" center sub-title main-title">Contact us at:<br> <a href="mailto:Yearbookiitkgp2021@gmail.com"> Yearbookiitkgp2021@gmail.com<a><i class="material-icons">error_outline</i><span class="tooltip">If you are not graduating this year, but want to write about your friends who are graduating, send us the testimonials via mail at Yearbookiitkgp2021@gmail.com</span></a></p>
 
