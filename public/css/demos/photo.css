@@ -680,8 +680,8 @@ a.navbar-brand:hover {
     position: relative;
     display: block;
 }
-.cardbox .cardbox-item img{
-}
+/* .cardbox .cardbox-item img{
+} */
 .img-responsive{
     display: block;
     max-width: 100%;
@@ -691,6 +691,8 @@ a.navbar-brand:hover {
     width: 100% !important;
 	height: auto;
 }
+
+
 
 .cardbox-base ul{
  margin: 10px !important; 
@@ -1250,8 +1252,8 @@ a.navbar-brand:hover {
 }
 .explore-top .explore-like span{
   font-family: 'Abhaya Libre', serif;	
-  font-size: 16px;	
-  color: #f4f4f4;
+   font-size: 35px;	
+  /* color: #f4f4f4; */ 
   padding-left: 2px;
 }
 .explore-body{
@@ -1305,7 +1307,7 @@ a.navbar-brand:hover {
 }
 .box .kafe-btn-mint-small{
   font-family: 'Abhaya Libre', serif !important;
-  font-size: 14px;
+  font-size: 1.65rem;
 }
 .box .nav-sm .nav-link {
   padding: .25rem .75rem;
@@ -1403,7 +1405,7 @@ a.navbar-brand:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  /* text-align: center; */
   line-height: 24px;
   margin-top: 20px;
 }
@@ -1425,7 +1427,8 @@ a.navbar-brand:hover {
   padding: 0px 0px 20px 0px;
 }
 .details .details-box{
-  background: #fff;
+  background: #39426247;
+  color: #fff;
   padding: 15px;  
 }
 .details .content-box h4{
@@ -1456,7 +1459,7 @@ a.navbar-brand:hover {
 
 @media (max-width: 768px){
 	.details .col-lg-3{
-	  float: left !important
+	  float: left !important;
       margin-bottom: 20px;	  
 	}
 }

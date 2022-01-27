@@ -60,9 +60,70 @@
     content: none;
   }
   .article{
-    background-color: #ffffff;
+    background-color: #1d202f;
     border-radius: 10px;
+    color: #fff;
   }
+  select{
+    font-size: 1.5rem !important;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    /* padding: 5px; */
+}
+.page-section{
+  background-color: #1d202f;
+  color: #fff;
+
+}
+.status-textarea {
+flex-grow: 1;
+background-color: transparent;
+border: none;
+resize: none;
+margin-top: 15px;
+color: #fff;
+        max-width: calc(100% - 70px);}
+ .status-textarea::placeholder {
+ color: #5c5d71;
+ /* outline: none; */
+}
+textarea{
+    outline:none;
+}
+.status-share {
+background-color: #1b86f9;
+border: none;
+color: #fff;
+border-radius: 4px;
+padding: 6px 12px;
+margin-left: auto;
+font-size:2rem;
+/* font-weight:bold; */
+box-shadow: 0 0 5px #1b86f9;
+cursor: pointer;
+}
+.status-img {
+width: 50px;
+height: 50px;
+object-fit: cover;
+border-radius: 50%;
+margin-right: 20px;
+}
+.section-heading-lower{
+  font-weight:bold !important;
+}
+
+@media (max-width:500px) {
+.section-heading-lower{
+  font-weight :500 !important;
+  font-size: 2.2rem !important;;
+}
+.section-heading i{
+  font-size:19px;
+}  
+}
 </style>
 </head>
 
@@ -73,21 +134,21 @@
 
 
     <section class="page-section article">
-      <div class="container" style="padding-right: 6vw;padding-left:2vw ">
+      <div class="container" >
         <div class="row">
-          <div class="col-xl-4 mx-auto">
+          <div class=" col-md-11 mx-auto">
             <div class=" text-center rounded">
               <h2 class="section-heading mb-4">
                 <span class="section-heading-lower">Upload Articles</span>
               </h2><br>
-              <p class="mb-0"> 
+              <p class="mb-0 text-left"> 
               How have all these years in KGP transformed you? What’s your funniest experience in the campus? Share with us your stories to make it a part of the yearbook that you carry along. Choose the topic below and send us your articles.</p>
               <br>
-              <form class="form-horizontal" method="POST" action="{{ url('/writeup') }}" style="padding-right: 3vw;padding-left: 2vw">
+              <form class="form-horizontal" method="POST" action="{{ url('/writeup') }}" >
                 {{csrf_field()}}
-                <div class="row">
-                  <div class="col-4">
-                   <select name="topic" id="topic" class="form-control" required="required" onchange="showfield(this.options[this.selectedIndex].value)">
+                <!-- <div class="row"> -->
+                  <div class="text-left">
+                   <select name="topic" id="topic" class="select" required="required" onchange="showfield(this.options[this.selectedIndex].value)">
                     <option selected disabled value="">Choose your topic</option>
                     <option  value="Spring Fest">Spring Fest</option>
                     <option value="Kshitij">Kshitij</option>
@@ -99,17 +160,23 @@
                     <option value="Other">Other</option>
                   </select>
                 </div>
-              </div>
+              <!-- </div> -->
               <br>
-              <div class="row">
-                <div class="col input-group">
-                  <span class="input-group-addon"><i class="material-icons prefix">mode_edit</i></span>
-                  <textarea name="writeup" id="icon_prefix2" required class="form-control" placeholder="Your article here"></textarea>
+              <!-- <div class="row"> -->
+                <div class="input-group">
+                  <!-- <span class="input-group-addon"><i class="material-icons prefix text-lighten-1">mode_edit</i></span> -->
+                  @if(!empty(Auth::user()->pro_pic))
+                  <img class="status-img" src="{{Auth::user()->pro_pic}}" alt="Image" data-toggle="tooltip">
+                  @else
+                  <img class="status-img" src="{{ asset('index.png') }}" alt="Image" data-toggle="tooltip">
+                  @endif
+                  <textarea name="writeup" id="icon_prefix2" required class="status-textarea" placeholder="Your article here..."></textarea>
                 </div>
-              </div>
+              <!-- </div> -->
+              <hr>
               <br>
               <div class="form-group"> 
-                <button class="btn btn-success" type="submit">Submit</button>
+                <button class="status-share" type="submit">Submit</button>
               </div>
             </form>
             
@@ -124,7 +191,7 @@
      <div class="article" data-toggle="tooltip" title="Click to edit!" style="padding-top:2vw;padding-right: 6vw;padding-left:2vw ">
       
       <h2 class="section-heading mb-4 text-center">
-          <a href="/writeup/{{ $writeup->id }}"><i style="float: right;color: black;font-size: 30px" class="material-icons">delete</i></a>
+          <a href="/writeup/{{ $writeup->id }}"><i style="float: right;color: #fff" class="material-icons">delete</i></a>
           <span class="section-heading-lower">{{ $writeup->topic }} </span>
 
       </h2>

@@ -15,14 +15,14 @@ class FileController extends Controller
         This function upload the profile pic in uploads/ folder
         It also validates the files for proper image fiel and size < 500 Kb
 
-        
+
     */
         public function __construct()
         {
         	$this->middleware('auth');
         }
         public function upload_pic_moto(Request $request)
-        {	
+        {
         	$user = Auth::user();
         	if($request->file('fileToUpload'))
         	{
@@ -57,7 +57,7 @@ class FileController extends Controller
 					return back()->with('message','Sorry, there was an error uploading your file.');
 				/*
 					This message is stores in flashed session data
-				*/	
+				*/
 				}
 			}
 			else

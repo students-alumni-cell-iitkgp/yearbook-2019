@@ -27,6 +27,7 @@
     CSS
     =============================================== -->
         <link type="text/css" href="{{ asset('css/demos/photo.css') }}" rel="stylesheet" />
+        <link type="text/css" href="{{ asset('css/demos/homes.css') }}" rel="stylesheet" />
         
     <!-- ==============================================
     Feauture Detection
@@ -50,8 +51,8 @@
 
 
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/introjs.css">
-
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+@extends('navbar')
     <style>
 #myBtn {
           display: none;
@@ -94,13 +95,6 @@
     color:white;
 }
 
-.tabcontent {
-    
-    display: none;
-    padding: 100px 20px;
-    height: 100%;
-}
-
 .cover-img{
   background-image: url('img/bg/1.jpg');
   height:30vw;
@@ -109,23 +103,24 @@
 
 }
 .back{
-  background-image: url('img/bg/bgbg.jpg');
-  background-attachment: fixed;
+  /* background-image: url('img/bg/bgbg.jpg'); */
+  /* background-attachment: fixed; */
+  background-color:#24273b
 }
 @media (max-width: 455px){
   .product-item-img{
   width: 97% !important;
 }
 .delete{
-  margin-left: 68% !important;
+  margin-left: 8% !important;
 }
 }
 .delete{
-  margin-left: 285px;
+  margin-left: 15px;
 }
 @media (min-width: 1200px){
   .delete{
-    margin-top: -15px;
+    margin-top: 0px;
   }
 }
 .imghover:hover{
@@ -135,14 +130,16 @@
   </head>
 
 <body>
-
+<!-- sd,jhb,jhb -->
      <!-- ==============================================
      Navigation Section
      =============================================== -->  
-  @include('navbar')
+
    <!-- ==============================================
    News Feed Section
    =============================================== --> 
+   @section('main-content')
+  <div class="main-container">
    <section class="profile">
     <div class="container-fluid cover-img">
 
@@ -154,32 +151,44 @@
    <div class="back">
    <section class="user-profile">
     <div class="container-fluid">
-     <div class="row">
+     <div class="row ">
      
       <div class="col-lg-12">
-       <div class="post-content">
-          <div class="author-post text-center">
-            <div>
-                  @if(!empty(Auth::user()->pro_pic))
+        <div class="post-content text-left">
+           <div class="author-post ">
+             <div class="row justify-content-center  justify-content-md-start">
+               <div class="col-lg-4 col-md-5 ms-md-5">
+               @if(!empty(Auth::user()->pro_pic))
                   <span data-toggle="modal" data-target="#modal2" data-step="1" data-intro="<center> Upload your profile picture and write a caption here </center> ">
-                  <img class="img-fluid img-circle imghover" style="border-width: 2px;cursor: pointer" src="{{Auth::user()->pro_pic}}" alt="Image" data-toggle="tooltip" title="Upload Profile Picture and Caption"  >
+                  <img class="img-fluid img-circle imghover ms-md-5" style="border-width: 2px;cursor: pointer" src="{{Auth::user()->pro_pic}}" alt="Image" data-toggle="tooltip" title="Upload Profile Picture and Caption"  >
                   </span>
+                  
                   @else
                   <span data-toggle="modal" data-target="#modal2" data-step="1" data-intro="<center> Upload your profile picture and write a caption here </center> ">
-                  <img class="img-fluid img-circle imghover" style="border-width: 2px;cursor: pointer" src="{{ asset('index.png') }}" alt="Image" data-toggle="tooltip" title="Upload Profile Picture and Caption"  >
+                  <img class="img-fluid img-circle imghover ms-md-5" style="border-width: 2px;cursor: pointer" src="{{ asset('index.png') }}" alt="Image" data-toggle="tooltip" title="Upload Profile Picture and Caption"  >
                   </span>  
                   
                   @endif
-                  
-
-                </div>
-          </div><!-- /author -->
+                  <h4 class="mx-5 my-3 h1">{{Auth::user()->name}}  </h4>
+               </div>
+               <div class="col-lg-5 col-md-6 align-self-center caption">
+               @if(!empty(Auth::user()->view_self))
+              <p class="mb-3 h3 text-center">{{Auth::user()->view_self}}</p>
+              @else
+              <p class="mb-3 h3">"Your Caption Here!"</p>
+              @endif
+               </div>
+             </div>
+           </div><!-- /author -->
        </div><!-- /.post-content -->    
     </div><!-- /col-sm-12 -->
     
        </div><!--/ row--> 
     </div><!--/ container -->
+    
    </section><!--/ profile -->
+<!-- </div> -->
+
   <div id="modal2" class="modal fade" role="dialog">
 
       <div class="modal-dialog">
@@ -258,7 +267,7 @@
    <!-- ==============================================
    User Profile Section
    =============================================== --> 
-   <section class="details">
+   <!-- <section class="details">
     <div class="container">
      <div class="row">
       <div class="col-lg-12">
@@ -266,21 +275,21 @@
           <div class="details-box row">
            <div class="content-box">
             <center>
-         <h4>{{Auth::user()->name}} <i class="fa fa-check"></i></h4>
+         <h4>{{Auth::user()->name}}  <i class="fa fa-check"></i></h4>
              @if(!empty(Auth::user()->view_self))
              <p class="mb-3">"{{Auth::user()->view_self}}"</p>
              @else
              <p class="mb-3">"Your Caption Here!"</p>
              @endif
-             </center>
-           </div><!--/ media -->
+             </center> -->
+           <!-- </div>/ media -->
        
-          </div><!--/ details-box -->
+          <!-- </div>/ details-box -->
       
-    </div>
-     </div>
-    </div><!--/ container -->
-   </section><!--/ profile -->
+    <!-- </div>
+     </div> -->
+    <!-- </div>/ container -->
+   <!-- </section>/ profile -->
 
   
 
@@ -294,34 +303,52 @@
    News Feed Section
    =============================================== --> 
    <section class="newsfeed">
-    
-        <div class="tab_bar" style="margin-left: 26%;align-items: center;
+   <div class="row justify-content-center links feedbox fw-bold">
+                <div class="col-md-2 col-4 p-3  active text-center btns tablinkss" onclick="openPage('Gallery', this, 'rgb(137 150 177)')" id="defaultOpen">
+                    <!-- <button class=" text-light "  > -->
+                        Gallery
+                    <!-- </button> -->
+
+                </div>
+                <div class="col-md-2 col-4 me-4 p-3 text-center btnss tablinkss" onclick="openPage('Articles', this, 'rgb(137 150 177)')" >
+                    <!-- <button class="" > -->
+                        Article
+                    <!-- </button> -->
+
+                </div>
+            </div>
+        <!-- <div class="tab_bar" style="margin-left: 26%;align-items: center;
           margin-right: 26%">
-          <button class="tablink kafe-btn" onclick="openPage('Gallery', this, '#0fc19e','white')" id="defaultOpen">Gallery</button>
-        <button class="tablink kafe-btn" onclick="openPage('Articles', this, '#0fc19e','white')">Articles</button>
-      </div>
+          <button class="tablink kafe-btn" onclick="openPage('Gallery', this, 'transparent','white')" id="defaultOpen">Gallery</button>
+        <button class="tablink kafe-btn" onclick="openPage('Articles', this, 'transparent','white')">Articles</button>
+      </div> -->
     <div class="container">
       <div id="Articles" class="tabcontent">
-      
+      <div class="row justify-content-center mt-4 mb-5 postbox">
+<div class="status box p-md-4 p-0  my-md-3 col-lg-10 col-md-11 col-12 ">
         
-        <div width="50vw">
+        <div  class="box">
         <p>
          @include('writeup2')
        </p>
      </div>
+</div>
+</div>
       </div>
     <div id="Gallery" class="tabcontent">
     
       <div class="row">
       <div class="col-lg-12">  
     
-       <div class="box" style="border-radius: 3px;font-color:#88898a">
+       <!-- <div class="box" style="border-radius: 3px;font-color:#88898a"> -->
+       <div class="row justify-content-center mt-4 mb-5 postbox">
+<div class="status box my-md-3 col-lg-10 col-md-11 col-12 ">
       <form id="upload-image-form" action="{{ url('/upload1') }}" method="post" enctype="multipart/form-data">
            <input id="signup-token" type="hidden" name="_token" value="{{ csrf_token() }}">
        
-       <div class="form-group" align="center">
-                <label for="classifiers" style="margin-top:1%" ><h5 style="color:#88898a"><b>Select Category: (Max size: 5MB)</b></h5></label>
-                <select class="form-control" name="classifier"  style="width:auto">
+       <div class="form-group" >
+                <!-- <label for="classifiers" style="margin-top:1%" ><h5 style="color:#88898a"><b>Select Category: (Max size: 5MB)</b></h5></label> -->
+                <select name="classifier" class="my-sm-5 mx-md-5 my-3 p-2 select ">
                   <option value="dep">DEPARTMENT PHOTOS</option>
                   <option value="hall">HALL PHOTOS</option>
                   <option value="fest">FEST PHOTOS</option>
@@ -329,25 +356,30 @@
                 </select>
               </div>
       
-              <div id="cropp-image-div">
+            
+        <div class="form-group status-main">
+          <!-- <label for="caption" style="margin-left:48%"><h5 style="color:#88898a"><b>Caption:</b></h5></label> -->
+          @if(!empty(Auth::user()->pro_pic))
+                  <img class="status-img" src="{{Auth::user()->pro_pic}}" alt="Image" data-toggle="tooltip">
+                  @else
+                  <img class="status-img" src="{{ asset('index.png') }}" alt="Image" data-toggle="tooltip">
+                  @endif
+                   <textarea class=" no-border status-textarea" rows="2" cols="10" placeholder="Type something..." name="caption" id="caption" required="required"></textarea>
+        </div> 
+        <div id="cropp-image-div">
                 <img id="crop-image" style="margin-left: 41%; border-radius: 3px; border-style:none;" src="" class="img-thumbnail">
               </div>
-        <div class="form-group">
-          <label for="caption" style="margin-left:48%"><h5 style="color:#88898a"><b>Caption:</b></h5></label>
-          <textarea class="form-control no-border" rows="2" cols="10" placeholder="Type something..." name="caption" id="caption" required="required"></textarea>
-        </div> 
           
       <div class="box-footer clearfix">
-       <button class="kafe-btn kafe-btn-mint-small pull-right btn-sm" id="upload-button" type="submit" disabled>Upload image</button>
+       <button class="kafe-btn kafe-btn-mint-small pull-right btn-sm status-share" id="upload-button" type="submit" disabled>Upload image</button>
 
        <ul class="nav nav-pills nav-sm">
       <li class="nav-item">
         <div class="image-upload">
             <label for="image">
-                <a class="nav-link" ><i class="fa fa-camera text-muted" style="font-size: 20px"></i><font style="color:#88898a; size:10px"> Browse image</font></a>
+                <a class="nav-link" ><i class="fa fa-camera text-muted" style="font-size: 20px"></i> Browse image</a>
             </label>
-
-            <input style="display: none;" type="file" name="image" id="image" accept="image/*" required/>
+            <input style="display: none;" type="file" name="image" id="image" accept="image/*" required/>            
         </div>
       </li>
        </ul>
@@ -365,9 +397,15 @@
     </div>
      </div>
 
-     <div class="container" style="margin-left: -2.4vw">
-        <div class="row">
+    </div>
+</div>
 
+</div>
+     <div class="container" >
+        <div class="row justify-content-center gallery mb-3 ">
+        <!-- <div class="row justify-content-center gallery mb-3 "> -->
+            <div class="col-lg-10 col-11 ms-lg-0 " >
+                <div class="row mb-4">
         @if(count($images)>0)
           {{ $images->links('vendor.pagination.bootstrap-4')}}
           @php
@@ -376,25 +414,23 @@
 
           @foreach($images as $image)
           @if(file_exists($image['url']))
-          <section class="page-section">
-            
-                   
+          <!-- <section class="page-section"> -->
             <div class="col-lg-4 col-md-6" id="img{{$image['id']}}">
-             <div class="explorebox" style="border-radius: 10px;">
+             <div class="explorebox" >
               <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0 imghover" src="{{$image['thumbnail']}}" id="{{$image['id']}}" data-src="{{$image['url']}}" data-toggle="tooltip" data-placement="top" title="Click the image!" style="cursor: pointer;width: 360px;height: 400px;border-radius: 10px;" >
-              <div class="explore-top" style="position: relative;top:-400px; ">
+              <div class=" overlay" onmouseover= "onImageHover({{$image['id']}})" onmouseout="onImageUn({{$image['id']}})" >
                 @php
                 $likes = DB::table('likes')->where('pic_id', $image['id'])->count();
                 @endphp
-                <div class="explore-like"><i class="fa fa-heart" style="font-size: 20px;"></i> <span style="color: #000">{{$likes}}</span>
-                  <i style="color: black;font-size: 20px; cursor: pointer;" class="material-icons delete" id="{{$image['id']}}" data-token="{{csrf_token()}}" title="Delete">delete</i>
+                <div class="explore-like"><i class="fa fa-heart" style="font-size: 25px; top:50%"></i> <span style="color: #000; font-size:25px">{{$likes}}</span>
+                  <i style="color: black;font-size: 25px;  cursor: pointer;" class="material-icons delete" id="{{$image['id']}}" data-token="{{csrf_token()}}" title="Delete">delete</i>
                 </div>
 
              </div>      
            </div>
          </div>
           
-          </section>
+          <!-- </section> -->
             @endif
           @endforeach
 
@@ -424,6 +460,9 @@
         @endif
         </div>  
     </div>
+</div>
+</div>
+</div>
      
    </section><!--/ newsfeed -->
      
@@ -432,7 +471,7 @@
    </section><!--/ newsfeed -->
    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class = "fa fa-chevron-circle-up" style = "font-size : 28px"></i><br><br>Scroll to top!</button>   
 
-
+  </div>
 
 
    <!-- ==============================================
@@ -540,12 +579,15 @@ function openPage(pageName,elmnt,color) {
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
-    tablinks = document.getElementsByClassName("tablink");
+    tablinks = document.getElementsByClassName("tablinkss");
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
+        tablinks[i].style.backgroundColor = "#fff";
+        // tablinks[i].style.transform = "scale(0.95)";
     }
     document.getElementById(pageName).style.display = "block";
     elmnt.style.backgroundColor = color;
+    // elmnt.style.transform = "scale(1)";
+    
 
 }
 document.getElementById("defaultOpen").click();
@@ -565,6 +607,22 @@ document.getElementById("defaultOpen").click();
     });   
   </script>
 <script type="text/javascript">
+  function onImageHover(id){
+    const image  = document.getElementById("img"+id);
+    const img = image.getElementsByTagName("img");
+    img[0].style.filter = "blur(3px)";
+    img[0].style.transform = "scale(1.03)";
+  }
+  function onImageUn(id){
+    const image  = document.getElementById("img"+id);
+    const img = image.getElementsByTagName("img");
+    img[0].style.filter = "blur(0px)";
+    img[0].style.transform = "scale(1)";
+  }
+  // const name = document.getElementByClassName("tabcontent");
+  // for(i = 0;i<name.length;i++){
+  //   console.log(name[i]);
+  // }
 
             /*
 
@@ -702,7 +760,6 @@ document.getElementById("defaultOpen").click();
   });
 });
 </script>
-@include('footer')
 </body>
 </html>
 <script>
@@ -813,3 +870,5 @@ document.getElementById("defaultOpen").click();
       });
   });
 </script>
+@endsection
+<!-- style="border-radius: 10px;" -->
