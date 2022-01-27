@@ -302,13 +302,13 @@
    =============================================== --> 
    <section class="newsfeed">
    <div class="row justify-content-center links feedbox fw-bold">
-                <div class="col-md-2 col-4 p-3  active text-center btns tablinkss" onclick="openPage('Gallery', this, 'rgb(137 150 177)')" id="defaultOpen">
+                <div class="col-md-2 col-4 p-2  active text-center btns tablinkss victoria-four animated-button" onclick="openPage('Gallery', this, 'hsl(219deg 30% 18%)')" id="defaultOpen"> 
                     <!-- <button class=" text-light "  > -->
                         Gallery
                     <!-- </button> -->
 
                 </div>
-                <div class="col-md-2 col-4 me-4 p-3 text-center btnss tablinkss" onclick="openPage('Articles', this, 'rgb(137 150 177)')" >
+                <div class="col-md-2 col-4 me-4 p-2 text-center btnss tablinkss victoria-four animated-button " onclick="openPage('Articles', this, 'hsl(219deg 30% 18%)')" > 
                     <!-- <button class="" > -->
                         Article
                     <!-- </button> -->
@@ -320,12 +320,13 @@
           <button class="tablink kafe-btn" onclick="openPage('Gallery', this, 'transparent','white')" id="defaultOpen">Gallery</button>
         <button class="tablink kafe-btn" onclick="openPage('Articles', this, 'transparent','white')">Articles</button>
       </div> -->
+      <!-- <a href="#" class="btn btn-sm animated-button victoria-four">Learn more</a>  </div> -->
     <div class="container">
       <div id="Articles" class="tabcontent">
       <div class="row justify-content-center mt-4 mb-5 postbox">
 <div class="status box p-md-4 p-0  my-md-3 col-lg-10 col-md-11 col-12 ">
         
-        <div  class="box">
+        <div  class="">
         <p>
          @include('writeup2')
        </p>
@@ -364,13 +365,14 @@
                   @endif
                    <textarea class=" no-border status-textarea" rows="2" cols="10" placeholder="Type something..." name="caption" id="caption" required="required"></textarea>
         </div> 
+        <hr>
         <div id="cropp-image-div">
                 <img id="crop-image" style="margin-left: 41%; border-radius: 3px; border-style:none;" src="" class="img-thumbnail">
               </div>
-          
+              
       <div class="box-footer clearfix">
        <button class="kafe-btn kafe-btn-mint-small pull-right btn-sm status-share" id="upload-button" type="submit" disabled>Upload image</button>
-
+ 
        <ul class="nav nav-pills nav-sm">
       <li class="nav-item">
         <div class="image-upload">
@@ -580,10 +582,13 @@ function openPage(pageName,elmnt,color) {
     tablinks = document.getElementsByClassName("tablinkss");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].style.backgroundColor = "#fff";
+        tablinks[i].style.color = "#000";
+        
         // tablinks[i].style.transform = "scale(0.95)";
     }
     document.getElementById(pageName).style.display = "block";
     elmnt.style.backgroundColor = color;
+    elmnt.style.color = "#fff";
     // elmnt.style.transform = "scale(1)";
     
 
