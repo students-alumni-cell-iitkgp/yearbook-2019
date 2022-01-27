@@ -34,7 +34,9 @@
  #timeline p {
    margin: 0 0 15px;
  }
- 
+ .relative{
+   text-align: left;
+ }
  .date {
    margin-top: -10px;
    top: 50%;
