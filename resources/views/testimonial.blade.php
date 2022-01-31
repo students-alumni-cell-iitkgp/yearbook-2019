@@ -84,7 +84,8 @@
    @section('main-content')
    <div class="main-container">
      <section class="profile">
-      <div class="container-fluid cover-img">
+     <img src="https://images.unsplash.com/photo-1508247967583-7d982ea01526?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" alt="" class="profile-cover">
+      <div class="container-fluid ">
       </div><!--/ container -->
     </section><!--/ profile -->
     <section class="user-profile">
