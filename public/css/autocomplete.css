@@ -19,6 +19,15 @@ text-align: start;
 	position:relative;
 	z-index:2;
 	margin: 20px;
+  font-size: 14px !important;
+}
+.account>ul>li>a{
+  font-size: 14px;
+  text-decoration: none;
+}
+.account>ul>li>a:hover{
+  color: #5C5D71 !important;
+  display: block !important;
 }
 .xdsoft_autocomplete .xdsoft_autocomplete_dropdown{
 	position:absolute;
@@ -333,7 +342,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   object-position: center;
   border-radius: 4px;
 }
@@ -612,6 +620,9 @@ body {
   .status-menu-item + .status-menu-item {
     margin-left: 0;
   }
+  .main-container{
+    padding: 5px;
+  }
 }
 
 .status-img {
@@ -679,6 +690,7 @@ body {
   margin-left: auto;
   box-shadow: 0 0 20px #1b86f9;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .album {
