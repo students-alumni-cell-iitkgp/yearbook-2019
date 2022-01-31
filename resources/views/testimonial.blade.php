@@ -29,6 +29,10 @@
     =============================================== -->
     <link type="text/css" href="{{ asset('/css/demos/photo.css') }}" rel="stylesheet" />
     <link type="text/css" href="{{ asset('/css/demos/testimonial.css') }}" rel="stylesheet" />
+    <link type="text/css" href="{{ asset('css/demos/timeline.css') }}" rel="stylesheet" />
+    <link type="text/css" href="{{ asset('css/demos/articleTimeline.css') }}" rel="stylesheet" />
+
+
 
     {{-- <link href="{{ asset('/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"> --}}
     <!-- ==============================================
@@ -66,7 +70,8 @@
      <!-- ==============================================
      Navigation Section
      =============================================== -->  
-     @include('navbar')
+     @extends('navbar')
+
 
    <!-- ==============================================
    Navbar Second Section
@@ -76,7 +81,8 @@
    <!-- ==============================================
    News Feed Section
    =============================================== --> 
-   <div class="back">
+   @section('main-content')
+   <div class="main-container">
      <section class="profile">
       <div class="container-fluid cover-img">
       </div><!--/ container -->
@@ -214,84 +220,128 @@
                 </ul>
                 <br>
                 <div class="tab-content">
-                  <div id="testimonial" class="container tab-pane active">
+                  <!-- <div id="testimonial" class="container tab-pane active">
 
                     <?php
-                    if(count($myviews)){
-                    $l=0;
-                    echo'
-                    <div class="container">
-                    <div class="row">
-                    <div class="col-md-12">
-                    <div class="main-timeline">';
+                    // if(count($myviews)){
+                    // $l=0;
+                    // echo'
+                    // <div class="container">
+                    // <div class="row">
+                    // <div class="col-md-12">
+                    // <div class="main-timeline">';
                     
-                    foreach($myviews as $view)
-                    {
-                      $pic = App\User::where('name', $view['user'])->pluck('pro_pic');
-                      $writtenBy = App\User::where('name', $view['user'])->value('rollno');
-                      $writtenFor = App\User::where('rollno', $view['depmate'])->value('name');
-                      if($view['approval']=='1'){
+                    // foreach($myviews as $view)
+                    //     {
+                    //       $pic = App\User::where('name', $view['user'])->pluck('pro_pic');
+                    //       $writtenBy = App\User::where('name', $view['user'])->value('rollno');
+                    //       $writtenFor = App\User::where('rollno', $view['depmate'])->value('name');
+                    //       if($view['approval']=='1'){
 
-                        if($l==0)
-                        {
-                         echo ' <div class="timeline">
-                        <span class="timeline-icon"></span>
-                        <span class="year"><a href="'.url('/profile_index/'.$writtenBy) .'">'.$view['user'].'</span></a>
-                        <div class="timeline-content media_body">
-                        <a href="'.url('/profile_index/'.$writtenBy) .'">
-                         <div align="center"><img src="/'.$pic[0].'" alt="" class="img-responsive img-circle" style="width: 60px; height: 60px;"></div>
-                         <p><b style="color: #000">'.$view['user'].'</b></a> wrote for <b>'.$writtenFor.': </b></p>
-                         <p>"'.$view['views'].'"</p>
-                        <h6>'.$view->created_at->diffForHumans().'</h6>
-                        </div>
-                        </div>';
-                         $l=1;
-                       }
-                       else{
-                        echo'
+                    //         if($l==0)
+                    //         {
+                    //         echo ' <div class="timeline">
+                    //         <span class="timeline-icon"></span>
+                    //         <span class="year"><a href="'.url('/profile_index/'.$writtenBy) .'">'.$view['user'].'</span></a>
+                    //         <div class="timeline-content media_body">
+                    //         <a href="'.url('/profile_index/'.$writtenBy) .'">
+                    //         <div align="center"><img src="/'.$pic[0].'" alt="" class="img-responsive img-circle" style="width: 60px; height: 60px;"></div>
+                    //         <p><b style="color: #000">'.$view['user'].'</b></a> wrote for <b>'.$writtenFor.': </b></p>
+                    //         <p>"'.$view['views'].'"</p>
+                    //         <h6>'.$view->created_at->diffForHumans().'</h6>
+                    //         </div>
+                    //         </div>';
+                    //         $l=1;
+                    //       }
+                    //       else{
+                    //         echo'
 
-                        <div class="timeline">
-                        <span class="timeline-icon"></span>
-                        <span class="year"><a href="'.url('/profile_index/'.$writtenBy) .'">'.$view['user'].'</span></a>
-                        <div class="timeline-content media_body">
-                        <a href="'.url('/profile_index/'.$writtenBy) .'">
-                         <div align="center"><img src="/'.$pic[0].'" alt="" class="img-responsive img-circle" style="width: 60px; height: 60px;"></div>
-                         <p><b style="color: #000">'.$view['user'].'</b></a> wrote for <b>'.$writtenFor.': </b></p>
-                         <p>"'.$view['views'].'"</p>
-                        <h6>'.$view->created_at->diffForHumans().'</h6>
-                        </div>
-                        </div>';
-                        $l=0;
-                      }
+                    //         <div class="timeline">
+                    //         <span class="timeline-icon"></span>
+                    //         <span class="year"><a href="'.url('/profile_index/'.$writtenBy) .'">'.$view['user'].'</span></a>
+                    //         <div class="timeline-content media_body">
+                    //         <a href="'.url('/profile_index/'.$writtenBy) .'">
+                    //         <div align="center"><img src="/'.$pic[0].'" alt="" class="img-responsive img-circle" style="width: 60px; height: 60px;"></div>
+                    //         <p><b style="color: #000">'.$view['user'].'</b></a> wrote for <b>'.$writtenFor.': </b></p>
+                    //         <p>"'.$view['views'].'"</p>
+                    //         <h6>'.$view->created_at->diffForHumans().'</h6>
+                    //         </div>
+                    //         </div>';
+                    //         $l=0;
+                    //       }
 
-                    }
-                  }
-                  echo '
-                  </div>
-                  </div>
-                  </div>
-                  </div>
-                  ';
-                }
-                  else{
-                    echo
-                  '<section class="page-section cta" style="background-color: rgba(76,71,97,0.55);">
-                    <div class="container" style="margin-top: 20px; font-family: "Varela Round", sans-serif;">
-                      <div class="row">
-                        <div class="col-xl-9 mx-auto">
-                          <div class="cta-inner text-center rounded">
-                            <h2 class="section-heading mb-4">
-                              <span class="section-heading-upper"></span>
-                              <span class="section-heading-lower" style="color: #000">Nothing to show yet!</span>
-                            </h2><br>
-                          </div>
-                        </div>
-                      </div>
+                    //     }
+                    //   }
+                    //   echo '
+                    //   </div>
+                    //   </div>
+                    //   </div>
+                    //   </div>
+                    //   ';
+                    // }
+                    //   else{
+                    //     echo
+                    //   '<section class="page-section cta" style="background-color: rgba(76,71,97,0.55);">
+                    //     <div class="container" style="margin-top: 20px; font-family: "Varela Round", sans-serif;">
+                    //       <div class="row">
+                    //         <div class="col-xl-9 mx-auto">
+                    //           <div class="cta-inner text-center rounded">
+                    //             <h2 class="section-heading mb-4">
+                    //               <span class="section-heading-upper"></span>
+                    //               <span class="section-heading-lower" style="color: #000">Nothing to show yet!</span>
+                    //             </h2><br>
+                    //           </div>
+                    //         </div>
+                    //       </div>
+                    //     </div>
+                    //   </section>';}
+                    ?>
+
+                  </div> -->
+                  <div class="timeline-right container tab-pane active" id="testimonial">
+                    <div class="album box">
+                      <ul id='timeline'>
+                        <?php
+              
+                          $dept = Auth::user()->department;
+                          $rollno = Auth::user()->rollno;
+                          $j=0;
+                          $i=0;
+                          $index=1;
+              
+                          foreach($myviews as $view)
+                          {
+                            $id=$view['id'];
+                            echo '
+                              <li class="work">
+                                <input class="radio" id="work'.$index.'" name="works" type="radio" checked>
+                                <div class="relative">
+                                  <label for="work'.$index.'">'.$view['user'].'</label>
+                                  <span class="date">'.$view->created_at->diffForHumans().'</span>
+                                  <span class="circle"></span>
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    '.$view['views'].'
+                                    <br>
+                                    ';    echo '</p>
+                                  
+                                </div>
+                              </li>';
+                            
+              
+                            $j=1;
+                            $index++;
+                          }         
+                          if($j==0)
+                          {
+              
+                            echo '<div style="text-align: center; font-family: Aclonica"><h3 style="color: #fff;">No Testimonials Given!</h3></div>';
+                          }
+                        ?>
+                      </ul>
                     </div>
-                  </section>';}
-                  ?>
-
-                </div>
+                  </div>
                 <div id="gallery" class="tab-pane fade">
                  <section class="newsfeed">
                    <div class="container">
@@ -306,7 +356,7 @@
                       @foreach($images as $image)
                       @if(file_exists($image['url']))
                       <section class="page-section">
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-6">
                          <div class="explorebox" style="border-radius: 10px;">
                           <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{{asset('/'.$image['url'])}}" id="{{$image['id']}}"  data-toggle="tooltip" data-placement="top" title="Click the image!" style="cursor: pointer;width: 360px;height: 400px;border-radius: 10px;" >
                           <div class="explore-top" style="position: relative;top:-400px;">
@@ -350,36 +400,51 @@
               </section>
             </div>
             <div id="articles" class="tab-pane fade">
-              @if(count($writeups)>0)
-             @foreach($writeups as $writeup)
-             <div class="article" style="padding-top:2vw;padding-right: 6vw;padding-left:2vw;">
+            <section id="timelinet" class="timelinet-outer">
+            <div class="containerArticle" id="content">
+              <div class="row">
+                <div class="col s12 m12 l12">
+                  <ul class="timelinet">
+                    @if(count($writeups)>0)
+                    @foreach($writeups as $writeup)
+                    <li class="event" data-date="2015/Present">
+                      <h3 class="topicArticle">{{ $writeup->topic }} <a href="/writeup/{{ $writeup->id }}">
+                        <i class="material-icons deleteArticle">delete</i></a></h3>
+                      <p class="contentArticle" title="Click to edit!" data-value="{{csrf_token()}}" onblur="update({{ $writeup->id }})"
+                        id="{{ $writeup->id }}" contenteditable>{!! nl2br($writeup->writeup)!!}
+                      </p>
+                    </li>
+                    <!-- <div class="article" style="padding-top:2vw;padding-right: 6vw;padding-left:2vw;">
 
-              <h2 class="section-heading mb-4 text-center">
-                <a href="/writeup/{{ $writeup->id }}"><i style="float: right;color: black;font-size: 30px" class="material-icons">delete</i></a>
-                <span class="section-heading-lower">{{ $writeup->topic }} </span>
+                      <h2 class="section-heading mb-4 text-center">
+                        <a href="/writeup/{{ $writeup->id }}"><i style="float: right;color: black;font-size: 30px" class="material-icons">delete</i></a>
+                        <span class="section-heading-lower">{{ $writeup->topic }} </span>
 
-              </h2>
+                      </h2>
 
-              <p style="padding: 2vw;text-align: left;" title="Click to edit!" data-value="{{csrf_token()}}" onblur="update({{ $writeup->id }})" id="{{ $writeup->id }}" contenteditable >{!!  nl2br($writeup->writeup)!!}</p>
-            </div>
-            @endforeach
-            @else
-            <section class="page-section cta">
-              <div class="container"  style="margin-top: 20px; font-family: 'Varela Round', sans-serif;">
-                <div class="row">
-                  <div class="col-xl-9 mx-auto">
-                    <div class="cta-inner text-center rounded">
-                      <h2 class="section-heading mb-4">
-                        <span class="section-heading-upper"></span>
-                        <span class="section-heading-lower" style="color: #000">Nothing to show yet!</span>
-                      </h2><br>
-                    </div>
+                      <p style="padding: 2vw;text-align: left;" title="Click to edit!" data-value="{{csrf_token()}}" onblur="update({{ $writeup->id }})" id="{{ $writeup->id }}" contenteditable >{!!  nl2br($writeup->writeup)!!}</p>
+                    </div> -->
+                    @endforeach
+                    @else
+                    <section class="page-section cta">
+                      <div class="container"  style="margin-top: 20px; font-family: 'Varela Round', sans-serif;">
+                        <div class="row">
+                          <div class="col-xl-9 mx-auto">
+                            <div class="cta-inner text-center rounded">
+                              <h2 class="section-heading mb-4">
+                                <span class="section-heading-upper"></span>
+                                <span class="section-heading-lower" style="color: #000">Nothing to show yet!</span>
+                              </h2><br>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    @endif        
                   </div>
                 </div>
               </div>
             </section>
-
-            @endif
 
           </div>
 
@@ -397,7 +462,7 @@
     <div class="modal-body">
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
        <span aria-hidden="true">×</span>
-       <span class="sr-only">Close</span>
+       <!-- <span class="sr-only">Close</span> -->
      </button>
      <div class="row">
 
@@ -464,8 +529,6 @@
       size:"8px",
     });   
   </script>
-
-  @include('footer')
 
 </body>
 </html>
@@ -613,3 +676,4 @@ $(function() {
     });
   });
 </script>
+@endsection
