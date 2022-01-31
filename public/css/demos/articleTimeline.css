@@ -129,17 +129,24 @@ Responsive Stuff
 }
 
 @media (max-width: 768px) {
+  #content {
+    margin-left: -10px;
+    
+  }
+  .timelinet{
+    width: 70vw;
+  }
   .timelinet .event::before {
-    left: 0.5px;
+    left: 12px;
     top: 20px;
     min-width: 0;
     font-size: 13px;
   }
-  .timelinet .event:nth-child(1)::before,
+  /* .timelinet .event:nth-child(1)::before,
   .timelinet .event:nth-child(3)::before,
   .timelinet .event:nth-child(5)::before {
     top: 38px;
-  }
+  } */
   .timelinet h3 {
     font-size: 16px;
   }

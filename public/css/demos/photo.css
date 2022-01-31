@@ -349,7 +349,8 @@ a.navbar-brand:hover {
   font-size: 13px !important;
 }
 
-@media(max-width:768px) {
+@media(max-width:768px) 
+{
 	.navbar-default ul li{
 	 display: inline-block !important;	
 	}
@@ -1230,7 +1231,10 @@ a.navbar-brand:hover {
   
   border-radius: 3px;
   box-shadow: 0 5px 25px 0 rgba(123,123,123,.15);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  /* padding-bottom: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5); */
+
   padding: 0px !important;
 }
 .explore-top{
