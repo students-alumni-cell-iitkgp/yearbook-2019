@@ -419,7 +419,12 @@ cursor: pointer;
     border-radius:8px !important; */
 }
 
-
+.modal-backdrop{
+    opacity: 0 !important;
+}
+.modal-backdrop{
+    display: none !important;
+}
 .tabcontent {
     
     display: none;
