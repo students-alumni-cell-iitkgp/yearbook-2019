@@ -267,14 +267,14 @@
 		  </a>
 		</div>
 	  </div>
-	  <a href="https://twitter.com/AysnrTrkk" class="follow-me" target="_blank">
+	  <a href="https://www.facebook.com/iitkgp.alumnicell/" class="follow-me" target="_blank">
 		<span class="follow-text">
-		  <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
-		  Follow me on Twitter
+		<i class="fab fa-facebook-f"></i>&nbsp;&nbsp;
+		  Follow us on Facebook
 	   </span>
 		<span class="developer">
-		  <img src="https://pbs.twimg.com/profile_images/1253782473953157124/x56UURmt_400x400.jpg" />
-		  Aysenur Turk — @AysnrTrkk
+		  <img src="https://scontent.fdel29-1.fna.fbcdn.net/v/t1.6435-9/43544733_2403344159705803_7519063889212866560_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=ku-ciCiyDw0AX9ErU8R&_nc_ht=scontent.fdel29-1.fna&oh=00_AT90sxGPoRTL9Q0VAIVBR-_ic9tZrDZ8TWDebdFNsTvn0A&oe=621DFB37" />
+		  Student's Alumni Cell
 		</span>
 	  </a>
 	</div>
@@ -370,7 +370,7 @@
 			</ul>
 			<ul class="nav navbar-nav">
 				<li class="dropdown notification-list">
-					<a class="account-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">Umang Singla
+					<a class="account-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">{{Auth::user()->name}}
 						@if(!empty(Auth::user()->pro_pic))
 						<img src="{{Auth::user()->thumbnail}}" alt="" class="account-profile" alt="">
 						@else

@@ -97,7 +97,7 @@
 
 .cover-img{
   background-image: url('img/bg/1.jpg');
-  height:30vw;
+  height:100%;
   background-size: 100% 100%;
   background-repeat: no-repeat;
 

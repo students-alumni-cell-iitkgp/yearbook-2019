@@ -142,6 +142,15 @@ option{
       .status-menu-item  {
       margin-left: 0;
      }
+     .btns, .btnss{
+        font-size: large;
+     }
+     .explorebox {
+         height: 270px !important;
+     }
+     .explorebox img{
+         height: 270px !important;
+     }
     }
    
    
@@ -440,9 +449,13 @@ cursor: pointer;
 }
 
 .fade:not(.show) {
+    padding-top: 10vw;
     opacity: 1 !important;
     background-color: transparent !important;
-    padding: 0 !important;
+    /* padding: 0 !important; */
+}
+.modal-content{
+    width: 130% !important;
 }
 form hr{
     color: #fff !important;
@@ -459,7 +472,7 @@ form hr{
         padding: 10px 0px;
     }
     select{
-        font-size: 1.3rem !important;
+        font-size: 1.25rem !important;
         padding: 5px;
 
         /* padding: 5px; */
@@ -478,6 +491,7 @@ form hr{
         width: 100px;
         height: 100px;
         /* border: 7px solid #fff; */
+        margin-left: 10px;
     }
     .author-post h4 {
         font-size: x-large;
