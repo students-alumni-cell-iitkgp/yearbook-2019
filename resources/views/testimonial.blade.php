@@ -372,8 +372,11 @@
                     @endif
                     @endforeach
 
-                    {{ $images->links('vendor.pagination.bootstrap-4')}}
-
+                    <div class="row">
+                      <div   class="col-12">
+                       {{ $images->links('vendor.pagination.bootstrap-4')}}
+                       </div>
+                    </div>
                     @else
 
                     <section class="page-section cta" style="background-color: rgba(76,71,97,0.55);">
@@ -408,7 +411,7 @@
                   <ul class="timelinet">
                     @if(count($writeups)>0)
                     @foreach($writeups as $writeup)
-                    <li class="event" data-date="2015/Present">
+                    <li class="event" data-date="{{$writeup->created_at->diffForHumans()}}">
                       <h3 class="topicArticle">{{ $writeup->topic }} <a href="/writeup/{{ $writeup->id }}">
                         <i class="material-icons deleteArticle">delete</i></a></h3>
                       <p class="contentArticle" title="Click to edit!" data-value="{{csrf_token()}}" onblur="update({{ $writeup->id }})"

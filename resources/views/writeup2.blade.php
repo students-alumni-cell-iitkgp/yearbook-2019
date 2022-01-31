@@ -60,7 +60,7 @@
     content: none;
   }
   .article{
-    background-color: #1d202f;
+    /* background-color: #1d202f; */
     border-radius: 10px;
     color: #fff;
   }
@@ -73,7 +73,7 @@
     /* padding: 5px; */
 }
 .page-section{
-  background-color: #1d202f;
+  /* background-color: #1d202f; */
   color: #fff;
 
 }
@@ -188,9 +188,9 @@ margin-right: 20px;
     </div>
   </section>
     @foreach($writeups as $writeup)
-     <div class="article" data-toggle="tooltip" title="Click to edit!" style="padding-top:2vw;padding-right: 6vw;padding-left:2vw ">
+     <div class="article box" data-toggle="tooltip" title="Click to edit!" style="padding-top:2vw;padding-right: 6vw;padding-left:2vw ">
       
-      <h2 class="section-heading mb-4 text-center">
+      <h2 class="section-heading mb-4 text-center ">
           <a href="/writeup/{{ $writeup->id }}"><i style="float: right;color: #fff" class="material-icons">delete</i></a>
           <span class="section-heading-lower">{{ $writeup->topic }} </span>
 
