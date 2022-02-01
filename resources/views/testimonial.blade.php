@@ -92,11 +92,11 @@
             @else
             <img class="profile-img" src="{{ asset('/index.png') }}" alt="Image">
             @endif
-            <div class="profile-name">{{Auth::user()->name}}</div>
+            <div class="profile-name">{{$data[0]['name']}}</div>
           </div>
           <div class="caption">
-            @if(!empty(Auth::user()->view_self))
-            {{Auth::user()->view_self}}
+            @if(!empty($data[0]['view_self']))
+            {{$data[0]['view_self']}}
             @else
             Your Caption Here!
             @endif
