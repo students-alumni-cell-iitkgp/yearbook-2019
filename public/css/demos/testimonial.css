@@ -1,7 +1,14 @@
-<style>
+
   .main-timeline{
     overflow: hidden;
     position: relative;
+  }
+  .nav-link:active{
+    background:white !important;
+    color: white !important;
+  }
+  .nav-link:hover{
+    background: white !important;
   }
   .main-timeline:before{
     content: "";
@@ -210,6 +217,11 @@
       transform: translateX(-50%);
     }
   }
+  @media (min-width: 768px){
+    .container{
+      width: 100%;
+    }
+  }
   @media only screen and (max-width: 480px){
     .main-timeline .title{
       float: none;
@@ -225,4 +237,3 @@
     background-color: #ffffff;
     border-radius: 10px;
   }
-</style>
