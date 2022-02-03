@@ -30,13 +30,14 @@
     =============================================== -->
         <link type="text/css" href="{{ asset('css/demos/photo.css') }}" rel="stylesheet" />
         <link type="text/css" href="{{ asset('css/demos/interest.css') }}" rel="stylesheet" />
+        <link type="text/css" href="{{ asset('css/demos/viewitch.css') }}" rel="stylesheet" />
         <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
-
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         
     <!-- ==============================================
     Feauture Detection
     =============================================== --> 
-    <style type="text/css">
+    <!--<style type="text/css">
         #myBtn {
           display: none;
           position: fixed;
@@ -56,8 +57,12 @@
           background-color: #555;
         }
     .back{
-      background-image: url('img/bg/bgbg.jpg');
-      background-attachment: fixed;
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+      /* overflow: scroll;*/
+      /*background-image: url('img/bg/bgbg.jpg');
+      background-attachment: fixed;*/
     }
     .article{
       background-color: #ffffff;
@@ -73,10 +78,23 @@
         height: 100%;
         overflow-y: scroll;
       }
+    }-->
+    <style type="text/css"> 
+    .back{
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+      /* overflow: scroll;*/
+      /*background-image: url('img/bg/bgbg.jpg');
+      background-attachment: fixed;*/
     }
-    
-    </style>
 
+    .logo {
+    padding:0;
+    background-color:rgb(11 21 35);
+    }
+    </style>
+@extends('navbar')
     </head>
 
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="10">
@@ -84,7 +102,7 @@
      <!-- ==============================================
      Navigation Section
      =============================================== -->  
-     @include('navbar')
+   
   
   
    <!-- ==============================================
@@ -95,180 +113,230 @@
    <!-- ==============================================
    News Feed Section
    =============================================== --> 
-
+   @section('main-content')
    <section class="newsfeed back">
     <section class="channel-one">
-    <div class="container-fluid" >
-     <div class="row" >
-     
-      <div class="col-md-3 col-sm-4" id="myScrollspy">
-       <aside class="sidebar">      
-        <ul id="side" data-spy="affix" data-offset-top="180">
-         <li class="" id="0"><a href="{{ url('/viewbucket') }}"><i class="fa fa-align-left"></i> All Photos</a></li>
-         <li id="1"><a href="{{ url('/viewbucket?id=1') }}"><i class="fa fa-align-left"></i> {{$buckets[1]}}</a></li>
-         <li id="2"><a href="{{ url('/viewbucket?id=2') }}"><i class="fa fa-align-left"></i> {{$buckets[2]}}</a></li>
-         <li id="3"><a href="{{ url('/viewbucket?id=3') }}"><i class="fa fa-align-left"></i> {{$buckets[3]}}</a></li>
-         <li id="4"><a href="{{ url('/viewbucket?id=4') }}"><i class="fa fa-chart-bar"></i> {{$buckets[4]}}</a></li>
-         <li id="5"><a href="{{ url('/viewbucket?id=5') }}"><i class="far fa-copy"></i> {{$buckets[5]}}</a></li>
-         <li id="6"><a href="{{ url('/viewbucket?id=6') }}"><i class="fa fa-align-left"></i> {{$buckets[6]}}</a></li>
-         <li id="7"><a href="{{ url('/viewbucket?id=7') }}"><i class="fa fa-users"></i> {{$buckets[7]}}</a></li>
-         <li id="8"><a href="{{ url('/viewbucket?id=8') }}"><i class="fa fa-user"></i> {{$buckets[8]}}</a></li>
-         <!-- <li id="9"><a href="{{ url('/viewbucket?id=9') }}"><i class="fa fa-align-left"></i> {{$buckets[9]}}</a></li>
-         <li id="10"><a href="{{ url('/viewbucket?id=10') }}"><i class="fa fa-users"></i> {{$buckets[10]}}</a></li>
-         <li id="11"><a href="{{ url('/viewbucket?id=11') }}"><i class="fa fa-user"></i> {{$buckets[11]}}</a></li>
-         <li id="12"><a href="{{ url('/viewbucket?id=12') }}"><i class="fa fa-align-left"></i> {{$buckets[12]}}</a></li>
-         <li id="13"><a href="{{ url('/viewbucket?id=13') }}"><i class="fa fa-users"></i> {{$buckets[13]}}</a></li>
-         <li id="14"><a href="{{ url('/viewbucket?id=14') }}"><i class="fa fa-user"></i> {{$buckets[14]}}</a></li>
-         <li id="15"><a href="{{ url('/viewbucket?id=15') }}"><i class="fa fa-align-left"></i> {{$buckets[15]}}</a></li>
-         <li id="16"><a href="{{ url('/viewbucket?id=16') }}"><i class="fa fa-users"></i> {{$buckets[16]}}</a></li> -->
-       </ul>
-     </aside>     
-     
-   </div><!--/ col-lg-3 -->
-   
+       <div class="container">
+          <div class="row">
 
-<div class="col-md-4 col-sm-8">
-     <section class="page-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10 col-md-10 col-sm-9 mx-auto" align="center" style='left:-7px;'>
-            <div class=" text-center rounded article" style="width:59%;padding: 1vw;" >
-              <h2 class="section-heading mb-4">
-                <span class="section-heading-lower">ITCH LIST</span>
-              </h2><br>
-              <p class="mb-0"> 
-              Snaps from the Itch List we gave you.</p>
-              <br>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    @if(count($images)>0)
-        <br>
-        {{ $images->links('vendor.pagination.bootstrap-4')}}
-        @php
-        $count= 0;
-        @endphp
+            <div class="col-sm-9">
+              <div class="text-center rounded article" align = "center" style = "color: #9c9cab;">
+                <h2 class="section-heading mb-4">
+                  <span class="section-heading-lower">ITCH LIST</span>
+                </h2>
+                <p class="mb-0"> Snaps from the Itch List we gave you.</p>
+              </div>
+          
+              @if(count($images)>0)
+      
+                <div class="row pagi1">
+                  <div class="col-12">
+                    {{ $images->links('vendor.pagination.bootstrap-4')}}
+                  </div>
+                </div>
 
-        @foreach($images as $image)
-        @if(true)
-        <section class="page-section">
-          <div class="container col-md-3" style="margin-left: 50px;">
-            <div class="product-item">
-              <div class="product-item-title d-flex">
-                <div class="bg-faded p-5 d-flex ml-auto rounded">
-                  <h2 class="section-heading mb-0">
-                    <!--<span class="section-heading-upper">Blended to Perfection</span>-->
+                @php
+                $count= 0;
+                $boxcount =0;
+                $linecount=1;
+                @endphp
+       
+                @foreach($images as $image)
+                  @if(true)
+                           
                     @php
                     $name = App\User::where('rollno',$image['roll'])->get();
-              
                     @endphp
 
+                    @php $boxcount++; @endphp
 
-                  </h2>
-                  <strong></strong>
-                </div>
-              </div>
-              
-           <!-- <div class="product-item-description d-flex mr-auto">
-              <div class="bg-faded p-5 rounded">
-                <p class="mb-0">{{$image['caption']}}</p>
-              </div>
-            </div>-->
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-md-7 col-lg-6 col-sm-8">
-                  <div class="cardbox" id="img{{$image['pic']}}">
-                    <div class="cardbox-heading">
-                      <!-- START dropdown-->
-                      @if($image['roll'] == Auth::user()->rollno)
-                      <div class="dropdown pull-right">
-                        <button class="btn btn-secondary btn-flat btn-flat-icon" title="Click to delete!" type="button" data-toggle="dropdown" aria-expanded="false">
-                          <em class="fa fa-ellipsis-h"></em>
-                        </button>
-                        <div class="dropdown-menu dropdown-scale dropdown-menu-right" role="menu" style="position: absolute; transform: translate3d(-136px, 28px, 0px); top: 0px; left: 0px; will-change: transform;">
-                          <a class="dropdown-item delete" href="#" id="{{$image['pic']}}" data-token="{{csrf_token()}}">Delete</a>
-                        </div>
-                      </div><!--/ dropdown -->
-                      @endif
-                      <!-- END dropdown-->
-                      <div class="media m-0">
-                        <div class="d-flex mr-3">
-                          <a href="/profile_index/{{$image['roll']}}">
-                            <img class="img-responsive img-circle" src="{{$name[0]['pro_pic']}}" alt="User">
-                          </a>
-                        </div>
-                        <div class="media-body">
-                          <a href="/profile_index/{{$image['roll']}}') }}">
-                            <p class="m-0">{{$name[0]['name']}}</p>
-                          </a>
-                          <small><span>{{$image['created_at']->diffForHumans() }}</span></small>
-                        </div>
-                      </div><!--/ media -->
-                    </div>
+                    @if($boxcount>10)
+                    @php $linecount=1;   @endphp
+                    @endif
+                  
+                    @if($boxcount>2)
+                    @php $linecount=2;   @endphp
+                    @endif
 
-                    <div class="cardbox-item">
-                      
-                      <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0 " src="{{$image['pic']}}"
-                      id="{{$image['pic']}}"  data-toggle="tooltip" data-placement="top" style="cursor: pointer; width: 100%;max-height: 500px; min-height: 300px; height: 50vw;">
-                    </div><!--/ cardbox-item -->
-                            
-                  </div><!--/ cardbox -->
-                </div>
-              </div>
-            </div>
+                    @if($boxcount>4)
+                    @php $linecount=3;   @endphp
+                    @endif
+
+                    @if($boxcount>6)
+                    @php $linecount=4;   @endphp
+                    @endif
+
+                    @if($boxcount>8)
+                    @php $linecount=5;   @endphp
+                    @endif
+
+                    @if($boxcount>10)
+                    @php $boxcount=0;   @endphp
+                    @endif
+                       
+                    <div class="section1 box{{$boxcount}}">
+                      <div class="cardbox" id="img{{$image['pic']}}" style = "border: 2px solid #272a3a;border-radius: 8px;">
+                        <div class="cardbox-heading">
+                             <!-- START dropdown-->
+                             @if($image['roll'] == Auth::user()->rollno)
+                            <div class="dropdown pull-right">
+                               <button class="btn btn-secondary btn-flat btn-flat-icon" title="Click to delete!" type="button" data-toggle="dropdown" aria-expanded="false">
+                                 <em class="fa fa-ellipsis-h"></em>
+                               </button>
+                               <div class="dropdown-menu dropdown-scale dropdown-menu-right" role="menu" style="position: absolute; transform: translate3d(-136px, 28px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                 <a class="dropdown-item delete" href="#" id="{{$image['pic']}}" data-token="{{csrf_token()}}">Delete</a>
+                               </div>
+                            </div><!--/ dropdown -->
+                             @endif
+                             <!-- END dropdown-->
+                            <div class="media m-0">
+                               <div class="d-flex mr-3">
+                                 <a href="/profile_index/{{$image['roll']}}">
+                                   <img class="img-responsive img-circle" src="{{$name[0]['pro_pic']}}" alt="User">
+                                 </a>
+                               </div>
+                               <div class="media-body">
+                                 <a href="/profile_index/{{$image['roll']}}') }}">
+                                   <p class="m-0">{{$name[0]['name']}}</p>
+                                 </a>
+                                 <small><span>{{$image['created_at']->diffForHumans() }}</span></small>
+                               </div>
+                            </div><!--/ media -->
+                          </div>
+       
+                           <div class="cardbox-item">
+                             
+                             <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0 " src="{{$image['pic']}}"
+                             id="{{$image['pic']}}"  data-toggle="tooltip" data-placement="top" style="cursor: pointer; width: 100%;max-height: 500px; min-height: 300px; height: 50vw;">
+                           </div><!--/ cardbox-item -->
+                                   
+                        </div><!--/ cardbox -->    
+                    </div><!--section1-->
+                  @endif
+                  <script type="text/javascript">
+                    $(document).ready(function() {
+                      if($(window).width() < 768) {
+                        document.getElementById('side').setAttribute('data-spy', ' ');
+                        $(window).scroll(function() {    
+                          var scroll = $(window).scrollTop();
+                          if (scroll >= 1) {
+                            document.getElementById('side').setAttribute('class', ' ');
+                          }
+                        });
+                      }
+                    });
+                  </script>
+            
+                @endforeach
+                 
+               <div class="row pagi2">
+                 <div class="col-12">
+                 {{ $images->links('vendor.pagination.bootstrap-4')}}
+                 </div>
+               </div>
       
-      </section>
-      @endif
-      <script type="text/javascript">
-        $(document).ready(function() {
-          if($(window).width() < 768) {
-            document.getElementById('side').setAttribute('data-spy', ' ');
-            $(window).scroll(function() {    
-              var scroll = $(window).scrollTop();
-              if (scroll >= 1) {
-                document.getElementById('side').setAttribute('class', ' ');
-              }
-            });
-          }
-        });
-      </script>
+              @else
+               <script type="text/javascript">
+                 document.getElementById('side').setAttribute('data-spy', ' ');
+               </script>
+               <section class="page-section cta">
+                 <div class="container" style="margin-top: 20px; font-family: 'Varela Round', sans-serif;">
+                   <div class="row">
+                     <div class="col-lg-9 mx-auto">
+                       <div class="cta-inner text-center rounded">
+                         <h2 class="section-heading mb-4">
+                           <span class="section-heading-upper"></span>
+                           <span class="section-heading-lower">Nothing to show yet!</span>
+                         </h2><br>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </section>
+               
+              @endif 
+          </div><!--col-sm-9-->
 
-      @endforeach
-
-      {{ $images->links('vendor.pagination.bootstrap-4')}}
+          <div class="col-sm-3" id="myScrollspy">
+            <div class="menu pmd-floating-action"  role="navigation"> 
+              <aside class="rightnavbar">      
+                <ul id="side" data-spy="affix" data-offset-top="180">
+       
+                   <li class="" id="0">
+                   <a href="{{ url('/viewbucket') }}" class="pmd-floating-action-btn btn pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-light" data-title="Add" href="javascript:void(0);"> 
+           	      	<span class="pmd-floating-hidden" style="padding-right:10px">All Photos</span>
+           	      	<i class="material-icons pmd-sm">dialpad</i> 
+           	       </a> </li>
       
-      @else
-      <script type="text/javascript">
-        document.getElementById('side').setAttribute('data-spy', ' ');
-      </script>
-      <section class="page-section cta">
-        <div class="container" style="margin-top: 20px; font-family: 'Varela Round', sans-serif;">
-          <div class="row">
-            <div class="col-lg-9 mx-auto">
-              <div class="cta-inner text-center rounded">
-                <h2 class="section-heading mb-4">
-                  <span class="section-heading-upper"></span>
-                  <span class="section-heading-lower">Nothing to show yet!</span>
-                </h2><br>
-              </div>
-            </div>
+                   <li id="1">
+           	       <a href="{{ url('/viewbucket?id=1') }}" class="pmd-floating-action-btn btn  pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-light" data-title="Cloud Queue"> 
+           	      	<span class="pmd-floating-hidden" style="padding-right:10px">{{$buckets[1]}}</span> 
+           	      	<i class="material-icons" style = " font-size: 18px;">liquor</i> 
+           	       </a> </li>
+      
+                   <li id="2">
+           	       <a href="{{ url('/viewbucket?id=2') }}" class="pmd-floating-action-btn btn  pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-light" data-title="Cloud Queue"> 
+           	      	<span class="pmd-floating-hidden" style="padding-right:10px">{{$buckets[2]}}</span> 
+           	      	<i class="material-icons" style = " font-size: 18px;">add_road</i> 
+           	       </a> </li>
+      
+                   <li id="3">
+           	       <a href="{{ url('/viewbucket?id=3') }}" class="pmd-floating-action-btn btn pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-light" data-title="Cloud Queue"> 
+           	      	<span class="pmd-floating-hidden" style="padding-right:10px">{{$buckets[3]}}</span> 
+           	      	<i class="material-icons" style = " font-size: 18px;">hiking</i> 
+           	       </a> </li>
+      
+                   <li id="4">
+           	       <a href="{{ url('/viewbucket?id=4') }}" class="pmd-floating-action-btn btn  pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-light" data-title="Cloud Queue"> 
+           	      	<span class="pmd-floating-hidden" style="padding-right:10px">{{$buckets[4]}}</span> 
+           	      	<i class="material-icons" style = " font-size: 18px;">whatshot</i> 
+           	       </a> </li>
+      
+                   <li id="5">
+           	       <a href="{{ url('/viewbucket?id=5') }}" class="pmd-floating-action-btn btn  pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-light" data-title="Cloud Queue"> 
+           	      	<span class="pmd-floating-hidden" style="padding-right:10px">{{$buckets[5]}}</span> 
+           	      	<i class="material-icons" style = " font-size: 18px;">smoking_rooms</i> 
+           	       </a> </li>
+       
+                   <li id="6">
+           	       <a href="{{ url('/viewbucket?id=6') }}" class="pmd-floating-action-btn btn pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-light" data-title="Cloud Queue"> 
+           	      	<span class="pmd-floating-hidden" style="padding-right:10px">{{$buckets[6]}}</span> 
+           	      	<i class="material-icons" style = " font-size: 18px;">color_lens</i> 
+           	       </a> </li>
+      
+                   <li id="7">
+           	       <a href="{{ url('/viewbucket?id=7') }}" class="pmd-floating-action-btn btn  pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-light" data-title="Cloud Queue"> 
+           	      	<span class="pmd-floating-hidden" style="padding-right:10px">{{$buckets[7]}}</span> 
+           	      	<i class="material-icons" style = " font-size: 18px;">queue_music</i> 
+           	       </a> </li>
+      
+                   <li id="8">
+           	       <a href="{{ url('/viewbucket?id=8') }}" class="pmd-floating-action-btn btn  pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-light" data-title="Cloud Queue"> 
+           	      	<span class="pmd-floating-hidden" style="padding-right:10px">{{$buckets[8]}}</span> 
+           	      	<i class="material-icons" style = " font-size: 18px;">beach_access</i> 
+           	       </a> </li>
+      
+                   <li id="9">
+           	       <a href="{{ url('/viewbucket?id=9') }}" class="pmd-floating-action-btn btn  pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-light" data-title="Cloud Queue"> 
+           	      	<span class="pmd-floating-hidden" style="padding-right:10px">{{$buckets[9]}}</span> 
+           	      	<i class="material-icons" style = " font-size: 18px;">emoji_events</i> 
+           	       </a> </li>
+                   
+                    <li id="10">
+           	       <a href="{{ url('/viewbucket?id=10') }}" class="pmd-floating-action-btn btn pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-light" data-title="Cloud Queue"> 
+           	      	<span class="pmd-floating-hidden" style="padding-right:10px">{{$buckets[10]}}</span> 
+           	      	<i class="material-icons" style = " font-size: 18px;">auto_awesome</i> 
+           	       </a> </li>
+
+                </ul>
+              </aside>
+             </div>
+            </div><!--col-sm-3-->
+
+           </div>
           </div>
-        </div>
-      </section>
-      
-      @endif
-      
-</div>
-</div>
-</div>
-<button onclick="topFunction()" id="myBtn" title="Go to top"><i class = "fa fa-chevron-circle-up" style = "font-size : 28px"></i><br><br>Scroll to top!</button>   
-
-</section>
-</section>
+   </section>
+   </section>
 
 <!-- ==============================================
    Modal Section
@@ -350,11 +418,33 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    var instances = M.FloatingActionButton.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.fixed-action-btn').floatingActionButton();
+  });
+
+  var instance = M.FloatingActionButton.getInstance(elem);
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    var instances = M.FloatingActionButton.init(elems, {
+      direction: 'left'
+    });
+  });
+
 </script>
    <script>            
       $('#viewbucket').removeClass('p-2 nav-icon-lg dark-black');
       $('#viewbucket').addClass('p-2 nav-icon-lg mint-green');            
   </script>
+  
    <script>
     $('#Slim,#Slim2').slimScroll({
       height:"auto",
@@ -392,3 +482,4 @@ function topFunction() {
 <!-- @include('footer') -->
 </body>
 </html>
+@endsection
