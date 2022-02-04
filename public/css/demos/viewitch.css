@@ -441,6 +441,57 @@ body {
     position: fixed;
 }
 
+.pagination>li:first-child>a,
+.pagination>li:first-child>span {
+    margin-left: 0;
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: rgb(11 21 35);
+    color: hsl(240, 16%, 78%);
+    border-color: #272a3a;
+}
+
+.pagination>li:last-child>a,
+.pagination>li:last-child>span {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+    background-color: rgb(11 21 35);
+    color: hsl(240, 16%, 78%);
+    border-color: #272a3a;
+}
+
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    z-index: 5;
+    color: rgb(11 21 35);
+    cursor: default;
+    background-color: hsl(240, 16%, 78%);
+    border-color: #272a3a;
+    border-radius: 8px;
+}
+
+.pagination>li>a,
+.pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: hsl(240, 16%, 78%);
+    text-decoration: none;
+    background-color: rgb(11 21 35);
+    border: 1px solid #272a3a;
+    border-radius: 4px;
+}
+
 @media (max-width: 764px) {
     .rightnavbar {
         display: none;

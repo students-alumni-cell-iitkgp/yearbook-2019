@@ -265,7 +265,7 @@
                    <li class="" id="0">
                    <a href="{{ url('/viewbucket') }}" class="pmd-floating-action-btn btn pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-light" data-title="Add" href="javascript:void(0);"> 
            	      	<span class="pmd-floating-hidden" style="padding-right:10px">All Photos</span>
-           	      	<i class="material-icons pmd-sm">dialpad</i> 
+           	      	<i class="material-icons " style = " font-size: 18px;">dialpad</i> 
            	       </a> </li>
       
                    <li id="1">
