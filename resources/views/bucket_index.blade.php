@@ -25,10 +25,10 @@
   #modal1{
     overflow: hidden;
   }
-  #search{
+  /*#search{
     padding-left: 0px !important;
     padding-right: 10px;
-  }
+  } */
   .xdsoft_autocomplete{
     margin-left: -20px;
   }
@@ -88,6 +88,27 @@
   .section1{
         color:black;
   }
+
+  @media (min-width: 930px){
+.container {
+    width: 700px;
+}}
+  @media (min-width: 992px){
+.container {
+    width: 730px;
+}}
+
+
+  @media (min-width: 1230px){
+.container {
+    width: 970px;
+}}
+
+@media (min-width: 1400px){
+.container {
+    width: 1170px;
+}}
+
 </style>
 
 
@@ -103,7 +124,7 @@
   @section('main-content')
 
   <section class="page-section section1" style="font-family: Century gothic;">
-    <div class="container article" style="padding: 2vw;margin:1vw;">
+    <div class="container article" style="padding: 2vw;">
           <div class="cta-inner text-center rounded">
             <h2 class="section-heading mb-4">
               <span class="section-heading-upper"></span>
