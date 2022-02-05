@@ -67,10 +67,10 @@ class BucketController extends Controller
       }
         //to select 50 images and show them in 10 per page
       if($listid = request('id')){
-        $images = Bucket::where('list', $listid)->orderBy('finalcount','DESC')->take(50)->paginate(5);
+        $images = Bucket::where('list', $listid)->orderBy('finalcount','DESC')->take(50)->paginate(10);
       }
       else{
-        $images = Bucket::latest()->orderBy('finalcount','DESC')->take(50)->paginate(5);
+        $images = Bucket::latest()->orderBy('finalcount','DESC')->take(50)->paginate(10);
         $listid = 0;
       }
       $currentpage=$images->currentPage();
@@ -83,7 +83,9 @@ class BucketController extends Controller
      $comment_notification = Comment::where('roll', $roll)->where('seen', '1')->where('user_id', '!=', $id)
           ->latest()->get();
       $notifications = views::where('depmate',$roll)->where('read','1')->get();
-      $buckets = ['','TREAT','2.2','TREK','BONFIRE','HALL DAYS','HOLI','Salsa/Prom','Beach Party','Little Sisters','Trek','Local Train','2.2', 'Explore KGP', 'Movie at Library', 'Lit Hall Day Host', 'How it Started!'];
+    
+      $buckets = ['','Treat','2.2','Trek','Bonfire','Hall Days','Holi','Salsa/Prom','Beach Party','GC','Illumination','2.2', 'Explore KGP', 'Movie at Library', 'Lit Hall Day Host', 'How it Started!','NSS Camp'];
+     // $buckets = ['','TREAT','2.2','TREK','BONFIRE','HALL DAYS','HOLI','Salsa/Prom','Beach Party','Little Sisters','Trek','Local Train','2.2', 'Explore KGP', 'Movie at Library', 'Lit Hall Day Host', 'How it Started!'];
       return view('bucket_view',compact('comment_notification','images','user','notifications','currentpage','perpage','buckets', 'listid'));
     }
 
