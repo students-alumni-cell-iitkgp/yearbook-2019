@@ -399,10 +399,10 @@
     </div>
      </div>
 
-    </div>
-</div>
+    <!-- </div>
+</div> -->
 
-</div>
+<!-- </div> -->
      <div class="container" >
         <div class="row justify-content-center gallery mb-3 ">
         <!-- <div class="row justify-content-center gallery mb-3 "> -->
@@ -469,7 +469,8 @@
    </section><!--/ newsfeed -->
      
     </div><!--/ container -->
-   
+    </div>
+</div>
    </section><!--/ newsfeed -->
    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class = "fa fa-chevron-circle-up" style = "font-size : 28px"></i><br><br>Scroll to top!</button>   
 
