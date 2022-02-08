@@ -404,10 +404,10 @@
             </div>
             <div id="articles" class="tab-pane fade">
             <section id="timelinet" class="timelinet-outer">
-            <div class="containerArticle" id="content">
+            <div class="containerArticle" >
               <div class="row">
                 <div class="col s12 m12 l12">
-                  <ul class="timelinet">
+                  <ul class="timelinet" id="content">
                     @if(count($writeups)>0)
                     @foreach($writeups as $writeup)
                     <li class="event" data-date="{{$writeup->created_at->diffForHumans()}}">
@@ -428,9 +428,10 @@
                       <p style="padding: 2vw;text-align: left;" title="Click to edit!" data-value="{{csrf_token()}}" onblur="update({{ $writeup->id }})" id="{{ $writeup->id }}" contenteditable >{!!  nl2br($writeup->writeup)!!}</p>
                     </div> -->
                     @endforeach
+                      </ul>
                     @else
                     <section class="page-section cta">
-                      <div class="container"  style="margin-top: 20px; font-family: 'Varela Round', sans-serif;">
+                      <div class="container"  style="margin-top: 20px;margin-left:-60px font-family: 'Varela Round', sans-serif;">
                         <div class="row">
                           <div class="col-xl-9 mx-auto">
                             <div class="cta-inner text-center rounded">

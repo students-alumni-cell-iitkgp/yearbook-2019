@@ -304,13 +304,13 @@
    =============================================== --> 
    <section class="newsfeed">
    <div class="row justify-content-center links feedbox fw-bold">
-                <div class="col-md-2 col-4 p-2  active text-center btns tablinkss victoria-four animated-button" onclick="openPage('Gallery', this, 'hsl(219deg 30% 18%)')" id="defaultOpen"> 
+                <div class="col-md-2 col-4 p-2  active text-center btns tablinkss victoria-four animated-button" onclick="openPage('Gallery', this, 'white')" id="defaultOpen"> 
                     <!-- <button class=" text-light "  > -->
                         Gallery
                     <!-- </button> -->
 
                 </div>
-                <div class="col-md-2 col-4 me-4 p-2 text-center btnss tablinkss victoria-four animated-button " onclick="openPage('Articles', this, 'hsl(219deg 30% 18%)')" > 
+                <div class="col-md-2 col-4 me-4 p-2 text-center btnss tablinkss victoria-four animated-button " onclick="openPage('Articles', this, 'white')" > 
                     <!-- <button class="" > -->
                         Article
                     <!-- </button> -->
@@ -583,14 +583,14 @@ function openPage(pageName,elmnt,color) {
     }
     tablinks = document.getElementsByClassName("tablinkss");
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "#fff";
-        tablinks[i].style.color = "#000";
+        tablinks[i].style.backgroundColor = "hsl(219deg 30% 18%)";
+        tablinks[i].style.color = "#fff";
         
         // tablinks[i].style.transform = "scale(0.95)";
     }
     document.getElementById(pageName).style.display = "block";
     elmnt.style.backgroundColor = color;
-    elmnt.style.color = "#fff";
+    elmnt.style.color = "hsl(219deg 30% 18%)";
     // elmnt.style.transform = "scale(1)";
     
 

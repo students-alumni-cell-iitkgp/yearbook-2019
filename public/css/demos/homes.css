@@ -472,7 +472,7 @@ form hr{
         padding: 10px 0px;
     }
     select{
-        font-size: 1.25rem !important;
+        font-size: 1.15rem !important;
         padding: 5px;
 
         /* padding: 5px; */
@@ -496,9 +496,22 @@ form hr{
     .author-post h4 {
         font-size: x-large;
         color: #fff;
+        text-align: center
     }
     .box .kafe-btn-mint-small {
         font-family: 'Abhaya Libre', serif !important;
         font-size: 1.45rem;
+    }
+}
+
+@media screen and (min-width:401px) and (max-width:426px) {
+    .user-profile .post-content .author-post img{
+        margin-left: 12.5rem !important;
+    }
+}
+
+@media (max-width:400px) {
+    .user-profile .post-content .author-post img{
+        margin-left: 10rem !important;
     }
 }

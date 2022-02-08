@@ -1424,6 +1424,7 @@ a.navbar-brand:hover {
   width: 200px;
   height: 200px;
   border: 7px solid #fff;
+  object-fit: cover !important;
 }
 
 .details{

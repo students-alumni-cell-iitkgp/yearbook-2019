@@ -975,9 +975,6 @@ a.navbar-brand:hover {
 }
 
 @media (max-width: 480px){
-  .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
-    width: 300px !important;
-  }
 	.modal-dialog{
 	  width: 300px !important;	
 	}
