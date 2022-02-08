@@ -11,6 +11,10 @@
 		width : 100%;
 		z-index : 1;
 	}
+	.notificationModal{
+		position:absolute;
+		top:0px;
+	}
 </style>
 <header class="tr-header">
 	<nav class="navbar navbar-default">
@@ -78,7 +82,7 @@
 						<i class="fa fa-bell noti-icon"></i>
 						@endif
 						</a>
-					<div class="dropdown-menu dropdown-menu-right dropdown-lg">
+					<div class="dropdown-menu dropdown-menu-right dropdown-lg notificationModal">
 
 						<div class="dropdown-item noti-title">
 							<h6 class="m-0">
@@ -299,7 +303,7 @@
 						<i class="fa fa-bell noti-icon"></i>
 						@endif
 					</a>
-					<div class="dropdown-menu dropdown-menu-right dropdown-lg">
+					<div class="dropdown-menu dropdown-menu-right dropdown-lg notificationModal" style="position:absolute;top:0px;">
 
 						<div class="dropdown-item noti-title">
 							<h6 class="m-0">

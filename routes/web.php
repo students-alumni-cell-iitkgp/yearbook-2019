@@ -25,7 +25,7 @@ Auth::routes()
 	Route::get('/Testimonial_public', function () {
 		return view('auth.Testimonial_public');
 	});
-
+ Route::get('adminPage','adminPageController@index');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout'); //Just added to fix issue
 Route::get('/home', 'HomeController@index2');
 Route::get('/profile_index', 'profile@index');
@@ -33,6 +33,10 @@ Route::get('/profile_index/{roll}', 'profile@testimonials');
 Route::post('/search','HomeController@search');
 Route::get('/comment/{id}','ImageController@comment');
 Route::post('/getimage','ImageController@get');
+// Route::get('/adminPage',function (){
+// 	return view('adminPage');
+// });
+
 /*
 --------------------------------------------------------------------------
 FileController 

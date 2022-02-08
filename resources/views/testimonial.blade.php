@@ -54,7 +54,10 @@
 
     }
     .back{
-      background-image: url('../img/bg/bgbg.jpg');
+      /* background-image: url('../img/bg/bgbg.jpg'); */
+      padding:0 10%;
+      height: 250px;
+      background-color:rgb(32 42 60);
       background-attachment: fixed;
     }
     @media (min-width: 768px) { 
@@ -119,7 +122,7 @@
           <div class="col-sm-4 col-sm-offset-3">
 
             <div class="details-box row">
-             <div class="content-box">
+             <div class="content-box pt-5">
               <center>
                <h4>{{$data[0]['name']}} <i class="fa fa-check"></i></h4>
                @if(!empty($data[0]['view_self']))
@@ -138,7 +141,7 @@
  </section><!--/ profile -->
 
  <div class="col-lg-9 col-lg-offset-1">
-  <div class="row" style=" color: #fff;background-color: black;opacity: 0.6;padding: 10px;">
+  <div class="row" style=" color: #fff;opacity: 0.6;padding: 10px;">
     <div class="col-sm-3 col-xs-6" align="center">
       <h4 style="font-weight:bolder" >Roll No.</h4>
       <h5><?php echo $data[0]['rollno']; ?></h5>
@@ -429,15 +432,16 @@
                       <p style="padding: 2vw;text-align: left;" title="Click to edit!" data-value="{{csrf_token()}}" onblur="update({{ $writeup->id }})" id="{{ $writeup->id }}" contenteditable >{!!  nl2br($writeup->writeup)!!}</p>
                     </div> -->
                     @endforeach
+                        </ul>
                     @else
                     <section class="page-section cta">
-                      <div class="container"  style="margin-top: 20px; font-family: 'Varela Round', sans-serif;">
+                      <div class="container content2"  style="margin-top: 20px; font-family: 'Varela Round', sans-serif;">
                         <div class="row">
                           <div class="col-xl-9 mx-auto">
                             <div class="cta-inner text-center rounded">
                               <h2 class="section-heading mb-4">
                                 <span class="section-heading-upper"></span>
-                                <span class="section-heading-lower" style="color: #000">Nothing to show yet!</span>
+                                <span class="section-heading-lower" style="color: #ffff">Nothing to show yet!</span>
                               </h2><br>
                             </div>
                           </div>
