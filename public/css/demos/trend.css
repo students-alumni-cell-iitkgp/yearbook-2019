@@ -1,0 +1,65 @@
+
+.col-md-6 {
+    width: 9%;
+    margin: auto;
+    padding-left: 10rem;
+}
+.full{
+    padding-left: 32px !important; 
+    padding-right: 0px !important;
+    padding-bottom: 22px !important;
+}
+.cardbox-like{
+    width:32%;
+    padding-right:15px;
+}
+.colr
+{
+    color: black;
+}
+.comment-body{
+    width: 80%;
+}
+.cardbox{
+    width: 60vw;
+}
+.page-section{
+    padding-left: 10vw;
+}
+.vl {
+    border-left: 3px solid rgb(138, 139, 138);
+    height: 380px;
+    position: absolute;
+    left: 50%;
+    margin-left: 135px;
+    top: 0;
+  }
+.colr
+{
+    color: white !important;      
+}
+.bkg
+{
+    background-color: #02152f;
+    margin-right: 0px !important;
+    margin-left: 0px  !important;
+}
+@media screen and (max-width: 501px) {
+    .product-item-img{
+        width: 90% !important;
+    }
+    .cardbox-like{
+        width: 100%;
+        padding-left: 6vw;
+    }
+}
+
+@media screen and (max-width: 931px) {
+    .product-item-img{
+        width: 95% !important;
+    }
+    .cardbox-like{
+        width: 100%;
+        padding-left: 4vw;
+    }
+}
