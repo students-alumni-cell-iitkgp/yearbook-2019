@@ -11,6 +11,11 @@
 		width : 100%;
 		z-index : 1;
 	}
+	/* @media (max-width:500px) {
+	.notification-list a .hiddenName{
+			display:none !important;
+		}
+	} */
 </style>
 <header class="tr-header">
 	<nav class="navbar navbar-default">
@@ -290,7 +295,7 @@
 						<i class="fa fa-bell noti-icon"></i>
 						@endif
 					</a>
-					<div class="dropdown-menu dropdown-menu-right dropdown-lg">
+					<div class="dropdown-menu dropdown-menu-right dropdown-lg notificationModal" style="position:absolute;top:0px">
 
 						<div class="dropdown-item noti-title">
 							<h6 class="m-0">
@@ -361,7 +366,7 @@
 			</ul>
 			<ul class="nav navbar-nav">
 				<li class="dropdown notification-list">
-					<a class="account-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">{{Auth::user()->name}}
+					<a class="account-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false"> <span class="hiddenName"> {{Auth::user()->name}} </span> 
 						@if(!empty(Auth::user()->pro_pic))
 						<img src="{{Auth::user()->thumbnail}}" alt="" class="account-profile" alt="">
 						@else
@@ -370,7 +375,7 @@
 						
 						<span>▼</span>
 					</a>
-					<div class="dropdown-menu dropdown-menu-right dropdown-lg" style="width: 100px;  left:0px;">     
+					<div class="dropdown-menu dropdown-menu-right dropdown-lg" style=" position:absolute; top:0px;width: 100px;  left:0px;">     
 						<div style="height: 35px;">
 							<a class="dropdown-item " href="{{ url('/profile_index') }}"><p style="font-family: 'Abhaya Libre', serif;">Profile</p> </a>
 						</div>
