@@ -124,6 +124,7 @@ body {
   overflow: auto;
   flex-shrink: 0;
 }
+
 @media screen and (max-width: 930px) {
   .left-side.active {
     z-index: 4;
@@ -222,6 +223,10 @@ body {
   flex-direction: column;
   font-size: 15px;
   white-space: nowrap;
+}
+.side-menu a{
+  padding-bottom: 10px;
+  border-bottom: 0.1px solid #8080802e
 }
 .side-menu svg {
   margin-right: 16px;
@@ -406,7 +411,6 @@ body {
 }
 
 .profile-name {
-  margin-left: 24px;
   margin-bottom: 24px;
   font-size: 22px;
   color: #fff;

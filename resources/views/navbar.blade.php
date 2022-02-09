@@ -238,16 +238,11 @@
 			Home
 		  </a>
 		  <a href="{{ url('/trending') }}">
-			<svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-			  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-			  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-			</svg>
+			<i class="fas fa-fire"></i>&nbsp;&nbsp;&nbsp;&nbsp;
 			Trending
 		  </a>
 		  <a href="{{ url('/bucket') }}">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-			  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-			  <circle cx="12" cy="10" r="3" /></svg>
+			<i class="fas fa-clipboard-list"></i>&nbsp;&nbsp;&nbsp;&nbsp;
 			Fill Itch List
 		  </a>
 		  <a href="{{ url('/viewbucket') }}">
@@ -258,11 +253,7 @@
 			View Itch List
 		  </a>
 		  <a class="test" href="{{ url('/testimonial') }}" data-toggle="modal" data-target="#modal_test">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-			  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-			  <circle cx="8.5" cy="8.5" r="1.5" />
-			  <path d="M21 15l-5-5L5 21" />
-			</svg>
+			<i class="far fa-comments"></i>&nbsp;&nbsp;
 			Testimonial
 		  </a>
 		</div>
