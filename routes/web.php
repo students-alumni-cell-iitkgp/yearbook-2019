@@ -33,6 +33,7 @@ Route::get('/profile_index/{roll}', 'profile@testimonials');
 Route::post('/search','HomeController@search');
 Route::get('/comment/{id}','ImageController@comment');
 Route::post('/getimage','ImageController@get');
+Route::get('adminPage','adminPageController@index');
 /*
 --------------------------------------------------------------------------
 FileController 
