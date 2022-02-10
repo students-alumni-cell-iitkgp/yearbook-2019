@@ -375,7 +375,7 @@ body {
 }
 
 .section1:hover {
-    border-top: 4px solid #26A69A;
+    border-top: 4px solid rgb(76, 79, 100);
     border-radius: 15px;
     height: 590px;
     width: 610px;
