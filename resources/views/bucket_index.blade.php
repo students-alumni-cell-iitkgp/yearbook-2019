@@ -48,13 +48,15 @@
     background-color: #26a69a;
   }
   .article{
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
+    color:#9c9cab;
     border-radius: 10px;
   }
   .back
   {
-    background-image: url('img/bg/bgbg.jpg') !important;
-    background-attachment: fixed;
+    /*background-image: url('img/bg/bgbg.jpg') !important;
+    background-attachment: fixed;*/
+    overflow-y: scroll;
   }
   #search{
     margin-left: -20  px;
@@ -70,6 +72,22 @@
     position: relative;
     left:370px;
   }
+  .section1{
+   
+      width: 100%;
+    height: 100%;
+    overflow: scroll;
+     
+    
+  }
+  .page-section{
+    
+    margin-bottom:0;
+  }
+
+  .section1{
+        color:black;
+  }
 </style>
 
 
@@ -78,14 +96,14 @@
 
 <body class="back">
   <!-- Navigation--> 
-  @include('navbar')
+  @extends('navbar')
 
+  
 
+  @section('main-content')
 
-  <section class="page-section" style="font-family: Century gothic;">
-    <div class="container article" style="padding: 2vw">
-      <div class="row">
-        <div class="col-xl-12 mx-auto">
+  <section class="page-section section1" style="font-family: Century gothic;">
+    <div class="container article" style="padding: 2vw;margin:1vw;">
           <div class="cta-inner text-center rounded">
             <h2 class="section-heading mb-4">
               <span class="section-heading-upper"></span>
@@ -93,14 +111,9 @@
             </h2>
             <p class="mb-0">Here is a list of things which you can do before graduating. Complete the tasks and upload the images and we will make sure they become a part of your yearbook.</p>
             <br>
-
-
-
             <!-- that’s all folks! -->
           </div>
-        </div>
-      </div>
-
+        
     </div>
 
     <br><br><br>
@@ -206,6 +219,16 @@
     alwaysVisible: true,
     size:"8px",
   });   
+
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
 </script>
 
 <style>
@@ -219,7 +242,7 @@
   }
 </style>
 
-<footer style="background-color:black; color:white; text-align:center; padding:25px; position:relative; bottom:0px; width:100%">&copy; Students' Alumni Cell, IIT Kharagpur
+<!--<footer style="background-color:black; color:white; text-align:center; padding:25px; position:relative; bottom:0px; width:100%">&copy; Students' Alumni Cell, IIT Kharagpur
   <ul class="soc">
 
     <li><a class="btn btn-social-icon btn-facebook"  href="//www.facebook.com/iitkgp.alumnicell?fref=ts&ref=br_tf" target="_blank">
@@ -236,8 +259,9 @@
         <i class="fa fa-instagram" aria-hidden="true"></i>
     </a></li>
 </ul>
-</footer>
+</footer>-->
 </body>
 </html>
+@endsection
 
 <!-- this is the markup. you can change the details (your own name, your own avatar etc.) but don’t change the basic structure! -->

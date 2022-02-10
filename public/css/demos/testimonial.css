@@ -3,6 +3,13 @@
     overflow: hidden;
     position: relative;
   }
+  .nav-link:active{
+    background:white !important;
+    color: white !important;
+  }
+  .nav-link:hover{
+    background: white !important;
+  }
   .main-timeline:before{
     content: "";
     width: 3px;
@@ -208,6 +215,11 @@
       left: 50%;
       right: auto;
       transform: translateX(-50%);
+    }
+  }
+  @media (min-width: 768px){
+    .container{
+      width: 100%;
     }
   }
   @media only screen and (max-width: 480px){
