@@ -19,6 +19,7 @@
     <!-- ==============================================
     Favicons
     =============================================== --> 
+    @extends('navbar')
       <link rel="icon" href="{{ asset('img/logo.jpg') }}">
       <link rel="apple-touch-icon" href="{{ asset('img/favicons/apple-touch-icon.png') }}">
       <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('img/favicons/apple-touch-icon-72x72.png') }}">
@@ -30,10 +31,31 @@
     =============================================== -->
         <link type="text/css" href="{{ asset('css/demos/photo.css') }}" rel="stylesheet" />
         <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
-  
-
+        <link type="text/css" href="{{ asset('css/demos/trend.css') }}" rel="stylesheet" />
+        
         <style type="text/css">
         
+        :root{--primary-color-dark-blue-1: hsl(217, 28%, 15%);
+--primary-color-dark-blue-2: hsl(218, 28%, 13%);
+--primary-color-dark-blue-3: hsl(216, 53%, 9%);
+--primary-color-dark-blue-4: hsl(219, 30%, 18%);}
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Nunito&family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
+body{
+    /* background-color: #394262 !important; */
+    background-color: var(--primary-color-dark-blue-2) !important;
+    /* font-family: 'Baloo Bhaijaan 2', cursive !important; */
+    
+    /* font-family: 'Source Sans Pro', sans-serif !important; */
+    /* font-family: 'Nunito', sans-serif !important; */
+    /* font-family: 'Neonderthaw', cursive !important; */
+    /* font-family: 'Karla', sans-serif !important; */
+    /* font-family: 'Balsamiq Sans', cursive !important; */
+    font-family: 'IBM Plex Serif', serif;
+}
         #myBtn {
           display: none;
           position: fixed;
@@ -53,7 +75,7 @@
           background-color: #555;
         }
         .back{
-          background-image: url('img/bg/bgbg.jpg');
+          /* background-image: url('img/bg/bgbg.jpg'); */
           background-attachment: fixed;
         }
 
@@ -109,7 +131,7 @@
      <!-- ==============================================
      Navigation Section
      =============================================== -->  
-    @include('navbar')  
+ 
   
    <!-- ==============================================
    Navbar Second Section
@@ -119,116 +141,12 @@
    <!-- ==============================================
    News Feed Section
    =============================================== --> 
+   @section('main-content')
 
-  <div class="row back" >
-
-    <div class="col-md-3 back" style="padding-top:  2.7%;">
-      <section style="margin-left: 5%">
-      <div class="panel panel-primary" style = "border-width : 0px">
-        <div class="panel-heading" style = "background-color : #0FC19E; border-width : 0px">
-            <h3 class="panel-title"><span class="fas fa-list"></span> ITCH LISTS</h3>
-        </div>
-        <div class="panel-body" >
-        
-
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        <li data-target="#myCarousel" data-slide-to="4"></li>
-        <li data-target="#myCarousel" data-slide-to="5"></li>
-        <li data-target="#myCarousel" data-slide-to="6"></li>
-      </ol>
-
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner"  role="listbox">
-
-        <div class="item active">
-          <div class="image">
-            <img src="bon.jpeg" style = "height : 50vh; opacity : 0.5">
-          </div>
-          <div class="carousel-caption" style = "margin-bottom : 12vh; color : black">
-            <h3>Bonfire</h3><br>
-            <p>Jolly Bonfire at Beach</p>
-          </div>
-        </div>
-
-        <div class="item">
-        <div class="image">
-          <img src="ls.webp" style = "height : 50vh; opacity : 0.5">
-          </div>
-          <div class="carousel-caption" style = "margin-bottom : 8vh; color : black">
-            <h3>Little Sisters</h3><br>
-            <p>“Delicacies” at Little Sisters</p>
-          </div>
-        </div>
-      
-        <div class="item">
-        <div class="image"><img src="graf.jpg" style = "height : 50vh; opacity : 0.5"></div>
-          <div class="carousel-caption" style = "margin-bottom : 8vh; color : black">
-            <h3>Graffiti</h3><br>
-            <p>Sketched pure art on the walls</p>
-          </div>
-        </div>
-
-        <div class="item">
-        <div class="image"><img src="50.jpg" style = "height : 50vh; opacity : 0.5"></div>
-          <div class="carousel-caption" style = "margin-bottom : 8vh; color : black">
-            <h3>Explore KGP</h3><br>
-            <p>Ventured into unknown paths.</p>
-          </div>
-        </div>
-
-        <div class="item">
-        <div class="image"><img src="two.webp" style = "height : 50vh; opacity : 0.5"></div>
-          <div class="carousel-caption" style = "margin-bottom : 8vh; color : black">
-            <h3>2.2</h3><br>
-            <p>Took long walks at night</p>
-          </div>
-        </div>
-
-        <div class="item">
-        <div class="image"><img src="lbs.jpg" style = "height : 50vh; opacity : 0.5"></div>
-          <div class="carousel-caption" style = "margin-bottom : 4vh; color : black">
-            <h3>How it all started?</h3><br>
-            <p>Memories from fresher year</p>
-          </div>
-        </div>
-
-
-        <div class="item">
-        <div class="image"><img src="hd.jpg" style = "height : 50vh; opacity : 0.5"></div>
-          <div class="carousel-caption" style = "margin-bottom : 8vh; color : black">
-            <h3>Hall Day</h3><br>
-            <p>Hosted the noisiest and the best parties</p>
-          </div>
-        </div>
-    
-      </div>
-      
-      <!-- Left and right controls -->
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      </a>
-    </div>
+  <div class="row back"  style="overflow-y:auto;" >
 
     
-        </div>
-        <div class="panel-footer text-center">
-        <a href = "{{ url('/bucket') }}"> <button type="button" class="btn btn-primary btn-block btn-sm" style = "background-color : #0FC19E; border-width : 0px">
-                    Finish the List!
-                </button> </a>
-                <a href="{{ url('/viewbucket') }}" class="small" style = "color : black">View other buckets</a>
-            </div>  
-      </div>
-     </section>
-    </div>
-    
-    <div class="col-md-6 back" style="padding-top: 1%; " >
+    <div class="back">
       @if(count($images)>0)
       @php
       $count= 0;
@@ -262,20 +180,20 @@
                       <div>
                           <div >
                             <div class="cardbox" id="img{{$image['id']}}">
-                              <div class="cardbox-heading">
+                              <div class="cardbox-heading bkg">
                                 <!-- START dropdown-->
                                 @if($image['rollno'] == Auth::user()->rollno)
                                 <div class="dropdown pull-right">
-                                  <button class="btn btn-secondary btn-flat btn-flat-icon" title="Click to delete!" type="button" data-toggle="dropdown" aria-expanded="false">
+                                  <!-- <button class="btn btn-secondary btn-flat btn-flat-icon" title="Click to delete!" type="button" data-toggle="dropdown" aria-expanded="false">
                                     <em class="fa fa-ellipsis-h"></em>
-                                  </button>
-                                  <div class="dropdown-menu dropdown-scale dropdown-menu-right" role="menu" style="position: absolute; transform: translate3d(-136px, 28px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                  </button> -->
+                                  <!-- <div class="dropdown-menu dropdown-scale dropdown-menu-right" role="menu" style="position: absolute; transform: translate3d(-136px, 28px, 0px); top: 0px; left: 0px; will-change: transform;">
                                     <a class="dropdown-item delete" href="#" id="{{$image['id']}}" data-token="{{csrf_token()}}">Delete</a>
-                                  </div>
+                                  </div> -->
                                 </div><!--/ dropdown -->
                                 @endif
                                 <!-- END dropdown-->
-                                <div class="media m-0">
+                                <div class="media colr m-0">
                                   <div class="d-flex mr-3">
                                     <a href="{{ url('/profile_index/'.$image['rollno']) }}">
                                       @if(!empty($name[0]['pro_pic']))
@@ -287,19 +205,21 @@
                                   </div>
                                   <div class="media-body">
                                     <a href="{{ url('/profile_index/'.$image['rollno']) }}">
-                                      <p class="m-0">{{$name[0]['name']}}</p>
+                                      <p class="m-0 colr">{{$name[0]['name']}}</p>
                                     </a>
                                     <small><span>{{$image['created_at']->diffForHumans() }}</span></small>
                                   </div>
                                 </div><!--/ media -->
                               </div><!--/ cardbox-heading -->
           
-                              <div class="cardbox-item">
-                                <span class="section-heading-upper" style="font-size : 15px; margin-left : 1vw">&nbsp {{$image['caption']}}</span><br>
-                                <br>
+                              <div class="row cardbox-item bkg">
+                                <div class="col-md-8 full">
                                 <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0 " src="{{$image['thumbnail']}}" data-src="{{$image['url']}}" id="{{$image['id']}}"  data-toggle="tooltip" data-placement="top" title="Click the image!" style="cursor: pointer; width: 100%;height: 380px;">
-                              </div><!--/ cardbox-item -->
-                              <div class="cardbox-like">
+                                </div>
+                                <div class="vl"></div>
+                                <div class="col-md-4  cardbox-like"> 
+                                <span class="section-heading-upper colr" style="font-size : 15px; font-colo margin-left : 1vw">&nbsp {{$image['caption']}}</span><br>
+                              
                                 <ul style="top: 6px; position: relative;">
                                   <li>
                                     <div id="+{{$image['id']}}+" class="like"></div>  <!-- Like Button -->
@@ -313,27 +233,27 @@
                                 </ul>
 
 
-                                <ul style="top: 6px; position: relative;list-style-type: none; margin-left : -15vw">
-                                  <li>
+                                <ul style="top: 6px; position: relative;list-style-type: none">
+                                  <!-- <li>
                                     @if(!empty(Auth::user()->pro_pic))
                                     <img class="img-fluid img-circle" src="{{Auth::user()->pro_pic}}" style="width: 30px; height: 30px;margin-top:-40px;" alt="Image">
                                     @else
                                     <img class="img-fluid img-circle" src="{{ asset('index.png') }}" style="width: 25px; height: 25px;margin-top:-40px;" alt="Image">  
                                     @endif
-                                  </li>
-                                  <li style=";">
+                                  </li> -->
+                                  <li style="width: 120%;">
                                     <div class="comment-body">
                                       <form class="form" id="form-comment" action="{{ url('/comment') }}" method="post">
                                         {{csrf_field()}}
-                                        <ul>
-                                          <li >
+                                        <!-- <ul>
+                                          <li > -->
                                               <input id="comment-token" type="hidden" name="_token" value="{{ csrf_token() }}" style="padding-left:20px;padding-right:20px">
-                                              <textarea name="comment" id="textarea" style = "width : 200%" class="form-control input-sm" rows="1" type="text" placeholder="Write your comment..." required></textarea>
-                                          </li>
-                                          <li> 
-                                              <button class="btn" id="submit" style="height : 60%; margin-right : -30vw; margin-top : -5vh">Comment</button>
-                                          </li>
-                                        </ul>  
+                                              <textarea name="comment" id="textarea" class="form-control input-sm" rows="1" type="text" placeholder="Write your comment..." required></textarea>
+                                          <!-- </li>
+                                          <li>  -->
+                                              <button class="btn" id="submit" style="height : 60%; margin-right : 23vh; margin-top : 3vh">Comment</button>
+                                          <!-- </li>
+                                        </ul>   -->
                                       </form>
                                     </div>
                                   </li>
@@ -359,8 +279,10 @@
                                   });
                                 </script>
           
-                              </div><!--/ cardbox-like -->        
-                            </div><!--/ cardbox -->
+                              </div>
+                              </div><!--/ cardbox-item -->
+                                    
+                            </div>
                           </div>
                         </div>
                 
@@ -392,7 +314,7 @@
           </div>   
     </div>
 
-    @include('polls_sidebar');
+    @endsection
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class = "fa fa-chevron-circle-up" style = "font-size : 28px"></i><br><br>Scroll to top!</button>   
   </div>       
    <!-- ==============================================
@@ -458,7 +380,7 @@
 
   </div>
 </div>
-   
+
      <!-- ==============================================
    Scripts
    =============================================== -->
@@ -663,5 +585,6 @@ function topFunction() {
 
     
   </script>
+  
   </body>
 </html>
