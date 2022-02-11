@@ -19,17 +19,35 @@
 
   <link rel="stylesheet" href="{{ asset('css/style1.css') }}">
 
+  <style>
+    .box{
+      background: #373e57e3;
+      color: white;
+    }
+    .status-share {
+      background-color: #1b86f9;
+      border: none;
+      color: #fff;
+      border-radius: 4px;
+      padding: 10px 20px;
+      margin-left: auto;
+      box-shadow: 0 0 20px #1b86f9;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
+
 
 </head>
 
 <body>
 
-  <div class="container-fluid">
+  <div class="container-fluid" >
 
 
 
 
-    <h1>
+    <h1 class="box">
       <small>
         <h3 class="center main-title animated zoomIn">
           <div class="clock-wrap">
@@ -55,22 +73,22 @@
                    
                     <div class="input-field col s12 l6 m12 " >                   
                         <input name="rollno" id="rollno" autofocus placeholder="Roll Number" type="text" style="margin-top: 5px;" required>
-                        <label for="rollno"><h5 style="font-size: 140%;  color: #004d33;">Roll Number (16THXXXXX)</h5></label>
+                        <label for="rollno"><h5 style="font-size: 140%; color:white">Roll Number (16THXXXXX)</h5></label>
                     </div>
                     <div class="input-field col s12 l6 m12 ">                   
                         <input name="password" id="dob" placeholder="Date of Birth" pattern="\d{1,2}-\d{1,2}-\d{4}" type="text" style="margin-top: 5px;" required>
-                        <label for="dob"><h5 style="font-size: 140%; color: #004d33;">Date of Birth (dd-mm-yyyy)</h5></label>
+                        <label for="dob"><h5 style="font-size: 140%;color:white">Date of Birth (dd-mm-yyyy)</h5></label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col s12 l4 m12 offset-l4">
-                        <button type="submit" id="submit" name="submit" class="waves-effect waves-light btn" style="font-size: 15px;" required >Submit</button>
+                        <button type="submit" id="submit" name="submit" class="status-share" style="font-size: 15px;" required >Submit</button>
                     </div>
                 </div>
             </form> 
 
         <!-- <p class=" center sub-title main-title" ><a href="{{ url('/Testimonial_public') }}"> Write Testimonials<a><i class="material-icons">error_outline</i><span class="tooltip">If you are not graduating this year, but want to write about your friends who are graduating, you can click on this link.</span></a></p> -->
-        <p class=" center sub-title main-title">Contact us at:<br> <a href="mailto:Yearbookiitkgp2021@gmail.com"> Yearbookiitkgp2021@gmail.com<a><i class="material-icons">error_outline</i><span class="tooltip">If you are not graduating this year, but want to write about your friends who are graduating, send us the testimonials via mail at Yearbookiitkgp2021@gmail.com</span></a></p>
+        <p class=" center sub-title main-title" style="color: white">Contact us at:<br> <a style="color: white" href="mailto:Yearbookiitkgp2021@gmail.com"> Yearbookiitkgp2021@gmail.com<a><i style="color: white" class="material-icons">error_outline</i><span class="tooltip">If you are not graduating this year, but want to write about your friends who are graduating, send us the testimonials via mail at Yearbookiitkgp2021@gmail.com</span></a></p>
 
       </small></h1>
   </div>

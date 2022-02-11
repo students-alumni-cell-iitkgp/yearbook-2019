@@ -395,6 +395,8 @@
 	  @yield('main-content')
 	</div>
   </div>
+</div>
+  @include('footer')
   
 
 <script>
