@@ -157,10 +157,10 @@
         <div class="post-content text-left">
            <div class="author-post ">
              <div class="row justify-content-center  justify-content-md-start">
-               <div class="col-lg-4 col-md-5 ms-md-5">
+               <div class="col-lg-3 col-md-5 ms-md-5">
                @if(!empty(Auth::user()->pro_pic))
                   <span data-toggle="modal" data-target="#modal2" data-step="1" data-intro="<center> Upload your profile picture and write a caption here </center> ">
-                  <img class="img-fluid img-circle imghover ms-md-5" style="border-width: 2px;cursor: pointer" src="{{Auth::user()->pro_pic}}" alt="Image" data-toggle="tooltip" title="Upload Profile Picture and Caption"  >
+                  <img class="img-fluid img-circle imghover ms-md-3" style="border-width: 2px;cursor: pointer" src="{{Auth::user()->pro_pic}}" alt="Image" data-toggle="tooltip" title="Upload Profile Picture and Caption"  >
                   </span>
                   
                   @else
@@ -169,7 +169,7 @@
                   </span>  
                   
                   @endif
-                  <h4 class="mx-5 my-3 h1">{{Auth::user()->name}}  </h4>
+                  <h4 style="margin-left:3rem;" class=" my-3 h1">{{Auth::user()->name}}  </h4>
                </div>
                <div class="col-lg-5 col-md-6 align-self-center caption">
                @if(!empty(Auth::user()->view_self))

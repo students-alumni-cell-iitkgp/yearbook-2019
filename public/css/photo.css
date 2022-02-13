@@ -329,8 +329,7 @@ a.navbar-brand:hover {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px !important;
 }
-.notification-list a.notify-all:hover{
-}
+
 
 
 .nav-user {
@@ -509,8 +508,7 @@ a.navbar-brand:hover {
   box-shadow: 0 -5px 25px 0 rgba(123, 123, 123, 0.15);
   color: #90a4ae;
 }
-.nav-sec a:hover{
-}
+
 
 .fh {
   height: 200% !important;
@@ -619,8 +617,7 @@ a.navbar-brand:hover {
   position: relative;
   left: 13px !important;  
 }
-.cardbox .pull-right a:hover{
-}
+
 .cardbox .pull-right a.dropdown-item {
   display: block;
   width: 100%;
@@ -679,8 +676,7 @@ a.navbar-brand:hover {
     position: relative;
     display: block;
 }
-.cardbox .cardbox-item img{
-}
+
 .img-responsive{
     display: block;
     max-width: 100%;
@@ -963,7 +959,7 @@ a.navbar-brand:hover {
 
 @media (max-width: 480px){
 	.modal-dialog{
-	  width: 300px !important;	
+	  width: 100% !important;	
 	}
 	.img-poster{
 	  padding-top: 5px;	
@@ -1454,7 +1450,7 @@ a.navbar-brand:hover {
 
 @media (max-width: 768px){
 	.details .col-lg-3{
-	  float: left !important
+	  float: left !important;
       margin-bottom: 20px;	  
 	}
 }
