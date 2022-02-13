@@ -19,7 +19,7 @@
   </aside>
   <br>
   @else
-  <aside class="profile-card" style="background: url(https://s-media-cache-ak0.pinimg.com/736x/3a/1f/02/3a1f02c10700daa80655a302c5a27acf.jpg);">
+  <aside class="profile-card">
     <header>
       <h1>TREAT</h1>
       <h2>Its all about foodie.</h2><br>
@@ -57,7 +57,7 @@
     </div>
   </aside><br>
   @else
-  <aside class="profile-card" style="background: url(https://s-media-cache-ak0.pinimg.com/736x/3a/1f/02/3a1f02c10700daa80655a302c5a27acf.jpg);">
+  <aside class="profile-card">
     <header>
       <h1>2.2</h1>
       <h2>Happiness is a complete</h2><br>
@@ -95,7 +95,7 @@
     </div>
   </aside><br>
   @else
-  <aside class="profile-card" style="background: url(https://s-media-cache-ak0.pinimg.com/736x/3a/1f/02/3a1f02c10700daa80655a302c5a27acf.jpg);">
+  <aside class="profile-card">
     <header>
       <h1>TREK</h1>
       <h2>Measuring the miles.</h2>

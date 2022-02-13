@@ -239,7 +239,13 @@
                <script type="text/javascript">
                  document.getElementById('side').setAttribute('data-spy', ' ');
                </script>
-               <section class="page-section cta">
+
+              <div class="text-center rounded article" align = "center" style = "color: #9c9cab;">
+                <h2 class="section-heading mb-4">
+                  <span class="section-heading-lower">Nothing to show yet!</span>
+                </h2>
+              </div>
+              <!-- <section class="page-section cta">
                  <div class="container" style="margin-top: 20px; font-family: 'Varela Round', sans-serif;">
                    <div class="row">
                      <div class="col-lg-9 mx-auto">
@@ -252,7 +258,7 @@
                      </div>
                    </div>
                  </div>
-               </section>
+               </section>-->
                
               @endif 
           </div><!--col-sm-9-->

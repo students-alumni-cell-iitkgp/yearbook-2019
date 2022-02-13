@@ -10,7 +10,7 @@
       <h2>A story from</h2><br><h2>gratifying the eyes to</h2><br><h2>illuminating the soul.</h2>
     </header>
     <div class="profile-bio" style="text-align: center;">
-      <form action="{{ url('/bucketpost/11')}}" method="post" enctype="multipart/form-data">
+      <form action="{{ url('/bucketpost/10')}}" method="post" enctype="multipart/form-data">
         {{csrf_field()}}
         <input type="file" required="required" name="fileToUpload" >
         <br><br>
@@ -19,13 +19,13 @@
     </div>
   </aside><br>
   @else
-  <aside class="profile-card" style="background: url(https://s-media-cache-ak0.pinimg.com/736x/3a/1f/02/3a1f02c10700daa80655a302c5a27acf.jpg);">
+  <aside class="profile-card">
     <header>
       <h1>Illumination</h1>
       <h2>A story from</h2><br><h2>gratifying the eyes to</h2><br><h2>illuminating the soul.</h2>
     </header>
     <div class="profile-bio" style="text-align: center;">
-      <form action="{{ url('/bucketpost/11')}}" method="post" enctype="multipart/form-data">
+      <form action="{{ url('/bucketpost/10')}}" method="post" enctype="multipart/form-data">
         {{csrf_field()}}
         <input type="file" required="required" name="fileToUpload" >
         <br><br>

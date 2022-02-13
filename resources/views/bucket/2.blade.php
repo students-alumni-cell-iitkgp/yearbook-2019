@@ -19,7 +19,7 @@
     </div>
   </aside><br>
   @else
-  <aside class="profile-card" style="background: url(https://s-media-cache-ak0.pinimg.com/736x/3a/1f/02/3a1f02c10700daa80655a302c5a27acf.jpg);">
+  <aside class="profile-card" >
     <header>
     <h1>BONFIRE</h1>
       <h2>When the nights turn</h2><br> 
@@ -58,7 +58,7 @@
     </div>
   </aside><br>
   @else
-  <aside class="profile-card" style="background: url(https://s-media-cache-ak0.pinimg.com/736x/3a/1f/02/3a1f02c10700daa80655a302c5a27acf.jpg);">
+  <aside class="profile-card">
     <header>
     <h1>HALL DAYS</h1>
       <h2>when we spend the days </h2><br> 
@@ -97,7 +97,7 @@
     </div>
   </aside><br>
   @else
-  <aside class="profile-card" style="background: url(https://s-media-cache-ak0.pinimg.com/736x/3a/1f/02/3a1f02c10700daa80655a302c5a27acf.jpg);">
+  <aside class="profile-card">
     <header>
       <h1>HOLI</h1>
       <h2>colours make u look</h2><br> 
