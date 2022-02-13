@@ -54,7 +54,10 @@
 
     }
     .back{
-      background-image: url('../img/bg/bgbg.jpg');
+      /* background-image: url('../img/bg/bgbg.jpg'); */
+      padding:0 10%;
+      height: 250px;
+      background-color:rgb(32 42 60);
       background-attachment: fixed;
     }
     @media (min-width: 768px) { 

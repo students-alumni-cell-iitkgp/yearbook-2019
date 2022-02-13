@@ -11,18 +11,11 @@
 		width : 100%;
 		z-index : 1;
 	}
-	/* @media (max-width:500px) {
-	.notification-list a .hiddenName{
-			display:none !important;
-		}
-	} */
-</style>
 <header class="tr-header">
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header" style='height:90px;'>
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -83,7 +76,7 @@
 						<i class="fa fa-bell noti-icon"></i>
 						@endif
 						</a>
-					<div class="dropdown-menu dropdown-menu-right dropdown-lg">
+					<div class="dropdown-menu dropdown-menu-right dropdown-lg notificationModal">
 
 						<div class="dropdown-item noti-title">
 							<h6 class="m-0">

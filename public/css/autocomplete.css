@@ -14,7 +14,10 @@ text-indent: 0px;
 text-shadow: none;
 text-align: start;
 }
-
+.notificationModal{
+  position: absolute;
+  top:0px;
+}
 .xdsoft_autocomplete .xdsoft_input{
 	position:relative;
 	z-index:2;
