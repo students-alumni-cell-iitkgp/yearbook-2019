@@ -20,7 +20,7 @@
     </div>
   </aside><br>
   @else
-  <aside class="profile-card" style="background: url(https://s-media-cache-ak0.pinimg.com/736x/3a/1f/02/3a1f02c10700daa80655a302c5a27acf.jpg);">
+  <aside class="profile-card">
     <header>
       <h1>Salsa/Prom</h1>
       <h2>Roses are red, violets are </h2><br> 
@@ -59,7 +59,7 @@
     </div>
   </aside><br>
   @else
-  <aside class="profile-card" style="background: url(https://s-media-cache-ak0.pinimg.com/736x/3a/1f/02/3a1f02c10700daa80655a302c5a27acf.jpg);">
+  <aside class="profile-card" >
     <header>
       <h1>Beach Party</h1>
       <h2>Glide on Wind,</h2><br><h2> Flow with Tides.</h2>
@@ -96,7 +96,7 @@
     </div>
   </aside><br>
   @else
-  <aside class="profile-card" style="background: url(https://s-media-cache-ak0.pinimg.com/736x/3a/1f/02/3a1f02c10700daa80655a302c5a27acf.jpg);">
+  <aside class="profile-card">
     <header>
       <h1>NSS Camps</h1>
       <h2>Which started with a </h2><br><h2>compulsion but ended up</h2><br><h2>multilying our friends.</h2>

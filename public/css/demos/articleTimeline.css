@@ -27,6 +27,11 @@ TimeLinet CSS
   margin-left: 0px;
   text-align: center;
 }
+.content2 {
+
+  margin-left: -150px !important;
+
+}
 
 section.timelinet-outer {
   width: 80%;
@@ -40,7 +45,8 @@ h1.header {
 /* Timelinet */
 
 .timelinet {
-  width: 105%;
+  width: 65vw;
+  margin-left: 60px;
   border-left: 8px solid #a9d0f0;
   border-bottom-right-radius: 2px;
   border-top-right-radius: 2px;
@@ -64,6 +70,7 @@ h1.header {
 }
 
 .timelinet .event {
+  height: auto;
   border-bottom: 1px solid rgba(175, 174, 174, 0.2);
   padding-bottom: 15px;
   margin-bottom: 20px;
