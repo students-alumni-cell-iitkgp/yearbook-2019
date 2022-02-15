@@ -49,8 +49,8 @@ class CountController extends Controller
     public function entry()
     {
         $users = User::get();
-        
-        for ($var=1500; $var < 1800; $var++) { 
+        $count = User::get()->count();
+        for ($var=0;$var < 200; $var++) { 
             $users[$var]->password = bcrypt($users[$var]->dob);
             $users[$var]->save();
         }
