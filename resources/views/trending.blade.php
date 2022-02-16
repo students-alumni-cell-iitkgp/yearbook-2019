@@ -207,7 +207,7 @@ body{
                                     <a href="{{ url('/profile_index/'.$image['rollno']) }}">
                                       <p class="m-0 colr">{{$name[0]['name']}}</p>
                                     </a>
-                                    <small><span>{{$image['created_at']->diffForHumans() }}</span></small>
+                                    <small><span style="font-family: 'Abhaya Libre', serif;font-size:17px">{{$image['created_at']->diffForHumans() }}</span></small>
                                   </div>
                                 </div><!--/ media -->
                               </div><!--/ cardbox-heading -->
@@ -218,14 +218,14 @@ body{
                                 </div>
                                 <div class="vl"></div>
                                 <div class="col-md-4  cardbox-like"> 
-                                <span class="section-heading-upper colr" style="font-size : 15px; font-colo margin-left : 1vw">&nbsp {{$image['caption']}}</span><br>
+                                <span class="section-heading-upper colr" style="  font-family: 'Abhaya Libre', serif;font-size : 23px; font-colo margin-left : 1vw">&nbsp {{$image['caption']}}</span><br>
                               
                                 <ul style="top: 6px; position: relative;">
                                   <li>
-                                    <div id="+{{$image['id']}}+" class="like"></div>  <!-- Like Button -->
+                                    <div id="+{{$image['id']}}+" style="border-right:1px solid gray;padding-right:10px" class="like"></div>  <!-- Like Button -->
                                   </li>
                                   <li>
-                                    <button type="button" class="com btn comment_btn" id="{{$image['id']}}" style="border: none; background: none;" value="{{$image['url']}}">
+                                    <button type="button" class="com btn comment_btn" id="{{$image['id']}}" style="margin-left:-30px;border: none;background:none" value="{{$image['url']}}">
                                       <i class="far fa-comment"></i> View Comments
                                     </button>
           
@@ -241,7 +241,7 @@ body{
                                     <img class="img-fluid img-circle" src="{{ asset('index.png') }}" style="width: 25px; height: 25px;margin-top:-40px;" alt="Image">  
                                     @endif
                                   </li> -->
-                                  <li style="width: 120%;">
+                                  <li style="width: 100%;border-right:none">
                                     <div class="comment-body">
                                       <form class="form" id="form-comment" action="{{ url('/comment') }}" method="post">
                                         {{csrf_field()}}
@@ -251,7 +251,7 @@ body{
                                               <textarea name="comment" id="textarea" class="form-control input-sm" rows="1" type="text" placeholder="Write your comment..." required></textarea>
                                           <!-- </li>
                                           <li>  -->
-                                              <button class="btn" id="submit" style="height : 60%; margin-right : 23vh; margin-top : 3vh">Comment</button>
+                                              <button  style="height : 20%;width:30%; margin-right : 15vh;float:left; margin-top : 3vh;color:red;border-radius:3px;border:0px solid white;">	<i class="material-icons" id="submit" style = " font-size:28px;color:gray">send</i> </button>
                                           <!-- </li>
                                         </ul>   -->
                                       </form>
