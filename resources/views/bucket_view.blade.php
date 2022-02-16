@@ -277,7 +277,7 @@
                    <li id="1">
            	       <a href="{{ url('/viewbucket?id=1') }}" class="pmd-floating-action-btn btn  pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-light" data-title="Cloud Queue"> 
            	      	<span class="pmd-floating-hidden" style="padding-right:10px">{{$buckets[1]}}</span> 
-           	      	<i class="material-icons" style = " font-size: 18px;">liquor</i> 
+           	      	<i class="material-icons" style = " font-size: 18px;">fastfood</i> 
            	       </a> </li>
       
                    <li id="2">
@@ -301,7 +301,7 @@
                    <li id="5">
            	       <a href="{{ url('/viewbucket?id=5') }}" class="pmd-floating-action-btn btn  pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-light" data-title="Cloud Queue"> 
            	      	<span class="pmd-floating-hidden" style="padding-right:10px">{{$buckets[5]}}</span> 
-           	      	<i class="material-icons" style = " font-size: 18px;">smoking_rooms</i> 
+           	      	<i class="material-icons" style = " font-size: 18px;">home_work</i> 
            	       </a> </li>
        
                    <li id="6">
