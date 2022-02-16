@@ -204,8 +204,8 @@
     				<div class="search-dashboard" >
     					<form action="{{ url('/search') }}" method="POST" class="form-inline">
     						{{ csrf_field() }}
-    						<input placeholder=" Search Your Friend Here..." type="text" name="search" required="required" id="search1" style="background: none; border: 1px solid; border-radius: 5px; padding-top: 3px; padding-left: 10px; line-height: 40px; cursor: text; font-size: 14px;">
-    						<input type="submit" value="Search" class="kafe-btn kafe-btn-mint" style="padding: 8px 22px; color: #fff"></input>
+    						<input class="test-search" placeholder=" Search Your Friend Here..." type="text" name="search" required="required" id="search1" style="background: none; border: 1px solid; border-radius: 5px; padding-top: 3px; padding-left: 10px; line-height: 40px; cursor: text; font-size: 14px;">
+    						<input type="submit" value="Search" class="kafe-btn kafe-btn-mint testi-btn" style=" color: #fff"></input>
     					</form>
     				</div></center>
     			</div>
@@ -275,7 +275,7 @@
 			<input type="submit" value="Search" class="kafe-btn kafe-btn-mint" style="display: none;">
 		</form>
 		<div class="account">
-			<ul class="nav navbar-nav">
+			<ul class="nav navbar-nav" style="font-family: 'DM Sans', sans-serif;">
 		  		<li class="dropdown notification-list">
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="notification" role="button"
 						aria-haspopup="false" aria-expanded="false">
@@ -293,11 +293,11 @@
 						<div class="dropdown-item noti-title">
 							<h6 class="m-0">
 								<span class="pull-right">
-									<a href="{{ url('/readall') }}" class="text-dark">
+									<a href="{{ url('/readall') }}" class="text-dark" style="font-family: 'DM Sans', sans-serif;">
 										<small>Clear All</small>
 									</a> 
 								</span>
-								<span style="color: #000;">Notifications({{count($notifications) + count($comment_notification)}})</span> 
+								<span style="font-family: 'DM Sans', sans-serif; color: #000;">Notifications({{count($notifications) + count($comment_notification)}})</span> 
 							</h6>
 						</div>
 
@@ -317,7 +317,7 @@
 										<div class="notify-icon">
 											<img src="../{{$pic[0]}}" class="img-responsive img-circle" style="width: 35px; height: 35px">
 										</div>
-										<p class="notify-details" style="font-family: Verdana">
+										<p class="notify-details" style="font-family: 'DM Sans', sans-serif;">
 											<strong>{{$commentedBy[0]}}</strong> commented on your post: <br>
 											<span>&nbsp"{{$notification['comments']}}"</span>
 											<small class="text-muted">{{$notification['created_at']->diffForHumans()}}</small>
@@ -333,7 +333,7 @@
 										<div class="notify-icon">
 											<img src="{{ asset('index.png') }}" class="img-responsive img-circle" style="width: 35px; height: 35px">
 										</div>
-										<p class="notify-details" style="font-family: Verdana">
+										<p class="notify-details" style="font-family: 'DM Sans', sans-serif;">
 											<strong>{{$notification['user']}}</strong> wrote :<br>
 											<span>&nbsp"{{$notification['views']}}"</span>
 											<small class="text-muted">{{$notification['created_at']->diffForHumans()}}</small>
@@ -370,13 +370,13 @@
 					</a>
 					<div class="dropdown-menu dropdown-menu-right dropdown-lg" style=" position:absolute; top:0px;width: 100px;  left:0px;">     
 						<div style="height: 35px;">
-							<a class="dropdown-item " href="{{ url('/profile_index') }}"><p style="font-family: 'Abhaya Libre', serif;">Profile</p> </a>
+							<a class="dropdown-item " href="{{ url('/profile_index') }}"><p style="font-family: 'DM Sans', sans-serif;">Profile</p> </a>
 						</div>
 						<div style="height: 35px;">
-							<a class="dropdown-item " href="{{ url('/details') }}"><p style="font-family: 'Abhaya Libre', serif;">Edit Details</p></a>
+							<a class="dropdown-item " href="{{ url('/details') }}"><p style="font-family: 'DM Sans', sans-serif;">Edit Details</p></a>
 						</div >
 						<div style="height: 35px;">
-							<a class="dropdown-item " href="{{ url('/logout') }}"><p style="font-family: 'Abhaya Libre', serif;">Logout</p> </a>
+							<a class="dropdown-item " href="{{ url('/logout') }}"><p style="font-family: 'DM Sans', sans-serif;">Logout</p> </a>
 						</div>
 						
 
@@ -388,6 +388,8 @@
 	  @yield('main-content')
 	</div>
   </div>
+</div>
+  @include('footer')
   
 
 <script>

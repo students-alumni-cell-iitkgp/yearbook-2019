@@ -291,7 +291,7 @@
                                       if($j==0)
                                       {
                           
-                                        echo '<div style="text-align: center; font-family: Aclonica"><h3 style="color: #fff;">No Testimonials Given!</h3></div>';
+                                        echo '<div style="text-align: left; font-family: Aclonica"><h3 style="color: #fff;">No Testimonials Given!</h3></div>';
                                       }
                                     ?>
                                   </ul>
