@@ -169,7 +169,7 @@
                   </span>  
                   
                   @endif
-                  <h4 style="margin-left:3rem;" class=" my-3 h1">{{Auth::user()->name}}  </h4>
+                  <h4  class=" my-3 h1">{{Auth::user()->name}}  </h4>
                </div>
                <div class="col-lg-5 col-md-6 align-self-center caption">
                @if(!empty(Auth::user()->view_self))

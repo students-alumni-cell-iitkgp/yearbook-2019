@@ -197,17 +197,27 @@
     		<!-- Modal content-->
     		<div class="modal-content">
     			<div class="modal-header">
-    				<button type="button" class="close" data-dismiss="modal">&times;</button>
-    				<center><h4 class="modal-title text-uppercase" style="color: #000">Write Testimonials</h4></center>
+				<div>
+    				<h4 class="modal-title text-uppercase" style="color: #000">Write Testimonials</h4>
+					</div>
+					<div>
+					<button type="button" class="close" data-dismiss="modal" style="right:0">&times;</button>
+					</div>
     			</div>
-    			<div class="modal-body" style='top:10px;'><center>
+    			<div class="modal-body" style='top:10px;'>
+				/* <center> */
     				<div class="search-dashboard" >
-    					<form action="{{ url('/search') }}" method="POST" class="form-inline">
+    					<form action="{{ url('/search') }}" method="POST" class="form-inline" style="justify-content:center">
     						{{ csrf_field() }}
+							<div>
     						<input class="test-search" placeholder=" Search Your Friend Here..." type="text" name="search" required="required" id="search1" style="background: none; border: 1px solid; border-radius: 5px; padding-top: 3px; padding-left: 10px; line-height: 40px; cursor: text; font-size: 14px;">
-    						<input type="submit" value="Search" class="kafe-btn kafe-btn-mint testi-btn" style=" color: #fff"></input>
-    					</form>
-    				</div></center>
+    						</div>
+							<div style="padding-left:25px">
+							<input type="submit" value="Search" class="kafe-btn kafe-btn-mint testi-btn" style=" color: #fff"></input>
+    					    </div>
+							</form>
+    				</div>
+					/* </center> */
     			</div>
     			<div class="modal-footer">
     			</div>

@@ -72,11 +72,11 @@
                 <div class="row" style="margin-bottom: 0px; text-align : center">
                    
                     <div class="input-field col s12 l6 m12 " >                   
-                        <input name="rollno" id="rollno" autofocus placeholder="Roll Number" type="text" style="margin-top: 5px;" required>
+                        <input name="rollno" id="rollno" autofocus placeholder="Roll Number" type="text" style="margin-top: 20px;" required>
                         <label for="rollno"><h5 style="font-size: 140%; color:white">Roll Number (16THXXXXX)</h5></label>
                     </div>
                     <div class="input-field col s12 l6 m12 ">                   
-                        <input name="password" id="dob" placeholder="Date of Birth" pattern="\d{1,2}-\d{1,2}-\d{4}" type="text" style="margin-top: 5px;" required>
+                        <input name="password" id="dob" placeholder="Date of Birth" pattern="\d{1,2}-\d{1,2}-\d{4}" type="text" style="margin-top: 20px;" required>
                         <label for="dob"><h5 style="font-size: 140%;color:white">Date of Birth (dd-mm-yyyy)</h5></label>
                     </div>
                 </div>

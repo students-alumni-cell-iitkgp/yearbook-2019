@@ -491,7 +491,7 @@ form hr{
         width: 100px;
         height: 100px;
         /* border: 7px solid #fff; */
-        margin-left: 10px;
+        /* margin-left: 10px; */
     }
     .author-post h4 {
         font-size: x-large;
@@ -506,12 +506,15 @@ form hr{
 
 @media screen and (min-width:401px) and (max-width:426px) {
     .user-profile .post-content .author-post img{
-        margin-left: 12.5rem !important;
+        /* margin-left: 12.5rem !important; */
+    }
+    #modal2 .modal-content{
+        width: 140% !important;
     }
 }
 
 @media (max-width:400px) {
     .user-profile .post-content .author-post img{
-        margin-left: 10rem !important;
+        /* margin-left: 10rem !important; */
     }
 }
