@@ -1,8 +1,5 @@
 
 
-
-
-
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
@@ -10,6 +7,7 @@
 <html>
   <head>
     <title>YB|Profile</title>
+    <link rel="icon" href="{{asset('img/navbar/SAClogo.png')}}" sizes="32x32" type="image/gif"/>
     <link rel="icon" href="{{ asset('../ind/fav.png') }}" type="image/png" >
     <script type="text/javascript" src="{{ asset('../../js/materialize.min.js') }}"></script>
     <link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>

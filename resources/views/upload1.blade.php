@@ -9,7 +9,7 @@
   <meta name="author" content="">
 
   <title>YB|Upload</title>
-
+  <link rel="icon" href="{{asset('img/navbar/SAClogo.png')}}" sizes="32x32" type="image/gif"/>
   <!-- Bootstrap core CSS -->
 
   <link rel="stylesheet" type="text/css" href="{{ asset('../css/animate.css') }}"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">

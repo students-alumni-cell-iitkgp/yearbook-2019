@@ -18,6 +18,7 @@
     <!-- ==============================================
     Favicons
     =============================================== -->
+    <link rel="icon" href="{{asset('img/navbar/SAClogo.png')}}" sizes="32x32" type="image/gif"/>
     <link rel="apple-touch-icon" href="{{ asset('img/favicons/apple-touch-icon.png') }}">
     <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('img/favicons/apple-touch-icon-72x72.png') }}">
     <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('img/favicons/apple-touch-icon-114x114.png') }}">

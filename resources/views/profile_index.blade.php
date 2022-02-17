@@ -14,10 +14,11 @@
     <meta property="og:title" content="" />
     <meta property="og:url" content="" />
     <meta property="og:description" content="" />   
-    
+    <link rel="icon" href="{{asset('img/navbar/SAClogo.png')}}" sizes="32x32" type="image/gif"/>
       <!-- ==============================================
     CSS
     =============================================== -->
+    
     <link type="text/css" href="{{ asset('css/demos/photo.css') }}" rel="stylesheet" />
     <link type="text/css" href="{{ asset('css/demos/timeline.css') }}" rel="stylesheet" />
 

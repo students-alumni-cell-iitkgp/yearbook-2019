@@ -9,6 +9,7 @@
   <meta name="author" content="">
 
   <title>YB|Writeup</title>
+  <link rel="icon" href="{{asset('img/navbar/SAClogo.png')}}" sizes="32x32" type="image/gif"/>
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style type="text/css">
   

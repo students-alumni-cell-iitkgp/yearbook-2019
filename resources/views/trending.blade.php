@@ -15,6 +15,7 @@
       <meta property="og:url" content="" />
       <meta property="og:description" content="" />  
       <meta name="csrf-token" content="{{ csrf_token() }}">   
+      <link rel="icon" href="{{asset('img/navbar/SAClogo.png')}}" sizes="32x32" type="image/gif"/>
     
     <!-- ==============================================
     Favicons
@@ -251,7 +252,7 @@ body{
                                               <textarea name="comment" id="textarea" class="form-control input-sm" rows="1" type="text" placeholder="Write your comment..." required></textarea>
                                           <!-- </li>
                                           <li>  -->
-                                              <button  style="height : 20%;width:30%; margin-right : 15vh;float:left; margin-top : 3vh;color:red;border-radius:3px;border:0px solid white;">	<i class="material-icons" id="submit" style = " font-size:28px;color:gray">send</i> </button>
+                                              <button class="comment_btn" style="height : 20%;width:30%; margin-right : 15vh;float:left; margin-top : 3vh;color:red;border-radius:3px;border:0px solid white;">	<i class="material-icons" id="submit" style = " font-size:28px;color:gray">send</i> </button>
                                           <!-- </li>
                                         </ul>   -->
                                       </form>
@@ -466,6 +467,7 @@ function topFunction() {
         'pic_id' : $('.enlargeImageModalSource').attr('id'),
         '_token' : $('#comment-token').val()
       } 
+      echo $('.enlargeImageModalSource').attr('id');
       $.ajax({
         url: "{{ url('/commentadd') }}",
         type: "POST",
