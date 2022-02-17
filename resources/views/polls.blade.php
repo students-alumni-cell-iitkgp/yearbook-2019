@@ -86,14 +86,15 @@
             margin-left:150px;
         }
         .media {
-            margin-top: 10px;
+            margin-top: 0px;
+            margin-bottom:15px;
             margin-right: 10px;
             padding: 4px;
             background-color: var(--primary-color-dark-blue-4) !important;
             border-radius: 6px;
         }
         .media_body p{
-            margin-top: 5px;
+            margin-top: 0px;
             font-size: large;
         }
         .form-group button{
