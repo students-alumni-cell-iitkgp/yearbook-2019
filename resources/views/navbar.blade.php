@@ -235,7 +235,7 @@
 		  <path d="M19 12H5M12 19l-7-7 7-7"/>
 		</svg>
 	  </div>
-	  <div class="logo"><img src="{{ asset('img/navbar/kgplogo.png') }}" alt="" style="filter:invert();width:100px; margin-top:-15px;"/>YEARBOOK</div>
+	  <div class="logo"><img src="{{ asset('img/navbar/kgplogo.png') }}" alt="" style="width:100px; margin-top:-15px;"/>YEARBOOK</div>
 	  <div class="side-wrapper">
 		<div class="side-title">MENU</div>
 		<div class="side-menu">
