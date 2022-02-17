@@ -9,7 +9,7 @@
   <meta name="author" content="">
 
   <title>YB | Itch List</title>
-  <link rel="icon" href="{{asset('img/navbar/SAClogo.png')}}" sizes="32x32" type="image/gif"/>
+  <link rel="icon" href="{{asset('img/navbar/kgplogo.png')}}" sizes="32x32" type="image/gif"/>
   <link href="{{ asset('/css/business-casual.min_test.css') }}" rel="stylesheet">
   <link type="text/css" href="{{ asset('/css/demos/photo.css') }}" rel="stylesheet" />
   <link type="text/css" href="{{ asset('/css/demos/bucketAnimation.css') }}" rel="stylesheet" />  

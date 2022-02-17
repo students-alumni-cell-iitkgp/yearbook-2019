@@ -15,7 +15,7 @@
     <meta property="og:url" content="" />
     <meta property="og:description" content="" /> 
     <meta name="csrf-token" content="{{ csrf_token() }}">  
-    <link rel="icon" href="{{asset('img/navbar/SAClogo.png')}}" sizes="32x32" type="image/gif"/>
+    <link rel="icon" href="{{asset('img/navbar/kgplogo.png')}}" sizes="32x32" type="image/gif"/>
     
     <!-- ==============================================
     Favicons

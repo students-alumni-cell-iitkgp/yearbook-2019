@@ -21,7 +21,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="https://sac.iitkgp.ac.in/index.php"><img src="{{ asset('img/navbar/SACLogo.png') }}" width="230px" height="105px" style="margin-top:-23px;" /></a>
+				<a class="navbar-brand" href="https://sac.iitkgp.ac.in/index.php"><img src="{{ asset('img/navbar/kgplogo.png') }}" width="230px" height="105px" style="margin-top:-23px;" /></a>
 			</div><!-- /.navbar-header -->
 			<div class="navbar-left">
 				<div class="collapse navbar-collapse" id="navbar-collapse">
@@ -235,7 +235,7 @@
 		  <path d="M19 12H5M12 19l-7-7 7-7"/>
 		</svg>
 	  </div>
-	  <div class="logo"><img src="{{ asset('img/navbar/SAClogo.png') }}" alt="" style="filter:invert();width:100px; margin-top:-15px;"/>YEARBOOK</div>
+	  <div class="logo"><img src="{{ asset('img/navbar/kgplogo.png') }}" alt="" style="filter:invert();width:100px; margin-top:-15px;"/>YEARBOOK</div>
 	  <div class="side-wrapper">
 		<div class="side-title">MENU</div>
 		<div class="side-menu">
