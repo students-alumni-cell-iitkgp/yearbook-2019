@@ -334,6 +334,12 @@
            	      	<i class="material-icons" style = " font-size: 18px;">auto_awesome</i> 
            	       </a> </li>
 
+                    <li id="11">
+           	       <a href="{{ url('/viewbucket?id=11') }}" class="pmd-floating-action-btn btn pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-light" data-title="Cloud Queue"> 
+           	      	<span class="pmd-floating-hidden" style="padding-right:10px">{{$buckets[11]}}</span> 
+           	      	<i class="material-icons" style = " font-size: 18px;">people_alt</i> 
+           	       </a> </li>
+
                 </ul>
               </aside>
              </div>

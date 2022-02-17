@@ -96,7 +96,7 @@
 }
 
 .cover-img{
-  background-image: url('img/bg/1.jpg');
+  background-image: url('img/bg/collage.jpg');
   height:100%;
   background-size: 100% 100%;
   background-repeat: no-repeat;
