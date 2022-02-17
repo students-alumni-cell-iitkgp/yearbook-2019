@@ -1,6 +1,6 @@
 <script src="{{ asset('/js/jquery.min.js') }}"></script>
 <script src="{{ asset('/js/autocomplete.js') }}"></script>
-<link rel="icon" href="{{asset('img/navbar/SAClogo.png')}}" sizes="32x32" type="image/gif"/>
+
 <link rel="stylesheet" type="text/css" href="{{ asset('/css/autocomplete.css') }}">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
