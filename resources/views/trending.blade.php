@@ -153,7 +153,6 @@ body{
       $count= 0;
       @endphp
           <div>
-        
                   @foreach($images as $image)
                   @if(file_exists($image['thumbnail']))
                   <section class="page-section">
@@ -171,11 +170,6 @@ body{
                           </div>
                         </div>
                         
-                     <!-- <div class="product-item-description d-flex mr-auto">
-                        <div class="bg-faded p-5 rounded">
-                          <p class="mb-0">{{$image['caption']}}</p>
-                        </div>
-                      </div>-->
                         </div>
                       </div>
                       <div>
