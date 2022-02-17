@@ -467,7 +467,7 @@ function topFunction() {
         'pic_id' : $('.enlargeImageModalSource').attr('id'),
         '_token' : $('#comment-token').val()
       } 
-      echo $('.enlargeImageModalSource').attr('id');
+ 
       $.ajax({
         url: "{{ url('/commentadd') }}",
         type: "POST",
