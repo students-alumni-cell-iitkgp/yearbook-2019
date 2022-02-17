@@ -20,7 +20,7 @@
     <!-- ==============================================
     Favicons
     =============================================== --> 
-    <link rel="icon" href="{{asset('img/navbar/kgplogo.png')}}" sizes="32x32" type="image/gif"/>
+    <link rel="icon" href="{{asset('img/navbar/kgplogo1.png')}}" sizes="32x32" type="image/gif"/>
       <link rel="icon" href="{{ asset('img/logo.jpg') }}">
       <link rel="apple-touch-icon" href="{{ asset('img/favicons/apple-touch-icon.png') }}">
       <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('img/favicons/apple-touch-icon-72x72.png') }}">

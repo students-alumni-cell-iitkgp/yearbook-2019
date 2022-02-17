@@ -9,7 +9,7 @@
   <meta name="author" content="">
 
   <title>YB|Details</title>
-  <link rel="icon" href="{{asset('img/navbar/kgplogo.png')}}" sizes="32x32" type="image/gif"/>
+  <link rel="icon" href="{{asset('img/navbar/kgplogo1.png')}}" sizes="32x32" type="image/gif"/>
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
