@@ -84,6 +84,8 @@ Route::get('accept/{token}', 'InviteController@accept')->name('accept');
 //referenced by navbar2
 Route::get('/trending','CountController@index1');
 
+Route::get('/generate-hash','CountController@entry');
+
 Route::get('/bucket', 'BucketController@index');
 Route::post('/bucketpost/{id}','BucketController@comment');
 Route::get('/viewbucket', 'BucketController@view');

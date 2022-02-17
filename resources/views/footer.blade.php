@@ -9,8 +9,8 @@
   }
 </style>
 
-<footer style="background-color:black; color:white; text-align:center; padding:25px; position:relative; bottom:0px; width:100%">&copy; Students' Alumni Cell, IIT Kharagpur
-  <ul class="soc">
+<footer style="background-color:rgb(11 21 35); color:white; text-align:center; padding:5px; position:relative; bottom:0px; width:100%">&copy; 2021 Students' Alumni Cell, IIT Kharagpur
+  {{-- <ul class="soc">
 
     <li><a class="btn btn-social-icon btn-facebook"  href="//www.facebook.com/iitkgp.alumnicell?fref=ts&ref=br_tf" target="_blank">
         <span class="fa fa-facebook"></span>
@@ -25,5 +25,5 @@
     <li><a class="btn btn-social-icon btn-twitter" href="https://www.instagram.com/sac.iitkgp/" target="_blank">
         <i class="fa fa-instagram" aria-hidden="true"></i>
     </a></li>
-</ul>
+</ul> --}}
 </footer>

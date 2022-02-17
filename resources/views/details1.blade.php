@@ -83,13 +83,6 @@
                     <label for="phone">Phone no</label>
                     <input name="phone" value="{{Auth::user()->phone}}" class="form-control"  type="number" size="10" required> 
                   </div>
-                  <div class="col-sm-6">
-                    <i class="fas fa-key"></i>&nbsp;
-                    <label for="password">Password</label>
-                    <input name="password"  value="{{Auth::user()->password}}"class="form-control" type="password" placeholder=" " required >
-    
-                  </div>
-    
     
                 </div>
                 <br>
