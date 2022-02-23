@@ -9,7 +9,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">  
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{Auth::user()->name}}-Dashboard</title>
-    <meta name="description" content="" />
+      <meta name="description" content="" />
         <meta name="keywords" content="" />
         <meta property="og:title" content="" />
         <meta property="og:url" content="" />
@@ -18,6 +18,7 @@
     <!-- ==============================================
     Favicons
     =============================================== -->
+    <link rel="icon" href="{{asset('img/navbar/kgplogo1.png')}}" sizes="32x32" type="image/gif"/>
     <link rel="apple-touch-icon" href="{{ asset('img/favicons/apple-touch-icon.png') }}">
     <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('img/favicons/apple-touch-icon-72x72.png') }}">
     <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('img/favicons/apple-touch-icon-114x114.png') }}">

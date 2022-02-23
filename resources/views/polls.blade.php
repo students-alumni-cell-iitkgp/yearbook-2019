@@ -18,6 +18,7 @@
     <!-- ==============================================
         Favicons
         =============================================== -->
+        <link rel="icon" href="{{asset('img/navbar/kgplogo1.png')}}" sizes="32x32" type="image/gif"/>
     <link rel="apple-touch-icon" href="{{ asset('img/favicons/apple-touch-icon.png') }}">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -38,7 +39,6 @@
     @extends('navbar')
 
     <style type="text/css">
-
     </style>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -68,13 +68,11 @@
             --primary-color-dark-blue-3: hsl(216, 53%, 9%);
             --primary-color-dark-blue-4: hsl(219, 30%, 18%);
         }
-
         @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Nunito&family=Source+Sans+Pro&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
-
         section{
             background-color: var(--primary-color-dark-blue-2) !important;
             font-family: 'IBM Plex Serif', serif;
@@ -82,21 +80,21 @@
         .row {
             width: 100%;
         }
-
         .back {
             overflow-y: auto;
             margin-bottom: 20px;
+            margin-left:150px;
         }
-
         .media {
-            margin-top: 10px;
+            margin-top: 0px;
+            margin-bottom:15px;
             margin-right: 10px;
             padding: 4px;
             background-color: var(--primary-color-dark-blue-4) !important;
             border-radius: 6px;
         }
         .media_body p{
-            margin-top: 5px;
+            margin-top: 0px;
             font-size: large;
         }
         .form-group button{
@@ -113,6 +111,17 @@
         }
         h1, h5{
             text-align: center;
+        }
+        @media screen and (max-width:500px){
+        .back {
+           
+            margin-left:20px;
+        }
+        .media {
+        
+            margin-right: 0px;
+    
+        }
         }
     </style>
     <section class = "header">
@@ -157,14 +166,14 @@
                     $q = 'q' . $i;
                     $link = '/polls/' . $i;
                     ?>
-                    <div class="col-xs-8 col-md-4 media">
+                    <div class="col-xs-11 col-lg-5 col-md-4 media">
                         <!-- <img src="{{ asset('img/ques.png') }}" alt="" class="img-responsive img-circle"> -->
                         <form action="{{ url($link) }}" method="POST">
                             {{ csrf_field() }}
                             <div class="media_body">
                             <p><i class="fas fa-poll fa-lg"></i><b> {{ $titles[$i] }} </b></p>
                                 <div class="row" style="display: inline-block;">
-                                    <div class="col-sm-8 ">
+                                    <div class="col-sm-10 ">
                                         <div class="polls-input">
                                             <div class="input-field">
                                                 @if(!empty($polls[$q]))

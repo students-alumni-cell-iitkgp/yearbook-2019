@@ -1,5 +1,6 @@
 <script src="{{ asset('/js/jquery.min.js') }}"></script>
 <script src="{{ asset('/js/autocomplete.js') }}"></script>
+
 <link rel="stylesheet" type="text/css" href="{{ asset('/css/autocomplete.css') }}">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -20,7 +21,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="https://sac.iitkgp.ac.in/index.php"><img src="{{ asset('img/navbar/SACLogo.png') }}" width="230px" height="105px" style="margin-top:-23px;" /></a>
+			<a class="navbar-brand" href="https://sac.iitkgp.ac.in/index.php"><img src="{{ asset('img/navbar/SACLogo1.png') }}" width="230px" height="105px" style="margin-top:-23px;" /></a>
 			</div><!-- /.navbar-header -->
 			<div class="navbar-left">
 				<div class="collapse navbar-collapse" id="navbar-collapse">
@@ -240,7 +241,12 @@
 		  <path d="M19 12H5M12 19l-7-7 7-7"/>
 		</svg>
 	  </div>
-	  <div class="logo">YEARBOOK</div>
+	  <div class="logo side-menu">
+	  <a href="{{ url('/home') }}">
+	  <img src="{{ asset('img/navbar/kgplogo1.png') }}" alt="" style="filter:invert();width:20px; margin-left:30px;margin-right:15px;margin-top:-8px"/> 
+	  	YEARBOOK
+		</a>
+		</div>
 	  <div class="side-wrapper">
 		<div class="side-title">MENU</div>
 		<div class="side-menu">
