@@ -62,7 +62,7 @@
             <div class="clock-toogle__toogle"></div>
           </div>
           <br>
-          Welcome to<b> Yearbook'21</b> Portal
+          Welcome to<b> Yearbook'22</b> Portal
         </h3><br>
         <!--<p> The Yearbook Portal has been closed. </p>-->
          <form method="post" class="form main-title center" action="{{ route('login') }}">
@@ -73,7 +73,7 @@
                    
                     <div class="input-field col s12 l6 m12 " >                   
                         <input name="rollno" id="rollno" autofocus placeholder="Roll Number" type="text" style="margin-top: 20px;" required>
-                        <label for="rollno"><h5 style="font-size: 140%; color:white">Roll Number (16THXXXXX)</h5></label>
+                        <label for="rollno"><h5 style="font-size: 140%; color:white">Roll Number (17THXXXXX)</h5></label>
                     </div>
                     <div class="input-field col s12 l6 m12 ">                   
                         <input name="password" id="dob" placeholder="Date of Birth" pattern="\d{1,2}-\d{1,2}-\d{4}" type="text" style="margin-top: 20px;" required>
@@ -88,7 +88,7 @@
             </form> 
 
         <!-- <p class=" center sub-title main-title" ><a href="{{ url('/Testimonial_public') }}"> Write Testimonials<a><i class="material-icons">error_outline</i><span class="tooltip">If you are not graduating this year, but want to write about your friends who are graduating, you can click on this link.</span></a></p> -->
-        <p class=" center sub-title main-title" style="color: white">Contact us at:<br> <a style="color: white" href="mailto:Yearbookiitkgp2021@gmail.com"> Yearbookiitkgp2021@gmail.com<a><i style="color: white" class="material-icons">error_outline</i><span class="tooltip">If you are not graduating this year, but want to write about your friends who are graduating, send us the testimonials via mail at Yearbookiitkgp2021@gmail.com</span></a></p>
+        <p class=" center sub-title main-title" style="color: white">Contact us at:<br> <a style="color: white" href="mailto:Yearbookiitkgp2022@gmail.com"> Yearbookiitkgp2022@gmail.com<a><i style="color: white" class="material-icons">error_outline</i><span class="tooltip">If you are not graduating this year, but want to write about your friends who are graduating, send us the testimonials via mail at Yearbookiitkgp2021@gmail.com</span></a></p>
 
       </small></h1>
   </div>
