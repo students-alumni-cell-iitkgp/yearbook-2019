@@ -87,7 +87,7 @@
    @section('main-content')
    <div class="main-container">
       <div class="profile">
-        <img src="../img/bg/1.jpg" alt="" class="profile-cover">
+        <img src="../img/bg/collage.jpg" alt="" class="profile-cover">
         <div class="profile-avatar">
           <div class="profile-photo">
             @if(!empty($data[0]['thumbnail']))
