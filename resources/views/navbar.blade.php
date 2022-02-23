@@ -63,6 +63,12 @@
 							Testimonials
 						</a>
 					</li>
+					
+					<li>
+					    <a class="test">
+						    Polls 
+						</a>
+					</li>
 
 					<li class="dropdown notification-list">
 						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="notification" role="button"
@@ -263,6 +269,10 @@
 		  <a class="test" href="{{ url('/testimonial') }}" data-toggle="modal" data-target="#modal_test">
 			<i class="far fa-comments"></i>&nbsp;&nbsp;
 			Testimonial
+		  </a>
+		  <a href="{{ url('/polls') }}" >
+		    <i class="fas fa-clipboard-list"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+			Polls 
 		  </a>
 		</div>
 	  </div>
