@@ -79,7 +79,7 @@
 
     <div class="profile-avatar">
       <div class="profile-photo">
-        <img src="<?php if (!empty(Auth::user()->pro_pic)){echo Auth::user()->pro_pic; } else { echo 'img/shot.jpg';}?>" alt="" class="profile-img">
+        <img src="<?php if (!empty(Auth::user()->pro_pic)){echo Auth::user()->pro_pic; } else { echo 'index.png';}?>" alt="" class="profile-img">
         <div class="profile-name">{{Auth::user()->name}}</div>
       </div>
       <div class="caption">
