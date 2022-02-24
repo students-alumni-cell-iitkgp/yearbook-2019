@@ -83,7 +83,7 @@
         .back {
             overflow-y: auto;
             margin-bottom: 20px;
-            margin-left:150px;
+            padding-left: 150px
         }
         .media {
             margin-top: 0px;
@@ -297,8 +297,6 @@
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
-
-    @include('footer')
     @endsection
 </body>
 
