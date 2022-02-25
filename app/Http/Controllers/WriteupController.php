@@ -64,7 +64,7 @@ class WriteupController extends Controller
 
     public function delete($id)
     {
-        \DB::table('writeups')->where('id',$id)->delete();
+        DB::table('writeups')->where('id',$id)->delete();
         return back();
     }
 
