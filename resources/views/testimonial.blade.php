@@ -367,8 +367,11 @@
                                 @if(count($writeups)>0)
                                 @foreach($writeups as $writeup)
                                 <li class="event" data-date="{{$writeup->created_at->diffForHumans()}}">
-                                  <h3 class="topicArticle">{{ $writeup->topic }} <a href="/writeup/{{ $writeup->id }}">
-                                    <i class="material-icons deleteArticle">delete</i></a></h3>
+                                  <h3 class="topicArticle">{{ $writeup->topic }}
+                                     <!-- <a href="/writeup/{{ $writeup->id }}">
+                                    <i class="material-icons deleteArticle">delete</i>
+                                  </a> -->
+                                </h3>
                                   <p class="contentArticle" title="Click to edit!" data-value="{{csrf_token()}}" onblur="update({{ $writeup->id }})"
                                     id="{{ $writeup->id }}" contenteditable>{!! nl2br($writeup->writeup)!!}
                                   </p>
