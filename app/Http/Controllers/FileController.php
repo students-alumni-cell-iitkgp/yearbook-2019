@@ -39,9 +39,9 @@ class FileController extends Controller
 
 				$user->pro_pic = 'uploads/'.$input['imagename'];
 				$thumbnail = Image::make($user->pro_pic)->resize(150, 150);
-				$target = public_path('thumbnails\profilePic\\'.$input['imagename']);
+				$target = public_path('thumbnails/profilePic/'.$input['imagename']);
 				$thumbnail->save($target);
-				$user->thumbnail = 'thumbnails\profilePic\\'.$input['imagename'];
+				$user->thumbnail = 'thumbnails/profilePic/'.$input['imagename'];
 				if(request('motto'))
 				{
 					$user->view_self = request('motto');//edit 'view_self' column of the current user
