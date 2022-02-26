@@ -48,6 +48,7 @@
 
 <body>
 
+    @section('main-content')
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
@@ -59,7 +60,6 @@
     <script src="{{ asset('plugins/slimscroll/jquery.slimscroll.js') }}"></script>
 
 
-    @section('main-content')
 
     <style type="text/css">
         :root {
