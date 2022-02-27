@@ -387,7 +387,7 @@
 				<li class="dropdown notification-list">
 					<a class="account-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false"> <span class="hiddenName"> {{Auth::user()->name}} </span> 
 						@if(!empty(Auth::user()->pro_pic))
-						<img src="{{Auth::user()->thumbnail}}" alt="" class="account-profile" alt="">
+						<img src="{{Auth::user()->pro_pic}}" alt="" class="account-profile" alt="">
 						@else
 						<img src="{{ asset('index.png') }}" alt="" class="account-profile" alt="">
 						@endif
