@@ -243,7 +243,7 @@
 	  </div>
 	  <div class="logo side-menu">
 	  <a href="{{ url('/home') }}">
-	  <img src="{{ asset('img/navbar/kgplogo1.png') }}" alt="" style="filter:invert();width:20px; margin-left:30px;margin-right:15px;margin-top:-8px"/> 
+	  <img class="cell-logo" src="{{ asset('img/navbar/kgplogo1.png') }}" alt="" style="filter:invert();width:20px; margin-left:30px;margin-right:15px;margin-top:-8px"/> 
 	  	YEARBOOK
 		</a>
 		</div>
@@ -432,6 +432,7 @@
 			document.getElementsByClassName("logo")[0].style.marginTop = "0px";
 			document.getElementsByClassName("drawer-logo")[0].style.opacity = 0;
 			document.getElementsByClassName("drawer-logo")[1].style.opacity = 1;
+			document.getElementsByClassName("cell-logo")[0].style.transform = "rotate(0deg)";
 			state = 1;
 		}
 		else{
@@ -444,9 +445,14 @@
 			document.getElementsByClassName("logo")[0].style.marginTop = "-10px";
 			document.getElementsByClassName("drawer-logo")[0].style.opacity = 1;
 			document.getElementsByClassName("drawer-logo")[1].style.opacity = 0;
+			document.getElementsByClassName("cell-logo")[0].style.transform = "rotate(90deg)";
 			state = 0;
 		}
 		
+	}
+
+	if(screen.width < 930){
+		document.getElementsByClassName("cell-logo")[0].style.transform = "rotate(90deg)";
 	}
 
 
