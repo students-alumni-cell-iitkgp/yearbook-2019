@@ -234,12 +234,12 @@ body{
                                 <!-- START dropdown-->
                                 @if($image['rollno'] == Auth::user()->rollno)
                                 <div class="dropdown pull-right">
-                                  <!-- <button class="btn btn-secondary btn-flat btn-flat-icon" title="Click to delete!" type="button" data-toggle="dropdown" aria-expanded="false">
+                                  <button class="btn btn-secondary btn-flat btn-flat-icon" title="Click to delete!" type="button" data-toggle="dropdown" aria-expanded="false">
                                     <em class="fa fa-ellipsis-h"></em>
-                                  </button> -->
-                                  <!-- <div class="dropdown-menu dropdown-scale dropdown-menu-right" role="menu" style="position: absolute; transform: translate3d(-136px, 28px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                  </button> -
+                                   <div class="dropdown-menu dropdown-scale dropdown-menu-right" role="menu" style="position: absolute; transform: translate3d(-136px, 28px, 0px); top: 0px; left: 0px; will-change: transform;">
                                     <a class="dropdown-item delete" href="#" id="{{$image['id']}}" data-token="{{csrf_token()}}">Delete</a>
-                                  </div> -->
+                                  </div> 
                                 </div><!--/ dropdown -->
                                 @endif
                                 <!-- END dropdown-->

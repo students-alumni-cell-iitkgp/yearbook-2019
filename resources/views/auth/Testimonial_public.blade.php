@@ -20,7 +20,27 @@
   <link rel='stylesheet prefetch' href="{{ url('https://fonts.googleapis.com/css?family=Raleway:300') }}">
 
       <link rel="stylesheet" href="{{ asset('css/style1.css') }}">
+      <style>
+      .box{
+      background: #373e57e3;
+      color: white;
+    }
+    .status-share {
+      background-color: #1b86f9;
+      border: none;
+      color: #fff;
+      border-radius: 4px;
+      padding: 10px 20px;
+      margin-left: auto;
+      box-shadow: 0 0 20px #1b86f9;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+   /* textarea placeholder{
+      color:black;
+    }*/
 
+    </style>
   
 </head>
 
@@ -28,10 +48,7 @@
 
    <div class="container-fluid">
 
-
-
-
-  <h1><small>
+  <h1 class = "box"><small>
 
    <h3 class="center main-title animated zoomIn">
     <div class="clock-wrap">
@@ -59,7 +76,7 @@
                    
                     <div class="input-field col s12 l6 m12 " >                   
                         <input name="user" id="user" autofocus placeholder="Name" type="text" style="margin-top: 5px;" required>
-                        <label for="user"><h5 style="font-size: 140%;  color: #004d33;">Name</h5></label>
+                        <label for="user"><h5 style="font-size: 140%;  color: white;">Name</h5></label>
                     </div>
                 </div>
                 
@@ -67,15 +84,15 @@
                 <div class="row" style="margin-bottom: 0px; text-align : center">
                     <div class="input-field col s12 l6 m12 " >                   
                         <input name="rollno" id="rollno" autofocus placeholder="Roll Number" type="text" style="margin-top: 5px;" required>
-                        <label for="rollno"><h5 style="font-size: 140%;  color: #004d33;">Roll Number (16THXXXXX)</h5></label>
+                        <label for="rollno"><h5 style="font-size: 140%;  color: white;">Roll Number (17THXXXXX)</h5></label>
                     </div>
                 </div>
                 <div style="text-align : left">Enter your review here:</div>
-                <textarea class="form-control animated" style="height:100px" cols="50" id="new-review" name="viewf" placeholder="Enter your review here...(max 144 character)" rows="10" maxlength="144" ></textarea>
+                <textarea class="form-control animated" style="height:100px" cols="50" id="new-review" name="viewf" autofocus placeholder="Enter your review here...(max 144 character)" rows="10" maxlength="144" ></textarea>
                 <br>
                 <div class="row">
                     <div class="col s12 l4 m12 offset-l4">
-                        <button type="submit" id="submit" name="submit" class="waves-effect waves-light btn" style="font-size: 15px;" required >Submit</button>
+                        <button type="submit" id="submit" name="submit" class="status-share" style="font-size: 15px;" required >Submit</button>
                     </div>
                 </div>
             </form> 
