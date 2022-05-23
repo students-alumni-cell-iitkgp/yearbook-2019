@@ -336,11 +336,17 @@
            	      	<i class="material-icons" style = " font-size: 18px;">auto_awesome</i> 
            	       </a> </li>
 
-                   <!-- <li id="11">
+                    <li id="11">
            	       <a href="{{ url('/viewbucket?id=11') }}" class="pmd-floating-action-btn btn pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-light" data-title="Cloud Queue"> 
            	      	<span class="pmd-floating-hidden" style="padding-right:10px">{{$buckets[11]}}</span> 
-           	      	<i class="material-icons" style = " font-size: 18px;">people_alt</i> 
-           	       </a> </li>-->
+           	      	<i class="material-icons" style = " font-size: 18px;">military_tech</i> 
+           	       </a> </li>
+
+                    <li id="12">
+           	       <a href="{{ url('/viewbucket?id=12') }}" class="pmd-floating-action-btn btn pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-light" data-title="Cloud Queue"> 
+           	      	<span class="pmd-floating-hidden" style="padding-right:10px">{{$buckets[12]}}</span> 
+           	      	<i class="material-icons" style = " font-size: 18px;">coffee</i> 
+           	       </a> </li>
 
                 </ul>
               </aside>
