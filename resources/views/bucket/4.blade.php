@@ -45,7 +45,7 @@
   <aside class="profile-card" style="background: url({{$myview[0]['pic']}}); background-size: 100% 100%; background-repeat: no-repeat;">
     <header>
       <h1>Inter IIT</h1><i class="fa fa-check-circle" style="color: #5cb85c; font-size: 30px;" title="Task Completed!"></i>
-      <h2>Ee Sala Cup Namde</h2>
+      <h2>KGP ka tempo</h2><br><h2>HIGH hai!!</h2>
     </header>
     <div class="profile-bio" style="text-align: center;">
       <form action="{{ url('/bucketpost/11')}}" method="post" enctype="multipart/form-data">
@@ -60,7 +60,7 @@
   <aside class="profile-card">
     <header>
       <h1>Inter IIT</h1>
-      <h2>Ee Sala Cup Namde</h2>
+      <h2>KGP ka tempo</h2><br><h2>HIGH hai!!</h2>
     </header>
     <div class="profile-bio" style="text-align: center;">
       <form action="{{ url('/bucketpost/11')}}" method="post" enctype="multipart/form-data">
@@ -82,7 +82,7 @@
   <aside class="profile-card" style="background: url({{$myview[0]['pic']}}); background-size: 100% 100%; background-repeat: no-repeat;">
     <header>
       <h1>SupDup</h1><i class="fa fa-check-circle" style="color: #5cb85c; font-size: 30px;" title="Task Completed!"></i>
-      <h2>Place that share</h2><br><h2>great thoughts with great</h2><br><h2>minds ~ A cup of tea</h2>
+      <h2>A cup of tea</h2><br><h2>and a bucket full</h2><br><h2>of memories.</h2>
     </header>
     <div class="profile-bio" style="text-align: center;">
       <form action="{{ url('/bucketpost/12')}}" method="post" enctype="multipart/form-data">
@@ -97,7 +97,7 @@
   <aside class="profile-card">
     <header>
       <h1>SupDup</h1>
-      <h2>Place that share</h2><br><h2>great thoughts with great</h2><br><h2>minds ~ A cup of tea</h2>>
+      <h2>A cup of tea</h2><br><h2>and a bucket full</h2><br><h2>of memories.</h2>
     </header>
     <div class="profile-bio" style="text-align: center;">
       <form action="{{ url('/bucketpost/12')}}" method="post" enctype="multipart/form-data">
