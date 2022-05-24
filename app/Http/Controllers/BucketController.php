@@ -84,7 +84,7 @@ class BucketController extends Controller
           ->latest()->get();
       $notifications = views::where('depmate',$roll)->where('read','1')->get();
     
-      $buckets = ['','Treat','2.2','Trek','Bonfire','Hall Days','Holi','Salsa/Prom','Beach Party','GC','Illumination','NSS Camp', 'Explore KGP', 'Movie at Library', 'Lit Hall Day Host', 'How it Started!','NSS Camp'];
+      $buckets = ['','Treat','2.2','Trek','Bonfire','Hall Days','Holi','Salsa/Prom','Beach Party','GC','Illumination','Inter IIT', 'SupDup', 'Movie at Library', 'Lit Hall Day Host', 'How it Started!','NSS Camp'];
      // $buckets = ['','TREAT','2.2','TREK','BONFIRE','HALL DAYS','HOLI','Salsa/Prom','Beach Party','Little Sisters','Trek','Local Train','2.2', 'Explore KGP', 'Movie at Library', 'Lit Hall Day Host', 'How it Started!'];
       return view('bucket_view',compact('comment_notification','images','user','notifications','currentpage','perpage','buckets', 'listid'));
     }
