@@ -122,58 +122,60 @@
           </div>
         </div>
         <div class="timeline-right">
-          <div class="album box">
+        <div style="text-align: left; font-family: Aclonica;color: white"><h3 style="color: #fff;">Closed for now!! Will show testimonials soon!! </h3></div>
+
+          <!--<div class="album box">
             <h2>Testimonials</h2>
-            <ul id='timeline'>
-              <?php
-    
-                $dept = Auth::user()->department;
-                $rollno = Auth::user()->rollno;
-                $j=0;
-                $i=0;
-                $index=1;
-    
-                foreach($myviews as $view)
-                {
-                  $id=$view['id'];
-                  echo '
-                    <li class="work">
-                      <input class="radio" id="work'.$index.'" name="works" type="radio" checked>
-                      <div class="relative">
-                        <label for="work'.$index.'">'.$view['user'].'</label>
-                        <span class="date">'.$view->created_at->diffForHumans().'</span>
-                        <span class="circle"></span>
-                      </div>
-                      <div class="content">
-                        <p>
-                          '.$view['views'].'
-                          <br>
-                          ';
-                          if($view['approval']=='1'){
-                            echo '<button type="button" class="status-share btn btn-danger disapprove "  data-no="'.json_encode($i).'" data-id="'.json_encode($id).'" id= "'.$id.'" >Disapprove</button>';
-                          }else{
-    
-                            echo '<button type="button" class="status-share btn btn-success approve "  data-no="'.json_encode($i).'" data-id="'.json_encode($id).'" id= "'.$id.'" );" >Approve</button> <div class="text_show'.$i.'" style= "padding-left: 15px;"></div>';
-                          }
-                        
-                          
-                        echo '</p>
-                        
-                      </div>
-                    </li>';
-                  
-    
-                  $j=1;
-                  $index++;
-                }         
-                if($j==0)
-                {
-    
-                  echo '<div font-family: Aclonica"><h3 style="color: #fff;">No Testimonials Given!</h3></div>';
-                }
-              ?>
+            //<ul id='timeline'>
+            //  <?php
+    //
+            //    $dept = Auth::user()->department;
+            //    $rollno = Auth::user()->rollno;
+            //    $j=0;
+            //    $i=0;
+            //    $index=1;
+    //
+            //    foreach($myviews as $view)
+            //    {
+            //      $id=$view['id'];
+            //      echo '
+            //        <li class="work">
+            //          <input class="radio" id="work'.$index.'" name="works" type="radio" checked>
+            //          <div class="relative">
+            //            <label for="work'.$index.'">'.$view['user'].'</label>
+            //            <span class="date">'.$view->created_at->diffForHumans().'</span>
+            //            <span class="circle"></span>
+            //          </div>
+            //          <div class="content">
+            //            <p>
+            //              '.$view['views'].'
+            //              <br>
+            //              ';
+            //              if($view['approval']=='1'){
+            //                echo '<button type="button" class="status-share btn btn-danger disapprove "  data-no="'.json_encode($i).'" data-id="'.json_encode($id).'" id= "'.$id.'" >Disapprove</button>';
+            //              }else{
+    //
+            //                echo '<button type="button" class="status-share btn btn-success approve "  data-no="'.json_encode($i).'" data-id="'.json_encode($id).'" id= "'.$id.'" );" >Approve</button> <div class="text_show'.$i.'" style= "padding-left: 15px;"></div>';
+            //              }
+            //            
+            //              
+            //            echo '</p>
+            //            
+            //          </div>
+            //        </li>';
+            //      
+    //
+            //      $j=1;
+            //      $index++;
+            //    }         
+            //    if($j==0)
+            //    {
+    //
+            //      echo '<div font-family: Aclonica"><h3 style="color: #fff;">No Testimonials Given!</h3></div>';
+            //    }
+            //  ?>
             </ul>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>  
