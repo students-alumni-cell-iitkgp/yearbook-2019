@@ -46,7 +46,7 @@ class CountController extends Controller
     }
 
 
-    public function entry()
+   /* public function entry()
     {
         $users = User::get();
         $count = User::get()->count();
@@ -55,7 +55,27 @@ class CountController extends Controller
             $users[$var]->save();
         }
         return redirect('/');
+    }*/
+    
+    public function entry()
+    {
+        $users = User::get();
+        $count = User::get()->count();
+        for ($var=0;$var < $count; $var++) { 
+  
+            if($users[$var]->name=="Parth Lohomi" && $users[$var]->rollno=='17AG36022'){
+                // print_r($users[$var]->name);
+                $users[$var]->password = bcrypt('22-00-1111');
+                $users[$var]->save();
+                print_r(" New Password Generated !");
+                
+            }else{
+                $users[$var]->password = bcrypt($users[$var]->dob);
+                $users[$var]->save();
+            }      
+        }
     }
+
      public function entry1()
     {
         $users = User::get();
