@@ -78,17 +78,17 @@
                         <input name="user" id="user" autofocus placeholder="Name" type="text" style="margin-top: 5px;" required>
                         <label for="user"><h5 style="font-size: 140%;  color: white;">Name</h5></label>
                     </div>
+                    <div class="input-field col s12 l6 m12 " >                   
+                        <input name="user1" id="user1" autofocus placeholder="Roll Number" type="text" style="margin-top: 5px;" required>
+                        <label for="user1"><h5 style="font-size: 140%;  color: white;">Roll Number (18THXXXXX)</h5></label>
+                    </div>
                 </div>
                 
                 <div style="text-align : left">To:</div>
                 <div class="row" style="margin-bottom: 0px; text-align : center">
                     <div class="input-field col s12 l6 m12 " >                   
-                      <form class="search-nav" action="{{ url('/search') }}" method="POST">
-	                    		{{ csrf_field() }}
-	                    		<input type="text" placeholder=" Search Your Friend Here..." name = "search" id="search" style="margin-top: 5px;" required>
-	                    		<input type="submit" value="Search" class="kafe-btn kafe-btn-mint" style="display: none;">
-	                    </form>
-                      <label for="user"><h5 style="font-size: 140%;  color: white;">Name</h5></label>
+                    <input name="rollno" id="rollno" autofocus placeholder="Roll Number" type="text" style="margin-top: 5px;" required>
+                        <label for="rollno"><h5 style="font-size: 140%;  color: white;">Roll Number (17THXXXXX)</h5></label>
                     </div>
                 </div>
                 
@@ -113,7 +113,9 @@
   <div class="slideshow-image" style="background-image: url('vikramshila.jpg')"></div>
 </div>
    
+<script>
 
+</script>
 
 </body>
 
