@@ -267,6 +267,7 @@
                           
                                       foreach($myviews as $view)
                                       {
+                                       if($view['approval']=='1'){
                                         $id=$view['id'];
                                         echo '
                                           <li class="work">
@@ -288,6 +289,7 @@
                           
                                         $j=1;
                                         $index++;
+                                        }
                                       }         
                                       if($j==0)
                                       {
