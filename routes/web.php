@@ -25,6 +25,9 @@ Auth::routes()
 	Route::get('/Testimonial_public', function () {
 		return view('auth.Testimonial_public');
 	});
+
+	//Route::get('/Testimonial_public', 'Testimonial_publicController@index')->name('index');
+
 //  Route::get('adminPage','adminPageController@index');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout'); //Just added to fix issue
 Route::get('/home', 'HomeController@index2');
@@ -96,3 +99,5 @@ Route::post('/delete', 'CountController@delete');
 Route::get('/polls','PollController@index');
 Route::post('/polls/{id}','PollController@post');
 Route::get('/pollres/{id}','PollController@plot');
+
+Route::get('/autocomplete','outsideController@autocomplete')->name('autocomplete');

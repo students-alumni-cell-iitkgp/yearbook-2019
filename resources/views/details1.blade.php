@@ -84,12 +84,18 @@
                     <input name="phone" value="{{Auth::user()->phone}}" class="form-control"  type="number" size="10" required> 
                   </div>
     
+                  <div class=" col-lg-4 col-sm-6">
+                    <i class="material-icons prefix">password</i>&nbsp;
+                    <label for="phone">Password</label>
+                        <input name="password" placeholder="xx-yy-zzzz" pattern="\d{1,2}-\d{1,2}-\d{4}" class="form-control"  type="text"   required> 
+                  </div>
                 </div>
                 <br>
     
                 <div class="row">
                   <div class="col text-center">
-                    <a class="status-share" href="/details">Update</a>
+                    <!--<a class="status-share" href="/details">Update</a>-->
+                    <input type="submit" value='Update' class="status-share" />
                   </div>
                 </div>
     
