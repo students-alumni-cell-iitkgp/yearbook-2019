@@ -42,10 +42,37 @@
       color:black;
     }*/
 
-    
+    .dropdown-menu{
+      top: 0px;
+      left: 0px;
+    }
+    .dropdown-item{
+      border-bottom: 1px; 
+    }
+
+    ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+    border-bottom: 1px white;
+    padding-top:0;
+  margin-top:0;
+}
+li{
+  display: flex;
+  justify-content: space-evenly;
+  background-color:#f8f8ff;
+  padding-top:0;
+  margin-top:0;
+}
     a{
-      color: white;
-      background-color: blue;
+      color: #005555;
+      font-weight: lighter;
+      font-size:small;
     }
     </style>
   
@@ -92,7 +119,7 @@
                 </div>
                 
                 <div style="text-align : left">To:</div>
-                <div class="row" style="margin-bottom: 0px; text-align : center">
+                <div class="row" style="margin-bottom: 0px;">
                     <!--<div class="input-field col s12 l6 m12 " >                   
                     <input name="rollno" id="rollno" autofocus placeholder="Roll Number" type="text" style="margin-top: 5px;" required>
                         <label for="rollno"><h5 style="font-size: 140%;  color: white;">Roll Number (17THXXXXX)</h5></label>

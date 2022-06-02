@@ -71,15 +71,24 @@ class ViewsController extends Controller
 
     public function writeoutside()
     {
+       
+        $name = strtok(request('rollno')."|");
+        $user = User::where('name',$name)->get();
 
 
-        views::create([
-            'depmate' => request('rollno'),
+        if( $user->isNotEmpty()){
+          $roll = $user[0]['rollno']; 
+          views::create([
+            'depmate' => $roll,
             'views' => request('viewf'),
             'user' => request('user'),
             'approval' => '0',
             
         ]);
+        }
+        else{
+            return back()->with('Error','Sorry, we cannot find your friend in our database');
+        }
 
 
         // $mydata = User::where('rollno',$roll)->get();
