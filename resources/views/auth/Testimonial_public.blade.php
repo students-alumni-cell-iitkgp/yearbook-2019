@@ -7,8 +7,10 @@
   
   <script src="{{ asset('/js/jquery.min.js') }}"></script>
 <script src="{{ asset('/js/autocomplete.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ asset('/css/autocomplete.css') }}">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <link href="{{ url('https://fonts.googleapis.com/icon?family=Material+Icons') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -40,6 +42,38 @@
       color:black;
     }*/
 
+    .dropdown-menu{
+      top: 0px;
+      left: 0px;
+    }
+    .dropdown-item{
+      border-bottom: 1px; 
+    }
+
+    ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+    border-bottom: 1px white;
+    padding-top:0;
+  margin-top:0;
+}
+li{
+  display: flex;
+  justify-content: space-evenly;
+  background-color:#f8f8ff;
+  padding-top:0;
+  margin-top:0;
+}
+    a{
+      color: #005555;
+      font-weight: lighter;
+      font-size:small;
+    }
     </style>
   
 </head>
@@ -78,20 +112,25 @@
                         <input name="user" id="user" autofocus placeholder="Name" type="text" style="margin-top: 5px;" required>
                         <label for="user"><h5 style="font-size: 140%;  color: white;">Name</h5></label>
                     </div>
-                </div>
-                
-                <div style="text-align : left">To:</div>
-                <div class="row" style="margin-bottom: 0px; text-align : center">
                     <div class="input-field col s12 l6 m12 " >                   
-                      <form class="search-nav" action="{{ url('/search') }}" method="POST">
-	                    		{{ csrf_field() }}
-	                    		<input type="text" placeholder=" Search Your Friend Here..." name = "search" id="search" style="margin-top: 5px;" required>
-	                    		<input type="submit" value="Search" class="kafe-btn kafe-btn-mint" style="display: none;">
-	                    </form>
-                      <label for="user"><h5 style="font-size: 140%;  color: white;">Name</h5></label>
+                        <input name="user1" id="user1" autofocus placeholder="Roll Number" type="text" style="margin-top: 5px;" required>
+                        <label for="user1"><h5 style="font-size: 140%;  color: white;">Roll Number (18THXXXXX)</h5></label>
                     </div>
                 </div>
                 
+                <div style="text-align : left">To:</div>
+                <div class="row" style="margin-bottom: 0px;">
+                    <!--<div class="input-field col s12 l6 m12 " >                   
+                    <input name="rollno" id="rollno" autofocus placeholder="Roll Number" type="text" style="margin-top: 5px;" required>
+                        <label for="rollno"><h5 style="font-size: 140%;  color: white;">Roll Number (17THXXXXX)</h5></label>
+                    </div>-->
+                    
+                    <div class="input-field col s12 l6 m12 " >
+                        <input type="text" name="rollno" id="rollno" autofocus class="form-control typeahead" placeholder="Search your friend here.....by name" style="margin-top: 5px;" required>
+                        <label for="rollno"><h5 style="font-size: 140%;  color: white;">Roll Number (17THXXXXX)</h5></label>
+                
+                      </div>
+                      </div>
                 <div style="text-align : left">Enter your review here:</div>
                 <textarea class="form-control animated" style="height:100px" cols="50" id="new-review" name="viewf" autofocus placeholder="Enter your review here...(max 144 character)" rows="10" maxlength="144" ></textarea>
                 <br>
@@ -112,8 +151,30 @@
   <div class="slideshow-image" style="background-image: url('kalidas.jpg')"></div>
   <div class="slideshow-image" style="background-image: url('vikramshila.jpg')"></div>
 </div>
-   
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js" integrity="sha512-HWlJyU4ut5HkEj0QsK/IxBCY55n5ZpskyjVlAoV9Z7XQwwkqXoYdCIC93/htL3Gu5H3R4an/S0h2NXfbZk3g7w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+<script>
+ var path = "{{route('autocomplete')}}";
+ var name ;
+ $('input.typeahead').typeahead({
+   source: function(terms,process){
+       return $.get(path,{terms:terms},function(data){
+
+       for( var i=0;i<data.length;i++){
+        name = data[i].name + '|' + data[i].rollno;
+        data[i].name = name;
+       }
+
+         return process(data);
+       })
+   }
+ });
+
+
+
+</script>
 
 </body>
 

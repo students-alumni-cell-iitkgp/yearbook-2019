@@ -146,9 +146,9 @@
                           <div class="well well-sm" align="center" style="background-color: rgba(67,100,107,0); border:none">
                             <div>
                               {{-- <p style="text-align: center;">Write for a friend!</p> --}}
-                              <!--<a class="btn btn-success btn-green" href="#reviews-anchor" id="open-review-box">Write Testimonial-Closed for the moment</a>
-  -->
-                              <a class="btn btn-success btn-green">Write Testimonial-Closed for the moment</a>
+                             <a class="btn btn-success btn-green" href="#reviews-anchor" id="open-review-box">Write Testimonial</a>
+ 
+                              <!--<a class="btn btn-success btn-green">Write Testimonial-Closed for the moment</a>-->
 
                             </div>
             
@@ -258,49 +258,51 @@
             
                               </div> -->
                               <div class="timeline-right container tab-pane active" id="testimonial">
-                              <div style="text-align: left; font-family: Aclonica;color: white"><h3 style="color: #fff;">Closed for now!! Will show testimonials soon!! </h3></div>
-                                <!--<div class="album box">
+                              <!--<div style="text-align: left; font-family: Aclonica;color: white"><h3 style="color: #fff;">Closed for now!! Will show testimonials soon!! </h3></div>-->
+                                <div class="album box">
                                   <ul id='timeline'>
-                                  //  <?php
-                          //
-                                  //    $dept = Auth::user()->department;
-                                  //    $rollno = Auth::user()->rollno;
-                                  //    $j=0;
-                                  //    $i=0;
-                                  //    $index=1;
-                          //
-                                  //    foreach($myviews as $view)
-                                  //    {
-                                  //      $id=$view['id'];
-                                  //      echo '
-                                  //        <li class="work">
-                                  //          <input class="radio" id="work'.$index.'" name="works" type="radio" checked>
-                                  //          <div class="relative">
-                                  //            <label for="work'.$index.'">'.$view['user'].'</label>
-                                  //            <span class="date">'.$view->created_at->diffForHumans().'</span>
-                                  //            <span class="circle"></span>
-                                  //          </div>
-                                  //          <div class="content">
-                                  //            <p>
-                                  //              '.$view['views'].'
-                                  //              <br>
-                                  //              ';    echo '</p>
-                                  //            
-                                  //          </div>
-                                  //        </li>';
-                                  //      
-                          //
-                                  //      $j=1;
-                                  //      $index++;
-                                  //    }         
-                                  //    if($j==0)
-                                  //    {
-                          //
-                                  //      echo '<div style="text-align: left; font-family: Aclonica"><h3 style="color: #fff;">No Testimonials Given!</h3></div>';
-                                  //    }
-                                  //  ?>
+                                   <?php
+                          
+                                      $dept = Auth::user()->department;
+                                      $rollno = Auth::user()->rollno;
+                                      $j=0;
+                                      $i=0;
+                                      $index=1;
+                          
+                                      foreach($myviews as $view)
+                                      {
+
+                                        if($view['approval']=='1'){
+                                        $id=$view['id'];
+                                        echo '
+                                          <li class="work">
+                                            <input class="radio" id="work'.$index.'" name="works" type="radio" checked>
+                                            <div class="relative">
+                                              <label for="work'.$index.'">'.$view['user'].'</label>
+                                              <span class="date">'.$view->created_at->diffForHumans().'</span>
+                                              <span class="circle"></span>
+                                            </div>
+                                            <div class="content">
+                                              <p>
+                                                '.$view['views'].'
+                                                <br>
+                                                ';    echo '</p>
+                                              
+                                            </div>
+                                          </li>';
+                                        
+                                        }
+                                        $j=1;
+                                        $index++;
+                                      }         
+                                      if($j==0)
+                                      {
+                          
+                                        echo '<div style="text-align: left; font-family: Aclonica"><h3 style="color: #fff;">No Testimonials Given!</h3></div>';
+                                      }
+                                    ?>
                                   </ul>
-                                </div>-->
+                                </div>
                               </div>
                             <div id="gallery" class="tab-pane fade">
                              <section class="newsfeed">

@@ -65,7 +65,7 @@
           Welcome to<b> Yearbook'22</b> Portal
         </h3><br>
         <!--<p> The Yearbook Portal has been closed. </p>-->
-         <form method="post" class="form main-title center" action="{{ route('login') }}">
+         <form method="post" class="form main-title center" onSubmit="alert('Kindly reapprove the desired testimonials to be shown in the testimonial timeline!!');" action="{{ route('login') }}">
 
                 {{ csrf_field() }}
 
