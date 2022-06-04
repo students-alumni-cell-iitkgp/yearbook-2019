@@ -72,7 +72,7 @@ class ViewsController extends Controller
     public function writeoutside()
     {
        
-        $name = strtok(request('rollno')."|");
+        $name = strtok(request('rollno'),"|");
         $user = User::where('name',$name)->get();
 
 
