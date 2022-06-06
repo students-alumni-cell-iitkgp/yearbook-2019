@@ -74,6 +74,17 @@ li{
       font-weight: lighter;
       font-size:small;
     }
+
+    #user, #user1, #rollno {
+      margin-top: 5px;
+    }
+
+    @media (max-width: 730px) {
+      #user, #user1, #rollno {
+      margin-top: 18px;
+    }
+    }
+
     </style>
   
 </head>
@@ -109,11 +120,11 @@ li{
 
                    
                     <div class="input-field col s12 l6 m12 " >                   
-                        <input name="user" id="user" autofocus placeholder="Name" type="text" style="margin-top: 5px;" required>
+                        <input name="user" id="user" autofocus placeholder="Name" type="text"  required>
                         <label for="user"><h5 style="font-size: 140%;  color: white;">Name</h5></label>
                     </div>
                     <div class="input-field col s12 l6 m12 " >                   
-                        <input name="user1" id="user1" autofocus placeholder="Roll Number" type="text" style="margin-top: 5px;" required>
+                        <input name="user1" id="user1" autofocus placeholder="Roll Number" type="text"  required>
                         <label for="user1"><h5 style="font-size: 140%;  color: white;">Roll Number (18THXXXXX)</h5></label>
                     </div>
                 </div>
@@ -126,7 +137,7 @@ li{
                     </div>-->
                     
                     <div class="input-field col s12 l6 m12 " >
-                        <input type="text" name="rollno" id="rollno" autofocus class="form-control typeahead" placeholder="Search your friend here.....by name" style="margin-top: 5px;" required>
+                        <input type="text" name="rollno" id="rollno" autofocus class="form-control typeahead" placeholder="Search your friend here.....by name"  required>
                         <label for="rollno"><h5 style="font-size: 140%;  color: white;">Roll Number (17THXXXXX)</h5></label>
                 
                       </div>
