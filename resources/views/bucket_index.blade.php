@@ -123,7 +123,7 @@
 
   @section('main-content')
 
-  <section class="page-section section1" style="font-family: Century gothic;">
+  <section class="page-section section1" style="font-family: fantasy;padding: 10px;">
     <div class="container article" style="padding: 2vw;">
           <div class="cta-inner text-center rounded">
             <h2 class="section-heading mb-4">

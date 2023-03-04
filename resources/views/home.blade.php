@@ -127,10 +127,30 @@
 .imghover:hover{
   opacity: 0.7;
 }
+
+.cta .cta-inner {
+    position: relative;
+    padding: 1rem;
+    margin: 0.1rem;
+    background-color: rgb(114 128 193 / 85%);
+}
+
+.rounded {
+    border-radius: 1rem!important;
+}
+
 </style>
   </head>
 
 <body>
+
+<!-- <script type="text/javascript">
+
+alert('Welcome to Yearbook Portal');
+
+</script> -->
+
+
 <!-- sd,jhb,jhb -->
      <!-- ==============================================
      Navigation Section
@@ -192,7 +212,9 @@
 
   <div id="modal2" class="modal fade" role="dialog">
 
-      <div class="modal-dialog">
+      <div class="modal-dialog" style="
+    width: fit-content;
+">
 
 
 
@@ -204,7 +226,7 @@
 
 
 
-            <h4 class="modal-title" style="color: white;">Upload Picture and Caption</h4>
+            <h4 class="modal-title" style="color: black;text-align: center;margin-left: 7.5rem;">Upload Picture & Caption</h4>
 
             <button type="button" class="close" data-dismiss="modal">&times;</button>
 
@@ -441,7 +463,7 @@
         
           @else
 
-        <section class="page-section cta" style="background-color: rgba(76,71,97,0.55);">
+        <section class="page-section cta" style="background-color: rgb(68 73 119 / 89%);">
           <div class="container">
             <div class="row">
               <div class="col-xl-9 mx-auto">

@@ -113,7 +113,42 @@ body{
           .panel-body .radio label, .panel-body .checkbox label {
               display: block;
           }
-        }
+
+          .row{
+            margin-left: 0px;
+
+          }
+
+          .cardbox {
+           width: 55vw;
+          }
+
+          .cardbox-like {
+           width: 80%;
+           float: none;
+           margin: 18px;
+          }
+
+          .page-section {
+          padding-left: 13vw;
+          }
+
+          .cardbox-like ul {
+          padding: 0px 0px 10px 0px !important;
+          font-size: 0px;
+          text-align: -webkit-left;
+          }
+
+          .modal-image img {
+    width: 500px !important;
+    height: 600px !important;
+}
+
+
+          @media (min-width: 992px)
+.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+    float: none !important;
+}
         </style>    
         <!-- ==============================================
     Feauture Detection
@@ -268,7 +303,7 @@ body{
                                 </div>
                                 <div class="vl"></div>
                                 <div class="col-md-4  cardbox-like"> 
-                                <span class="section-heading-upper colr" style="  font-family: 'Abhaya Libre', serif;font-size : 23px; font-colo margin-left : 1vw">&nbsp {{$image['caption']}}</span><br>
+                                <span class="section-heading-upper colr" style="  font-family: 'Abhaya Libre', serif;font-size : 18px; font-colo margin-left : 1vw">&nbsp {{$image['caption']}}</span><br>
                               
                                 <ul style="top: 6px; position: relative;">
                                   <li>

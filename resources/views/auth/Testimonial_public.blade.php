@@ -108,11 +108,11 @@ li{
   <div class="clock-toogle__toogle"></div>
 </div>           
 <br>
-<!--<b> Write Testimonials</b> </h3><br>-->
- <p> The Yearbook Portal has been closed. </p> 
+<b> Write Testimonials</b> </h3><br>
+<!-- <p> The Yearbook Portal has been closed. </p> -->
 
 
-   <!--<form action="{{ url('/writetestimonyngb') }}" onSubmit="alert('Your views will be added in their yearbook after their registration and approval');" method="POST" class="form main-title center">              
+   <form action="{{ url('/writetestimonyngb') }}" onSubmit="alert('Your views will be added in their yearbook after their registration and approval');" method="POST" class="form main-title center">              
                 {{ csrf_field() }}
 
                 <div style="text-align : left">Sender Details:</div>
@@ -130,13 +130,13 @@ li{
                 </div>
                 
                 <div style="text-align : left">To:</div>
-                <div class="row" style="margin-bottom: 0px;">-->
-                    <!-- real comment<div class="input-field col s12 l6 m12 " >                   
+                <div class="row" style="margin-bottom: 0px;">
+                    <!--<div class="input-field col s12 l6 m12 " >                   
                     <input name="rollno" id="rollno" autofocus placeholder="Roll Number" type="text" style="margin-top: 5px;" required>
                         <label for="rollno"><h5 style="font-size: 140%;  color: white;">Roll Number (17THXXXXX)</h5></label>
-                    </div> comment end-->
+                    </div>-->
                     
-                   <!-- <div class="input-field col s12 l6 m12 " >
+                    <div class="input-field col s12 l6 m12 " >
                         <input type="text" name="rollno" id="rollno" autofocus class="form-control typeahead" placeholder="Search your friend here.....by name"  required>
                         <label for="rollno"><h5 style="font-size: 140%;  color: white;">Roll Number (17THXXXXX)</h5></label>
                 
@@ -150,7 +150,7 @@ li{
                         <button type="submit" id="submit" name="submit" class="status-share" style="font-size: 15px;" required >Submit</button>
                     </div>
                 </div>
-            </form> -->
+            </form> 
          
             </small></h1>
   </div>

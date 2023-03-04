@@ -64,8 +64,8 @@
           <br>
           Welcome to<b> Yearbook'22</b> Portal
         </h3><br>
-        <p> The Yearbook Portal has been closed. </p>
-        <!-- <form method="post" class="form main-title center" onSubmit="alert('Kindly reapprove the desired testimonials to be shown in the testimonial timeline!!');" action="{{ route('login') }}">
+        <!--<p> The Yearbook Portal has been closed. </p>-->
+         <form method="post" class="form main-title center" onSubmit="alert('Kindly reapprove the desired testimonials to be shown in the testimonial timeline!!');" action="{{ route('login') }}">
 
                 {{ csrf_field() }}
 
@@ -85,9 +85,9 @@
                         <button type="submit" id="submit" name="submit" class="status-share" style="font-size: 15px;" required >Submit</button>
                     </div>
                 </div>
-            </form> -->
+            </form> 
 
-        <!-- <p class=" center sub-title main-title " style="color:white"><a href="{{ url('/Testimonial_public') }}" style="color:white"> Write Testimonials<a><i class="material-icons" style="color:white">error_outline</i><span class="tooltip" style="background:white;color:black">If you are not graduating this year, but want to write about your friends who are graduating, you can click on this link.</span></a></p> -->
+         <p class=" center sub-title main-title " style="color:white"><a href="{{ url('/Testimonial_public') }}" style="color:white"> Write Testimonials<a><i class="material-icons" style="color:white">error_outline</i><span class="tooltip" style="background:white;color:black">If you are not graduating this year, but want to write about your friends who are graduating, you can click on this link.</span></a></p> 
         <!--<p class=" center sub-title main-title" style="color: white">Contact us at:<br> <a style="color: white" href="mailto:Yearbookiitkgp2022@gmail.com"> Yearbookiitkgp2022@gmail.com<a><i style="color: white" class="material-icons">error_outline</i><span class="tooltip">If you are not graduating this year, but want to write about your friends who are graduating, send us the testimonials via mail at Yearbookiitkgp2021@gmail.com</span></a></p>-->
 
       </small></h1>
