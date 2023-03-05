@@ -420,6 +420,14 @@
           <!-- <section class="page-section"> -->
             <div class="col-lg-4 col-md-6" id="img{{$image['id']}}">
              <div class="explorebox" >
+             <div class="dropdown pull-right">
+                                  <button class="btn btn-secondary btn-flat btn-flat-icon" title="Click to delete!" type="button" data-toggle="dropdown" aria-expanded="false">
+                                    <em class="fa fa-ellipsis-h"></em>
+                                  </button> 
+                                   <div class="dropdown-menu dropdown-scale dropdown-menu-right" role="menu" style="position: absolute; transform: translate3d(-136px, 28px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                    <a class="dropdown-item delete" href="#" id="{{$image['id']}}" data-token="{{csrf_token()}}">Delete</a>
+                                  </div> 
+                                </div>
               <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0 imghover" src="{{$image['thumbnail']}}" id="{{$image['id']}}" data-src="{{$image['url']}}" data-toggle="tooltip" data-placement="top" title="Click the image!" style="cursor: pointer;width: 360px;height: 400px;border-radius: 10px;" >
               <div class=" overlay" onmouseover= "onImageHover({{$image['id']}})" onmouseout="onImageUn({{$image['id']}})" >
                 @php
@@ -639,25 +647,25 @@ document.getElementById("defaultOpen").click();
 
               */
 
-              var back = "<?php if (!empty(Auth::user()->view_self)) echo 1;else echo 0; ?>" ;
+              // var back = "<?php if (!empty(Auth::user()->view_self)) echo 1;else echo 0; ?>" ;
 
-              var back2 = "<?php echo Auth::user()->pro_pic; ?>" ;
+              // var back2 = "<?php echo Auth::user()->pro_pic; ?>" ;
 
-              $(document).ready(function() {
+              // $(document).ready(function() {
 
-                $('#modal2').modal('hide');
+              //   $('#modal2').modal('hide');
 
-                if ( (!back)||!(back2) ) {
+              //   if ( (!back)||!(back2) ) {
 
-                  $("#modal2").modal('show');
+              //     $("#modal2").modal('show');
 
-                } else {
+              //   } else {
 
-                }
+              //   }
 
 
 
-              });
+              // });
               $('#photo').click(function(){
 
                 $('#photo').submit();

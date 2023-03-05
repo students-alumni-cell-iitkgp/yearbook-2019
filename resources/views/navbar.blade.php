@@ -276,9 +276,9 @@
 			<i class="far fa-comments"></i>&nbsp;&nbsp;
 			Testimonial
 		  </a>
-		  <a href="{{ url('/home') }}" >
+		  <a href="{{ url('/polls') }}" >
 		    <i class="fas fa-clipboard-list"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-			Polls-Closed 
+			Polls
 		  </a>
 		</div>
 	  </div>
