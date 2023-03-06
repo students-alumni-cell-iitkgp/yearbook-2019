@@ -115,7 +115,9 @@
         @media screen and (max-width:500px){
         .back {
            
-            margin-left:20px;
+            margin-left:0px;
+            padding-left:15px;
+            
         }
         .media {
         
