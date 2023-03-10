@@ -205,7 +205,7 @@
     		<div class="modal-content">
     			<div class="modal-header">
 				<div>
-    				<h4 class="modal-title text-uppercase" style="color: #000">Write Testimonials</h4>
+    				<h4 class="modal-title text-uppercase" style= "color: #000;text-align:center;">Write Testimonials</h4>
 					</div>
 					<div>
 					<button type="button" class="close" data-dismiss="modal" style="right:0">&times;</button>

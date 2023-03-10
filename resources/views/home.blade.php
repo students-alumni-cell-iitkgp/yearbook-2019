@@ -444,7 +444,7 @@ alert('Welcome to Yearbook Portal');
              <div class="explorebox" >
              <div class="dropdown pull-right">
                                   <button class="btn btn-secondary btn-flat btn-flat-icon" title="Click to delete!" type="button" data-toggle="dropdown" aria-expanded="false">
-                                    <em class="fa fa-ellipsis-h"></em>
+                                  <i style="float: right;color: #fff" class="material-icons">delete</i>
                                   </button> 
                                    <div class="dropdown-menu dropdown-scale dropdown-menu-right" role="menu" style="position: absolute; transform: translate3d(-136px, 28px, 0px); top: 0px; left: 0px; will-change: transform;width: 160px;">
                                     <a class=" delete" href="#" id="{{$image['id']}}" data-token="{{csrf_token()}}" style="font-weight: 400;color: #212529;text-align: inherit;white-space: nowrap;font-size:18px;">Delete</a>

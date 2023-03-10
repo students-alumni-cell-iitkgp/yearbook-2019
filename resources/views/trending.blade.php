@@ -270,9 +270,9 @@ body{
                                 <!-- START dropdown-->
                                 @if($image['rollno'] == Auth::user()->rollno)
                                 <div class="dropdown pull-right">
-                                  <button class="btn btn-secondary btn-flat btn-flat-icon" title="Click to delete!" type="button" data-toggle="dropdown" aria-expanded="false">
-                                    <em class="fa fa-ellipsis-h"></em>
-                                  </button> -
+                                  <button class="btn bg-transparent" title="Click to delete!" type="button" data-toggle="dropdown" aria-expanded="false">
+                                  <i style="float: right;color: #5C5D71" class="material-icons">delete</i>
+                                  </button> 
                                    <div class="dropdown-menu dropdown-scale dropdown-menu-right" role="menu" style="position: absolute; transform: translate3d(-136px, 28px, 0px); top: 0px; left: 0px; will-change: transform;">
                                     <a class="dropdown-item delete" href="#" id="{{$image['id']}}" data-token="{{csrf_token()}}">Delete</a>
                                   </div> 
