@@ -217,14 +217,14 @@
     					<form action="{{ url('/search') }}" method="POST" class="form-inline" style="justify-content:center">
     						{{ csrf_field() }}
 							<div>
-    						<input class="test-search" placeholder=" Search Your Friend Here..." type="text" name="search" required="required" id="search1" style="background: none; border: 1px solid; border-radius: 5px; padding-top: 3px; padding-left: 10px; line-height: 40px; cursor: text; font-size: 14px;">
+    						<input class="test-search" placeholder="Search Your Friend Here..." type="text" name="search" required="required" id="search1" style="background: none; border: 1px solid; border-radius: 5px; padding-top: 3px; padding-left: 10px; line-height: 40px; cursor: text; font-size: 14px;margin-left: -10%;">
     						</div>
 							<div style="padding-left:25px">
 							<input type="submit" value="Search" class="kafe-btn kafe-btn-mint testi-btn" style=" color: #fff"></input>
     					    </div>
 							</form>
     				</div>
-					/* </center> */
+				/* </center> */
     			</div>
     			<div class="modal-footer">
     			</div>
@@ -453,6 +453,7 @@
 
 	if(screen.width < 930){
 		document.getElementsByClassName("cell-logo")[0].style.transform = "rotate(90deg)";
+		
 	}
 
 
