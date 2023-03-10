@@ -446,8 +446,8 @@ alert('Welcome to Yearbook Portal');
                                   <button class="btn btn-secondary btn-flat btn-flat-icon" title="Click to delete!" type="button" data-toggle="dropdown" aria-expanded="false">
                                     <em class="fa fa-ellipsis-h"></em>
                                   </button> 
-                                   <div class="dropdown-menu dropdown-scale dropdown-menu-right" role="menu" style="position: absolute; transform: translate3d(-136px, 28px, 0px); top: 0px; left: 0px; will-change: transform;">
-                                    <a class="dropdown-item delete" href="#" id="{{$image['id']}}" data-token="{{csrf_token()}}">Delete</a>
+                                   <div class="dropdown-menu dropdown-scale dropdown-menu-right" role="menu" style="position: absolute; transform: translate3d(-136px, 28px, 0px); top: 0px; left: 0px; will-change: transform;width: 160px;">
+                                    <a class=" delete" href="#" id="{{$image['id']}}" data-token="{{csrf_token()}}" style="font-weight: 400;color: #212529;text-align: inherit;white-space: nowrap;font-size:18px;">Delete</a>
                                   </div> 
                                 </div>
               <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0 imghover" src="{{$image['thumbnail']}}" id="{{$image['id']}}" data-src="{{$image['url']}}" data-toggle="tooltip" data-placement="top" title="Click the image!" style="cursor: pointer;width: 360px;height: 400px;border-radius: 10px;" >
@@ -503,7 +503,7 @@ alert('Welcome to Yearbook Portal');
     </div>
 </div>
    </section><!--/ newsfeed -->
-   <button onclick="topFunction()" id="myBtn" title="Go to top"><i class = "fa fa-chevron-circle-up" style = "font-size : 28px"></i><br><br>Scroll to top!</button>   
+   <!-- <button onclick="topFunction()" id="myBtn" title="Go to top"><i class = "fa fa-chevron-circle-up" style = "font-size : 28px"></i><br><br>Scroll to top!</button>    -->
 
   </div>
 
