@@ -351,10 +351,10 @@ alert('Welcome to Yearbook Portal');
       <div class="row justify-content-center mt-4 mb-5 postbox">
 <div class="status box p-md-4 p-0  my-md-3 col-lg-10 col-md-11 col-12 ">
         
-        <div  class="">
+        <div  class="">          
         <p>
          @include('writeup2')
-       </p>
+       </p>    
      </div>
 </div>
 </div>
@@ -392,7 +392,10 @@ alert('Welcome to Yearbook Portal');
         </div> 
         <hr>
         <div id="cropp-image-div">
-                <img id="crop-image" style="margin-left: 41%; border-radius: 3px; border-style:none;" src="" class="img-thumbnail">
+                <img id="crop-image" style="margin-left: 3%; border-radius: 3px; border-style:none;
+                
+                
+                " src="" class="img-thumbnail">
               </div>
               
       <div class="box-footer clearfix">

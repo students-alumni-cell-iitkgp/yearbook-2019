@@ -189,7 +189,7 @@ margin-right: 20px;
     </div>
   </section>
     @foreach($writeups as $writeup)
-     <div class="article box" data-toggle="tooltip" title="Click to edit!" style="padding-top:2vw;padding-right: 6vw;padding-left:2vw ">
+     <div class="article box" data-toggle="tooltip" title="Click to edit!" style="margin-top:3%;padding-top:2vw;padding-right: 6vw;padding-left:2vw; ">
       
       <h2 class="section-heading mb-4 text-center ">
           <a href="writeup/{{ $writeup->id }}"><i style="float: right;color: #fff" class="material-icons">delete</i></a>
@@ -197,7 +197,8 @@ margin-right: 20px;
 
       </h2>
 
-      <p style="padding: 2vw;text-align: left" onblur="update({{ $writeup->id }})" id="{{ $writeup->id }}" contenteditable >{!!  nl2br($writeup->writeup)!!}</p>
+      <textarea readonly="" rows="4" cols="150" class="no-border status-textarea " style=" margin-left:7%;margin-top:-1%; font-family: 'Abhaya Libre', serif;font-size : 22px; font-colo margin-left : 1vw;" style="padding: 2vw;text-align: left" onblur="update({{ $writeup->id }})" id="{{ $writeup->id }}" contenteditable >{!!  nl2br($writeup->writeup)!!}</textarea>
+
   </div>
   @endforeach
   
