@@ -90,9 +90,7 @@ color: #fff;
  color: #5c5d71;
  /* outline: none; */
 }
-textarea{
-    outline:none;
-}
+
 .status-share {
 background-color: #1b86f9;
 border: none;
@@ -196,8 +194,8 @@ margin-right: 20px;
           <span class="section-heading-lower">{{ $writeup->topic }} </span>
 
       </h2>
-
-      <textarea readonly="" rows="4" cols="120" class="no-border status-textarea " style=" margin-left:7%;margin-top:-1%; font-family: 'Abhaya Libre', serif;font-size : 22px; font-colo margin-left : 1vw;" style="padding: 2vw;text-align: left" onblur="update({{ $writeup->id }})" id="{{ $writeup->id }}" contenteditable >{!!  nl2br($writeup->writeup)!!}</textarea>
+      
+      <textarea  id="doneToMakeResponsive"readonly="" rows="5" cols="100" class="no-border status-textarea " style=" overflow:auto;margin-left:7%;margin-top:-1%; font-family: 'Abhaya Libre', serif;font-size : 14 px; font-colo margin-left : 1vw;" style="width:100%;padding: 2vw;text-align: left" onblur="update({{ $writeup->id }})" id="{{ $writeup->id }}" contenteditable >{!!  nl2br($writeup->writeup)!!}</textarea>
 
   </div>
   @endforeach
@@ -207,6 +205,29 @@ margin-right: 20px;
 
 
 <script type="text/javascript">
+
+window.addEventListener("resize", myFunction);
+function myFunction() {
+   if(screen.width<882){
+    document.getElementById("doneToMakeResponsive").setAttribute("cols", 30)
+
+  }
+  else if(screen.width<988){
+    document.getElementById("doneToMakeResponsive").setAttribute("cols", 50)
+  }
+  else if(screen.width<1059){
+    document.getElementById("doneToMakeResponsive").setAttribute("cols", 60)
+  }
+  else if(screen.width<1152){
+    document.getElementById("doneToMakeResponsive").setAttribute("cols", 70)
+  }
+  else if(screen.width<1326){
+    document.getElementById("doneToMakeResponsive").setAttribute("cols", 80)
+  }
+  // console.log(screen.width)
+ 
+}
+  
 
  function update(id){
   var writeupedit=$("#"+id).text();
