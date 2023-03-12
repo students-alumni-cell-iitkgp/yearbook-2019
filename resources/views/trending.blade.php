@@ -139,9 +139,24 @@ body{
           text-align: -webkit-left;
           }
 
+          .cardbox .cardbox-heading {
+    padding: 2%;
+    margin: 0;
+}
+
           .modal-image img {
-    width: 500px !important;
-    height: 600px !important;
+    width: 300px !important;
+    height: 300px !important;
+}
+
+.status-textarea {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    resize: none;
+    margin-top: 15px;
+    color: #fff;
+    max-width: calc(100% - 10px) !important;
 }
 
 
@@ -271,7 +286,7 @@ body{
                                 @if($image['rollno'] == Auth::user()->rollno)
                                 <div class="dropdown pull-right">
                                   <button class="btn bg-transparent" title="Click to delete!" type="button" data-toggle="dropdown" aria-expanded="false">
-                                  <i style="float: right;color: #5C5D71" class="material-icons">delete</i>
+                                  <i style="float: right;color: #5C5D71;/* line-height: 63%; */font-size: large;" class="material-icons">delete</i>
                                   </button> 
                                    <div class="dropdown-menu dropdown-scale dropdown-menu-right" role="menu" style="position: absolute; transform: translate3d(-136px, 28px, 0px); top: 0px; left: 0px; will-change: transform;">
                                     <a class="dropdown-item delete" href="#" id="{{$image['id']}}" data-token="{{csrf_token()}}">Delete</a>
@@ -300,7 +315,7 @@ body{
           
                               <div class="row cardbox-item bkg">
                                 <div class="col-md-8 full">
-                                <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0 " src="{{$image['thumbnail']}}" data-src="{{$image['url']}}" id="{{$image['id']}}"  data-toggle="tooltip" data-placement="top" title="Click the image!" style="cursor: pointer; width: 100%;height: 380px;">
+                                <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0 " src="{{$image['thumbnail']}}" data-src="{{$image['url']}}" id="{{$image['id']}}"  data-toggle="tooltip" data-placement="top" title="Click the image!" style="cursor: pointer; width: 145%;height: 380px;">
                                 </div>
                                 <div class="vl"></div>
                                 <div class="col-md-4  cardbox-like"> 
@@ -327,7 +342,7 @@ body{
                                     <img class="img-fluid img-circle" src="{{ asset('index.png') }}" style="width: 25px; height: 25px;margin-top:-40px;" alt="Image">  
                                     @endif
                                   </li> -->
-                                  <li style="width: 100%;border-right:none">
+                                  <li style="width: 100%;padding: 0px;border-right:none;margin: 0px;">
                                     <div class="comment-body">
                                       <form class="form" id="form-comment" action="{{ url('/comment') }}" method="post">
                                         {{csrf_field()}}
