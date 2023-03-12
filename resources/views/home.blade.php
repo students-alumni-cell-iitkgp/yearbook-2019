@@ -112,9 +112,18 @@
   .product-item-img{
   width: 97% !important;
 }
+.main-container {
+    padding: 1% !important;
+    width: 100%% !important;
+}
 .delete{
   margin-left: 8% !important;
 }
+
+/* .tabcontent {
+    padding: 10px 0px;
+    width: 31%;
+} */
 }
 .delete{
   margin-left: 15px;
@@ -139,10 +148,18 @@
     border-radius: 1rem!important;
 }
 
+
+
+
 </style>
   </head>
 
 <body>
+  <style>
+    .modal-content{
+      max-width:100%;
+    }
+  </style>
 
 <!-- <script type="text/javascript">
 
@@ -250,7 +267,7 @@ alert('Welcome to Yearbook Portal');
 
               <input type="file" name="fileToUpload" id="fileToUpload" style="display: none;" onchange="readURL(this);">
 
-              <img src="<?php if (!empty(Auth::user()->pro_pic)){echo Auth::user()->pro_pic; } else { echo 'img/bg/5.jpeg';}?>" alt="abc" class="intro-img img-fluid mb-3 mb-lg-0 rounded" id="OpenImgUpload" style="cursor: pointer;width: 180px;height: 180px;">
+              <img src="<?php if (!empty(Auth::user()->pro_pic)){echo Auth::user()->pro_pic; } else { echo 'img/bg/5.jpeg';}?>" alt="abc" class="intro-img img-fluid mb-3 mb-lg-0 rounded" id="OpenImgUpload" style="cursor: pointer;max-width: 100%;">
 
               <div class="input-field col sm-12 lg-12 md-12">
 
@@ -450,7 +467,7 @@ alert('Welcome to Yearbook Portal');
                                   <i style="float: right;color: #fff" class="material-icons">delete</i>
                                   </button> 
                                    <div class="dropdown-menu dropdown-scale dropdown-menu-right" role="menu" style="position: absolute; transform: translate3d(-136px, 28px, 0px); top: 0px; left: 0px; will-change: transform;width: 160px;">
-                                    <a class=" delete" href="#" id="{{$image['id']}}" data-token="{{csrf_token()}}" style="font-weight: 400;color: #212529;text-align: inherit;white-space: nowrap;font-size:18px;">Delete</a>
+                                    <a class=" delete" href="#" id="{{$image['id']}}" data-token="{{csrf_token()}}" style="font-weight: 400;color: #212529;text-align: inherit;white-space: nowrap;font-size:18px;text-decoration:none;">Delete</a>
                                   </div> 
                                 </div>
               <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0 imghover" src="{{$image['thumbnail']}}" id="{{$image['id']}}" data-src="{{$image['url']}}" data-toggle="tooltip" data-placement="top" title="Click the image!" style="cursor: pointer;width: 360px;height: 400px;border-radius: 10px;" >
@@ -896,9 +913,10 @@ document.getElementById("defaultOpen").click();
 
             success: function(response)
             {
-
              document.getElementById("img"+id).innerHTML = "";
-
+            function inner(){
+              location.reload();
+            }inner()
            },
            error: function(data)
            {

@@ -32,7 +32,7 @@
                     <div class="media_body">
                         <p><b>Maggu of the Batch</b></p>
                         <div class="row" style="display: inline-block;">
-                          <div class="col-sm-8  ">
+                          <div class="col-sm-8  col-lg-6">
                             <div class="">
                                 <div class="input-field">
                                     @if(!empty($polls['q1']))
@@ -43,7 +43,7 @@
                                 </div>
                             </div>                                     
                           </div>
-                          <div class="col-sm-2" >
+                          <div class="col-sm-2 col-lg-3" >
                             <div class="form-group" style="margin-left: 10px">
                                 <button type="submit" class="btn btn-success"><i class="material-icons" style = "font-size : 15px"> done </i></button>                                                    
                             </div>      
@@ -359,7 +359,11 @@
                 </form>
             </div>
           </div>
-
+          <style>
+            .media_body{
+              padding-top: 20px;
+            }
+          </style>
           </div>
           
           <!-- Left and right controls -->
