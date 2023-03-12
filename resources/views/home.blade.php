@@ -461,10 +461,10 @@ alert('Welcome to Yearbook Portal');
           @if(file_exists($image['url']))
           <!-- <section class="page-section"> -->
             <div class="col-lg-4 col-md-6" id="img{{$image['id']}}">
-             <div class="explorebox" >
+             <div class="explorebox" style="height:fit-content;" >
              <div class="dropdown pull-right">
                                   <button class="btn btn-secondary btn-flat btn-flat-icon" title="Click to delete!" type="button" data-toggle="dropdown" aria-expanded="false">
-                                  <i style="float: right;color: #fff" class="material-icons">delete</i>
+                                  <i style="float: right;color: #fff" class="material-icons" style="">delete</i>
                                   </button> 
                                    <div class="dropdown-menu dropdown-scale dropdown-menu-right" role="menu" style="position: absolute; transform: translate3d(-136px, 28px, 0px); top: 0px; left: 0px; will-change: transform;width: 160px;">
                                     <a class=" delete" href="#" id="{{$image['id']}}" data-token="{{csrf_token()}}" style="font-weight: 400;color: #212529;text-align: inherit;white-space: nowrap;font-size:18px;text-decoration:none;">Delete</a>
