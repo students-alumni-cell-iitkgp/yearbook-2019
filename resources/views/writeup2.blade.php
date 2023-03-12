@@ -197,7 +197,7 @@ margin-right: 20px;
 
       </h2>
 
-      <textarea readonly="" rows="4" cols="150" class="no-border status-textarea " style=" margin-left:7%;margin-top:-1%; font-family: 'Abhaya Libre', serif;font-size : 22px; font-colo margin-left : 1vw;" style="padding: 2vw;text-align: left" onblur="update({{ $writeup->id }})" id="{{ $writeup->id }}" contenteditable >{!!  nl2br($writeup->writeup)!!}</textarea>
+      <textarea readonly="" rows="4" cols="120" class="no-border status-textarea " style=" margin-left:7%;margin-top:-1%; font-family: 'Abhaya Libre', serif;font-size : 22px; font-colo margin-left : 1vw;" style="padding: 2vw;text-align: left" onblur="update({{ $writeup->id }})" id="{{ $writeup->id }}" contenteditable >{!!  nl2br($writeup->writeup)!!}</textarea>
 
   </div>
   @endforeach
