@@ -195,7 +195,7 @@ margin-right: 20px;
 
       </h2>
       
-      <textarea  id="doneToMakeResponsive"readonly="" rows="5" cols="100" class="no-border status-textarea " style=" overflow:auto;margin-left:7%;margin-top:-1%; font-family: 'Abhaya Libre', serif;font-size : 14 px; font-colo margin-left : 1vw;" style="width:100%;padding: 2vw;text-align: left" onblur="update({{ $writeup->id }})" id="{{ $writeup->id }}" contenteditable >{!!  nl2br($writeup->writeup)!!}</textarea>
+      <textarea  name="abc"readonly="" rows="5" cols="100" class=" abc no-border status-textarea " style=" overflow:auto;margin-left:7%;margin-top:-1%; font-family: 'Abhaya Libre', serif;font-size : 14 px; font-colo margin-left : 1vw;" style="width:100%;padding: 2vw;text-align: left" onblur="update({{ $writeup->id }})" id="{{ $writeup->id }}" contenteditable >{!!  nl2br($writeup->writeup)!!}</textarea>
 
   </div>
   @endforeach
@@ -208,23 +208,33 @@ margin-right: 20px;
 
 window.addEventListener("resize", myFunction);
 function myFunction() {
-   if(screen.width<882){
-    document.getElementById("doneToMakeResponsive").setAttribute("cols", 30)
+  const abc_names = document.getElementsByName("abc");
+  for (var i = 0; i < abc_names.length; i++) {
+    if(screen.width<882){
+    abc_names[i].setAttribute("cols", 30)
 
   }
   else if(screen.width<988){
-    document.getElementById("doneToMakeResponsive").setAttribute("cols", 50)
+    abc_names[i].setAttribute("cols", 50)
   }
   else if(screen.width<1059){
-    document.getElementById("doneToMakeResponsive").setAttribute("cols", 60)
+    abc_names[i].setAttribute("cols", 60)
   }
   else if(screen.width<1152){
-    document.getElementById("doneToMakeResponsive").setAttribute("cols", 70)
+    abc_names[i].setAttribute("cols", 70)
   }
   else if(screen.width<1326){
-    document.getElementById("doneToMakeResponsive").setAttribute("cols", 80)
+    abc_names[i].setAttribute("cols", 80)
+  }else{
+    abc_names[i].setAttribute("cols", 100)
+
   }
-  // console.log(screen.width)
+    
+    
+}
+   
+  console.log(screen.width)
+  console.log(abc_names)
  
 }
   
