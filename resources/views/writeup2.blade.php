@@ -127,6 +127,7 @@ margin-right: 20px;
 </head>
 
 <body>
+  
 
   
 
@@ -205,9 +206,43 @@ margin-right: 20px;
 
 
 <script type="text/javascript">
+  window.addEventListener('load', function() {
+   
 
-window.addEventListener("resize", myFunction);
-function myFunction() {
+const abc_names = document.getElementsByName("abc");
+for (var i = 0; i < abc_names.length; i++) {
+  if(screen.width<882){
+  abc_names[i].setAttribute("cols", 30)
+
+}
+else if(screen.width<988){
+  abc_names[i].setAttribute("cols", 50)
+}
+else if(screen.width<1059){
+  abc_names[i].setAttribute("cols", 60)
+}
+else if(screen.width<1152){
+  abc_names[i].setAttribute("cols", 70)
+}
+else if(screen.width<1326){
+  abc_names[i].setAttribute("cols", 80)
+}else{
+  abc_names[i].setAttribute("cols", 100)
+
+
+}
+console.log(screen.width)
+// console.log(abc_names)
+} 
+
+
+    
+    
+})
+  
+
+window.addEventListener("resize", ()=>{
+
   const abc_names = document.getElementsByName("abc");
   for (var i = 0; i < abc_names.length; i++) {
     if(screen.width<882){
@@ -228,15 +263,21 @@ function myFunction() {
   }else{
     abc_names[i].setAttribute("cols", 100)
 
+
   }
-    
-    
-}
-   
   console.log(screen.width)
-  console.log(abc_names)
+  // console.log(abc_names)
+} 
+
+});
+
+  
+    
+
+   
+  
  
-}
+
   
 
  function update(id){
