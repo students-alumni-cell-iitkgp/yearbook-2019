@@ -36,7 +36,7 @@
     <style>
     
     .cover-img{
-      background-image: url('img/bg/collage.jpg');
+      background-image: url('img/bg/collage.webp');
       height:30vw;
       background-size: 100% 100%;
       background-repeat: no-repeat;
@@ -75,7 +75,7 @@
 @section('main-content')
 <div class="main-container">
   <div class="profile">
-    <img src="img/bg/collage.jpg" alt="" class="profile-cover">
+    <img src="img/bg/collage.webp" alt="" class="profile-cover">
 
     <div class="profile-avatar">
       <div class="profile-photo">

@@ -347,7 +347,7 @@ body{
                                   </li> -->
                                   <div class="row comment-send">
                                     <li style="width: 100%;padding: 0px;border-right:none;margin: 0px; display:flex; flex-flow: row;">
-                                      <div class="d-flex justify-content-between col-lg-8 col-md-8 col-sm-12 comment-body" style="width=:100%">
+                                      <div class="d-flex justify-content-between col-lg-8 col-md-8 col-sm-12 comment-body" style="width=:fit-content">
                                         <form class="form" id="form-comment" action="{{ url('/comment') }}" method="post">
                                           {{csrf_field()}}
                                           <!-- <ul>

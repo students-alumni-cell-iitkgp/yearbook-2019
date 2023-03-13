@@ -42,7 +42,7 @@
   @section('main-content')
     <div class="main-container">
       <div class="profile">
-        <img src="img/bg/collage.jpg" alt="" class="profile-cover">
+        <img src="img/bg/collage.webp" alt="" class="profile-cover">
         <div class="profile-avatar">
           <div class="profile-photo">
             <img src="<?php if (!empty(Auth::user()->pro_pic)){echo Auth::user()->pro_pic; } else { echo 'img/shot.jpg';}?>" alt="" class="profile-img">
