@@ -175,7 +175,7 @@
                             <div class="media_body">
                             <p><i class="fas fa-poll fa-lg"></i><b> {{ $titles[$i] }} </b></p>
                                 <div class="row" style="display: inline-block;">
-                                    <div class="col-sm-10">
+                                    <div class="col-sm-10 col-md-12">
                                         <div class="polls-input">
                                             <div class="input-field">
                                                 @if(!empty($polls[$q]))
@@ -186,7 +186,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-2">
+                                    <div class="col-sm-2 col-md-2">
                                         <div class="form-group" style="margin-left: 20px;">
                                             <button><submit type="submit" class="btn btn-primary">Submit </button>
                                         </div>

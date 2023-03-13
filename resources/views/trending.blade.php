@@ -159,6 +159,10 @@ body{
     max-width: calc(100% - 10px) !important;
 }
 
+.comment-send{
+  
+}
+
 
           @media (min-width: 992px){
 .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
@@ -319,9 +323,9 @@ body{
                                 </div>
                                 <div class="vl"></div>
                                 <div class="col-md-4  cardbox-like"> 
-                                <textarea readonly rows="3" cols="65" class="no-border status-textarea " style="  font-family: 'Abhaya Libre', serif;font-size : 18px; font-colo margin-left : 1vw;">&nbsp {{$image['caption']}}</textarea><br>
-                              
-                                <ul style="top: 6px; position: relative;">
+                                  <textarea readonly rows="3" cols="65" class="no-border status-textarea " style="  font-family: 'Abhaya Libre', serif;font-size : 18px; font-colo margin-left : 1vw;">&nbsp {{$image['caption']}}</textarea><br>
+
+                                  <ul style="top: 6px; position: relative;">
                                   <li>
                                     <div id="+{{$image['id']}}+" style="border-right:1px solid gray;padding-right:10px" class="like"></div>  <!-- Like Button -->
                                   </li>
@@ -329,7 +333,6 @@ body{
                                     <button type="button" class="com btn comment_btn" id="{{$image['id']}}" style="margin-left:-30px;border: none;background:none" value="{{$image['url']}}">
                                       <i class="far fa-comment"></i> View Comments
                                     </button>
-          
                                   </li>
                                 </ul>
 
@@ -342,22 +345,26 @@ body{
                                     <img class="img-fluid img-circle" src="{{ asset('index.png') }}" style="width: 25px; height: 25px;margin-top:-40px;" alt="Image">  
                                     @endif
                                   </li> -->
-                                  <li style="width: 100%;padding: 0px;border-right:none;margin: 0px;">
-                                    <div class="comment-body">
-                                      <form class="form" id="form-comment" action="{{ url('/comment') }}" method="post">
-                                        {{csrf_field()}}
-                                        <!-- <ul>
-                                          <li > -->
-                                              <input id="comment-token" type="hidden" name="_token" value="{{ csrf_token() }}" style="padding-left:20px;padding-right:20px">
-                                              <textarea name="comment" id="textarea" class="form-control input-sm" rows="1" type="text" placeholder="Write your comment..." required></textarea>
-                                          <!-- </li>
-                                          <li>  -->
-                                              <button class="comment_btn" style="height : 20%;width:30%; margin-right : 15vh;float:left; margin-top : 3vh;color:red;border-radius:3px;border:0px solid white;">	<i class="material-icons" id="submit" style = " font-size:28px;color:gray">send</i> </button>
-                                          <!-- </li>
-                                        </ul>   -->
-                                      </form>
-                                    </div>
-                                  </li>
+                                  <div class="row comment-send">
+                                    <li style="width: 100%;padding: 0px;border-right:none;margin: 0px; display:flex; flex-flow: row;">
+                                      <div class="d-flex justify-content-between col-lg-8 col-md-8 col-sm-12 comment-body" style="width=:100%">
+                                        <form class="form" id="form-comment" action="{{ url('/comment') }}" method="post">
+                                          {{csrf_field()}}
+                                          <!-- <ul>
+                                            <li > -->
+                                                <input id="comment-token" type="hidden" name="_token" value="{{ csrf_token() }}" style="padding-left:20px;padding-right:20px">
+                                                <textarea name="comment" id="textarea" class="form-control input-sm" rows="1" type="text" placeholder="Write your comment..." required></textarea>
+                                            <!-- </li>
+                                            <li>  -->
+                                          </form>
+                                      </div>
+                                      <div class="d-flex justify-content-between col-2 send-body">
+                                        <button class="comment_btn" style="height : 100%; margin-right : 15vh;float:left;color:red;border-radius:3px;border:0px solid white;">	<i class="material-icons" id="submit" style = " font-size:28px;color:gray">send</i> </button>
+                                      </div>      
+                                        <!-- </li>
+                                          </ul>   -->
+                                    </li>
+                                  </div>
                                 </ul>
                                 <script type="text/javascript"> 
                                   $(document).ready(function () {
