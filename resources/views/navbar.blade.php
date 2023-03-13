@@ -212,7 +212,7 @@
 					</div>
     			</div>
     			<div class="modal-body" style='top:10px;'>
-				/* <center> */
+				
     				<div class="search-dashboard" >
     					<form action="{{ url('/search') }}" method="POST" class="form-inline" style="justify-content:center">
     						{{ csrf_field() }}
@@ -224,7 +224,7 @@
     					    </div>
 							</form>
     				</div>
-				/* </center> */
+				
     			</div>
     			<div class="modal-footer">
     			</div>
