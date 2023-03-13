@@ -106,7 +106,7 @@
 .back{
   /* background-image: url('img/bg/bgbg.jpg'); */
   /* background-attachment: fixed; */
-  background-color:#24273b
+  background-color:#24x3b
 }
 @media (max-width: 455px){
   .product-item-img{
@@ -461,7 +461,7 @@ alert('Welcome to Yearbook Portal');
           @if(file_exists($image['url']))
           <!-- <section class="page-section"> -->
             <div class="col-lg-4 col-md-6" id="img{{$image['id']}}">
-             <div class="explorebox" style="height:fit-content;" >
+             <div class="explorebox" style="height:fit-content !important;" >
              <div class="dropdown pull-right">
                                   <button class="btn btn-secondary btn-flat btn-flat-icon" title="Click to delete!" type="button" data-toggle="dropdown" aria-expanded="false">
                                   <i style="float: right;color: #fff" class="material-icons" style="">delete</i>
