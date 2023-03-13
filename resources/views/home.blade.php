@@ -97,7 +97,7 @@
 }
 
 .cover-img{
-  background-image: url('img/bg/collage.jpg');
+  background-image: url('img/bg/collage.webp');
   height:100%;
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -842,9 +842,9 @@ document.getElementById("defaultOpen").click();
         $el.wrap('<form>').closest('form').get(0).reset();
         $el.unwrap();
         console.log(response);
-        function inner(){
-              location.reload();
-            }inner()
+        
+        location.reload();
+           
 
        
         
@@ -856,6 +856,17 @@ document.getElementById("defaultOpen").click();
       //  location.reload();
      },
      
+     error: function(data)
+        {
+          swal({  
+       title: "Failure!",  
+       
+       icon: "error",  
+       button: "OK",  
+      }).then(()=>{
+        location.reload();
+      })
+        }
   });
    });
   $('#image').change(function() {
