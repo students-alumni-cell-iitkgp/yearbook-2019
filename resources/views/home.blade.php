@@ -781,7 +781,45 @@ document.getElementById("defaultOpen").click();
       var formdata = new FormData(this); 
       
      //console.log("crop image",originalData);
+
+     /*swal ({ 
+        title: "Are you sure?",
+        icon: "warning",
+        buttons: {
+          cancel: "No",
+          confirm: "Yes",
+        },
+        dangerMode: true,
+        url: "{{ url('/upload1') }}",
+        type: "POST",
+        data: formdata,
+        contentType: false,
+        cache: false,
+        processData: false,
+      }).then(() => {
+       
+          $.ajax({
+            
+
+            success: function(response)
+            {
+             document.getElementById("img"+id).innerHTML = "";
+             $('#loading').hide();
+             $('#cropp-image-div').css("display", "none");
+             $('#cropp-image-div').css("border-style", "none");
+             var $el = $('#image');
+             $el.wrap('<form>').closest('form').get(0).reset();
+             $el.unwrap();
+             console.log(response);
+          
+            
+           },
+          
+         });
+        
+      }); */
      $.ajax({
+      
       url: "{{ url('/upload1') }}",
       type: "POST",
       data: formdata,
@@ -790,7 +828,13 @@ document.getElementById("defaultOpen").click();
       processData: false,
       success: function(response)
       {
-        alert('Your pic has been succesfully added.');
+        // alert('Your pic has been succesfully added.');
+        swal({  
+       title: "Good job!",  
+       
+       icon: "success",  
+       button: "oh yes!",  
+      }).then(() => {
         $('#loading').hide();
         $('#cropp-image-div').css("display", "none");
         $('#cropp-image-div').css("border-style", "none");
@@ -798,15 +842,20 @@ document.getElementById("defaultOpen").click();
         $el.wrap('<form>').closest('form').get(0).reset();
         $el.unwrap();
         console.log(response);
+        function inner(){
+              location.reload();
+            }inner()
+
+       
+        
+          
+        
+      });  
+        
        // document.getElementById('posts').innerHTML += response;
-       location.reload();
+      //  location.reload();
      },
-     error: function(data)
-     {
-      alert("Sorry, there was an error uploading image");
-      console.log("error",data);
-      window.location.reload();
-    }
+     
   });
    });
   $('#image').change(function() {
