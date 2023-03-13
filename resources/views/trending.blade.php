@@ -140,29 +140,36 @@ body{
           }
 
           .cardbox .cardbox-heading {
-    padding: 2%;
-    margin: 0;
-}
+            padding: 2%;
+            margin: 0;
+          }
 
           .modal-image img {
-    width: 300px !important;
-    height: 300px !important;
-}
+            width: 300px !important;
+            height: 300px !important;
+          }
 
-.status-textarea {
-    flex-grow: 1;
-    background-color: transparent;
-    border: none;
-    resize: none;
-    margin-top: 15px;
-    color: #fff;
-    max-width: calc(100% - 10px) !important;
-}
+          .status-textarea {
+              flex-grow: 1;
+              background-color: transparent;
+              border: none;
+              resize: none;
+              margin-top: 15px;
+              color: #fff;
+              max-width: calc(100% - 10px) !important;
+          }
 
-.comment-send{
-  
-}
+          .form{
+            width: -webkit-fill-available;
+          }
 
+
+          @media and (max-width: 820px ){
+            .comment-send{
+              display: flex;
+              flex-flow: row !important;
+            }
+          }
 
           @media (min-width: 992px){
 .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
@@ -346,19 +353,19 @@ body{
                                     @endif
                                   </li> -->
                                   <div class="row comment-send">
-                                    <li style="width: 100%;padding: 0px;border-right:none;margin: 0px; display:flex; flex-flow: row;">
-                                      <div class="d-flex justify-content-between col-lg-8 col-md-8 col-sm-12 comment-body" style="width=:fit-content">
+                                    <li class="c-s" style="width: 100%;padding: 0px;border-right:none;margin: 0px; display:flex; flex-flow: row;">
+                                      <div class="d-flex justify-content-between col-lg-8 col-md-10 col-sm-12 comment-body" style="width=:fit-content">
                                         <form class="form" id="form-comment" action="{{ url('/comment') }}" method="post">
                                           {{csrf_field()}}
                                           <!-- <ul>
                                             <li > -->
                                                 <input id="comment-token" type="hidden" name="_token" value="{{ csrf_token() }}" style="padding-left:20px;padding-right:20px">
-                                                <textarea name="comment" id="textarea" class="form-control input-sm" rows="1" type="text" placeholder="Write your comment..." required></textarea>
+                                                <textarea name="comment" id="textarea" class="form-control input-sm" rows="1" columns="50" type="text" placeholder="Write your comment..." required></textarea>
                                             <!-- </li>
                                             <li>  -->
                                           </form>
                                       </div>
-                                      <div class="d-flex justify-content-between col-2 send-body">
+                                      <div class="d-flex justify-content-between col-lg-2 col-md-2 col-sm-12 send-body">
                                         <button class="comment_btn" style="height : 100%; margin-right : 15vh;float:left;color:red;border-radius:3px;border:0px solid white;">	<i class="material-icons" id="submit" style = " font-size:28px;color:gray">send</i> </button>
                                       </div>      
                                         <!-- </li>
