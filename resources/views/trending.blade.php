@@ -101,7 +101,7 @@ body{
               margin-top: 0px;
               margin-bottom: 0px;
           }
-
+  
           .panel-body .list-group {
               margin-bottom: 0;
           }
@@ -121,6 +121,7 @@ body{
 
           .modal-meta-top{
             width: -webkit-fill-available;
+            padding-right:37%;
           }
 
           .cardbox {
@@ -168,13 +169,28 @@ body{
           }
 
 
-          @media and (max-width: 820px ){
+
+          
+
+          @media and (min-width:300px) and (max-width: 820px ){
             .comment-send{
               display: flex;
               flex-flow: row !important;
             }
+            .comments{
+              width:120% !important;
+            }
           }
 
+          @media (min-width: 992px){
+.col-md-4 {
+    width: 75.333333%;
+}
+
+.modal-content{
+  width:50% !important;
+}
+          }
           @media (min-width: 992px){
 .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
     float: none !important;
@@ -209,7 +225,12 @@ body{
    =============================================== -->
    <div id="myModal" class="modal fade">
     <div class="modal-dialog">
-     <div class="modal-content">
+     <div class="modal-content" style="
+    width: 70%;
+    margin: auto;
+    padding: 0;
+    top:15%;
+" >
       <div class="modal-body" style="width: 50vw;">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
          <span aria-hidden="true">×</span>
@@ -229,7 +250,9 @@ body{
           </a>
           <span id="created_at"></span><br/>
         </div><!--/ img-poster -->
-        <div id="comments"> 
+        <div id="comments"style="
+    width: 100%;
+"> 
         </div>
         
         <div class="modal-meta-bottom">     
@@ -242,8 +265,8 @@ body{
             <form class="form" id="form-comment" action="{{ url('/comment') }}" method="post">
               {{csrf_field()}}
               <input id="comment-token" type="hidden" name="_token" value="{{ csrf_token() }}">
-              <textarea name="comment" id="textarea" class="form-control input-sm" rows="2" type="text" placeholder="Write your comment..." required></textarea>
-              <div align="right">
+              <textarea style="width: 300px !important;height: 32px;" name="comment" id="textarea" class="form-control input-sm" rows="2" type="text" placeholder="Write your comment..." required ></textarea>
+              <div >
                 <button class="btn" id="submit" style="margin-top: 10px;"><span>Comment</span></button>
               </div>
             </form>
@@ -358,7 +381,7 @@ body{
                                   </li> -->
                                   <div class="row comment-send">
                                     <li class="c-s" style="width: 100%;padding: 0px;border-right:none;margin: 0px; display:flex; flex-flow: row;">
-                                      <div class="d-flex justify-content-between col-lg-8 col-md-10 col-sm-12 comment-body" style="width=:fit-content">
+                                      <div class="d-flex justify-content-between col-lg-8 col-md-10 col-sm-12 comment-body" style="width=:fit-content;padding:0px;">
                                         <form class="form" id="form-comment" action="{{ url('/comment') }}" method="post">
                                           {{csrf_field()}}
                                           <!-- <ul>
@@ -709,7 +732,7 @@ body{
 
 }
 else{
-  abc_names[i].style.width ='315px'
+  abc_names[i].style.width ='300px'
   abc_names[i].style.height ='32px'
 
 
@@ -759,7 +782,7 @@ window.addEventListener("resize", ()=>{
 
 }
 else{
-  abc_names[i].style.width ='315px'
+  abc_names[i].style.width ='300px'
   abc_names[i].style.height ='32px'
 
 
