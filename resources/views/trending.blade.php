@@ -684,6 +684,99 @@ body{
 
     
   </script>
+  <script type="text/javascript">
+  window.addEventListener('load', function() {
+    const abc_names = document.getElementsByName("comment");
+  for (var i = 0; i < abc_names.length; i++) {
+ if(screen.width<396){
+      abc_names[i].style.width ='103px'
+      abc_names[i].style.height ='51px'
+}else if(screen.width<430){
+      abc_names[i].style.width ='115px'
+      abc_names[i].style.height ='48px'
+
+}else if(screen.width<465){
+      abc_names[i].style.width ='129px'
+      abc_names[i].style.height ='51px'
+
+}else if(screen.width<590){
+      abc_names[i].style.width ='145px'
+      abc_names[i].style.height ='33px'
+
+}else if(screen.width<956){
+      abc_names[i].style.width ='183px'
+      abc_names[i].style.height ='31px'
+
+}
+else{
+  abc_names[i].style.width ='315px'
+  abc_names[i].style.height ='32px'
+
+
+}
+// console.log(screen.width)
+} 
+
+
+
+
+
+
+
+
+
+
+
+  })
+
+   
+
+
+  
+
+window.addEventListener("resize", ()=>{
+
+  const abc_names = document.getElementsByName("comment");
+  for (var i = 0; i < abc_names.length; i++) {
+ if(screen.width<396){
+      abc_names[i].style.width ='103px'
+      abc_names[i].style.height ='51px'
+}else if(screen.width<430){
+      abc_names[i].style.width ='115px'
+      abc_names[i].style.height ='48px'
+
+}else if(screen.width<465){
+      abc_names[i].style.width ='129px'
+      abc_names[i].style.height ='51px'
+
+}else if(screen.width<590){
+      abc_names[i].style.width ='145px'
+      abc_names[i].style.height ='33px'
+
+}else if(screen.width<956){
+      abc_names[i].style.width ='183px'
+      abc_names[i].style.height ='31px'
+
+}
+else{
+  abc_names[i].style.width ='315px'
+  abc_names[i].style.height ='32px'
+
+
+}
+// console.log(screen.width)
+} 
+
+});
+
+  
+    
+
+   
+  
+ 
+
+</script>
   
   @endsection
   </body>
