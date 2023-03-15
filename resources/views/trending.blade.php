@@ -119,6 +119,10 @@ body{
 
           }
 
+          .modal-meta-top{
+            width: -webkit-fill-available;
+          }
+
           .cardbox {
            width: 55vw;
           }
@@ -206,12 +210,12 @@ body{
    <div id="myModal" class="modal fade">
     <div class="modal-dialog">
      <div class="modal-content">
-      <div class="modal-body">
+      <div class="modal-body" style="width: 50vw;">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
          <span aria-hidden="true">×</span>
          <span class="sr-only">Close</span>
        </button>
-       <div class="row">
+       <div class="row" style="word-break: break-all">
          
         <div class="col-md-8 modal-image">
           <img class="img-responsive enlargeImageModalSource" src="" alt="Image"/>
