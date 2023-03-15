@@ -155,7 +155,7 @@
                             <div class="row" id="post-review-box" style="display:none;">
                               <div class="col-md-12">
                                 <form action="{{ url('/writetestimony/'.$data[0]["rollno"]) }}" onSubmit="Swal.fire(
-  'Good job!',
+  'Posted Succesfully',
   'The testimonial will be added once it is approved',
   'success'
 )" method="POST" style="padding-top: 0;">
