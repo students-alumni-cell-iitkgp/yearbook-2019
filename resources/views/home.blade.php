@@ -830,10 +830,10 @@ document.getElementById("defaultOpen").click();
       {
         // alert('Your pic has been succesfully added.');
         swal({  
-       title: "Good job!",  
+       title: "Uploaded Successfully ",  
        
        icon: "success",  
-       button: "oh yes!",  
+       button: "OK",  
       }).then(() => {
         $('#loading').hide();
         $('#cropp-image-div').css("display", "none");

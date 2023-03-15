@@ -334,10 +334,10 @@ $(document).ready(function (e) {
       {
         // alert('Your pic has been succesfully added.');
         swal({  
-       title: "Good job!",  
+       title: "Uploaded Succesfully",  
        
        icon: "success",  
-       button: "oh yes!",  
+       button: "OK",  
       }).then(() => {
         $('#loading').hide();
         $('#cropp-image-div').css("display", "none");
