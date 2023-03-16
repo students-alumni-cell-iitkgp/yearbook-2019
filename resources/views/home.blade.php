@@ -541,8 +541,13 @@ alert('Welcome to Yearbook Portal');
         <div class="modal-header" style="
     display: inline-table;
 ">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Selected image : </h4>
+          <button type="button" class="close" data-dismiss="modal" style="
+    color: darkred;
+">&times;</button>
+          <h4 class="modal-title" style="
+    color: #265986;
+    font-weight: 700;
+" >Selected image : </h4>
         </div>
         <div class="modal-body">
          <div id="image-preview-div" style="display: none">
