@@ -232,7 +232,9 @@ body{
     top:15%;
 " >
       <div class="modal-body" style="width: 50vw;">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+        <button type="button" style="
+    float: none;
+" class="close" data-dismiss="modal" aria-hidden="true">
          <span aria-hidden="true">×</span>
          <span class="sr-only">Close</span>
        </button>
