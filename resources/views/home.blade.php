@@ -239,7 +239,7 @@ alert('Welcome to Yearbook Portal');
 
         <div class="modal-content" style="text-align: center;">
 
-          <div class="modal-header">
+          <div class="modal-header" >
 
 
 
@@ -409,7 +409,7 @@ alert('Welcome to Yearbook Portal');
         </div> 
         <hr>
         <div id="cropp-image-div">
-                <img id="crop-image" style="margin-left: 3%; border-radius: 3px; border-style:none;
+                <img id="crop-image" style="margin-left: 10%; border-radius: 3px; border-style:none;
                 
                 
                 " src="" class="img-thumbnail">
@@ -534,8 +534,13 @@ alert('Welcome to Yearbook Portal');
    <div id="bootstrap-modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
       <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
+      <div class="modal-content" style="
+    top: 5%;
+    margin: 18%;
+" >
+        <div class="modal-header" style="
+    display: inline-table;
+">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Selected image : </h4>
         </div>
