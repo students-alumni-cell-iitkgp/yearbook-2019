@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Testimonials</title>
-  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="{{ asset('/js/jquery.min.js') }}"></script>
 <script src="{{ asset('/js/autocomplete.js') }}"></script>
 <link rel="stylesheet" type="text/css" href="{{ asset('/css/autocomplete.css') }}">
@@ -121,8 +121,14 @@ li{
 <b> Write Testimonials</b> </h3><br>
  <!-- <p> The Yearbook Portal has been closed. </p>  -->
 
-
-   <form action="{{ url('/writetestimonyngb') }}" onSubmit="alert('Your views will be added in their yearbook after their registration and approval');" method="POST" class="form main-title center">              
+   <form action="{{ url('/writetestimonyngb') }}" onSubmit=" 
+Swal.fire({
+ 
+  icon: 'success',
+  title: 'The testimonial will be added once it is approved',
+  showConfirmButton: true,
+  
+}).then((result) => {location.reload();});return false" method="POST" class="form main-title center">              
                 {{ csrf_field() }}
 
                 <div style="text-align : left">Sender Details:</div>
