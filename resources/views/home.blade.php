@@ -237,7 +237,7 @@ alert('Welcome to Yearbook Portal');
 
         <!-- Modal content-->
 
-        <div class="modal-content" style="text-align: center;">
+        <div class="modal-content" style="text-align: center; margin:15%">
 
           <div class="modal-header" >
 
