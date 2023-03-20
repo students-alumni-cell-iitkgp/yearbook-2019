@@ -853,8 +853,8 @@
                                 }
                                 
                                 .modal-image img {
-                                    width: 600px !important;
-                                    height: 540px !important;
+                                    width: inherit !important;
+                                    /* height: 540px !important; */
                                 }
                                 
                                 .img-poster {

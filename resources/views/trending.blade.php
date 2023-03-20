@@ -121,7 +121,7 @@ body{
 
           .modal-meta-top{
             width: -webkit-fill-available;
-            padding-right:37%;
+            padding-right:0%;
           }
 
           .cardbox {
@@ -150,7 +150,6 @@ body{
           }
 
           .modal-image img {
-            width: 300px !important;
             height: 300px !important;
           }
 
@@ -180,6 +179,10 @@ body{
             .comments{
               width:120% !important;
             }
+
+            .modal-content{
+  width:50% !important;
+}
           }
 
           @media (min-width: 992px){
@@ -188,7 +191,7 @@ body{
 }
 
 .modal-content{
-  width:50% !important;
+  width:90% !important;
 }
           }
           @media (min-width: 992px){
@@ -227,11 +230,11 @@ body{
     <div class="modal-dialog">
      <div class="modal-content" style="
     width: 70%;
-    margin: auto;
+    margin: 0 20%;
     padding: 0;
     top:15%;
 " >
-      <div class="modal-body" style="width: 50vw;">
+      <div class="modal-body" >
         <button type="button" style="
     float: none;
 " class="close" data-dismiss="modal" aria-hidden="true">
@@ -240,7 +243,7 @@ body{
        </button>
        <div class="row" style="word-break: break-all">
          
-        <div class="col-md-8 modal-image">
+        <div class="col-md-12 modal-image">
           <img class="img-responsive enlargeImageModalSource" src="" alt="Image"/>
         </div><!--/ col-md-8 -->
         <div class="col-md-4 modal-meta">
