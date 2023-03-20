@@ -133,12 +133,12 @@ li{
                 
                 <div style="text-align : left">To:</div>
                 <div class="row" style="margin-bottom: 0px;">
-                    <div class="input-field col s12 l6 m12 " >                   
+                    <!-- <div class="input-field col s12 l6 m12 " >                   
                     <input name="rollno" id="rollno" autofocus placeholder="Roll Number" type="text" style="
     padding-top: 5px;
 " required>
                         <label for="rollno"><h5 style="font-size: 140%;  color: white;">Roll Number (18THXXXXX)</h5></label>
-                    </div> 
+                    </div>  -->
                     
                     <div class="input-field col s12 l6 m12 " >
                         <input type="text" name="rollno" id="rollno" autofocus class="form-control typeahead" placeholder="Search your friend here.....by name" style="
