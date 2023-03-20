@@ -772,7 +772,7 @@ a.navbar-brand:hover {
 
 .img-responsive {
     display: block;
-    max-width: 100%;
+    max-width: inherit !important;
     height: auto;
 }
 
@@ -870,9 +870,17 @@ a.navbar-brand:hover {
 }
 
 .modal-image img {
-    width: 600px !important;
-    height: 540px !important;
+    width: inherit !important;
 }
+
+/* @media only screen and (min-width: 768px) {
+    .img-responsive {
+        display: block;
+        max-width: 130% !important;
+        height: auto;
+    }
+
+} */
 
 .img-poster {
     margin-bottom: 10px;
