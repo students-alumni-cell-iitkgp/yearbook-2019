@@ -738,6 +738,7 @@
                                     font-size: 17px;
                                     color: hsl(240, 11%, 81%);
                                     /*color: #88898a;*/
+                                    word-break: break-word !important;
                                 }
                                 
                                 .media-body small span {

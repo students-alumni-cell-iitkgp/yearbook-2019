@@ -89,7 +89,7 @@
             margin-top: 0px;
             margin-bottom:15px;
             margin-right: 10px;
-            padding: 4px;
+            padding: 20px;
             background-color: var(--primary-color-dark-blue-4) !important;
             border-radius: 6px;
         }
@@ -115,7 +115,9 @@
         @media screen and (max-width:500px){
         .back {
            
-            margin-left:20px;
+            margin-left:0px;
+            padding-left:15px;
+            
         }
         .media {
         
@@ -166,14 +168,14 @@
                     $q = 'q' . $i;
                     $link = '/polls/' . $i;
                     ?>
-                    <div class="col-xs-11 col-lg-5 col-md-4 media">
+                    <div class="col-xs-11 col-lg-5 col-md-5 media">
                         <!-- <img src="{{ asset('img/ques.png') }}" alt="" class="img-responsive img-circle"> -->
                         <form action="{{ url($link) }}" method="POST">
                             {{ csrf_field() }}
                             <div class="media_body">
                             <p><i class="fas fa-poll fa-lg"></i><b> {{ $titles[$i] }} </b></p>
                                 <div class="row" style="display: inline-block;">
-                                    <div class="col-sm-10 ">
+                                    <div class="col-sm-10 col-md-12 col-lg-9">
                                         <div class="polls-input">
                                             <div class="input-field">
                                                 @if(!empty($polls[$q]))
@@ -184,7 +186,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-2">
+                                    <div class="col-sm-2 col-md-2 col-lg-3">
                                         <div class="form-group" style="margin-left: 20px;">
                                             <button><submit type="submit" class="btn btn-primary">Submit </button>
                                         </div>

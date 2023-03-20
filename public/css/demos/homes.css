@@ -496,7 +496,9 @@ form hr{
     .author-post h4 {
         font-size: x-large;
         color: #fff;
-        text-align: center
+        text-align: center;
+        word-break: break-word;
+        padding: 6%;
     }
     .box .kafe-btn-mint-small {
         font-family: 'Abhaya Libre', serif !important;

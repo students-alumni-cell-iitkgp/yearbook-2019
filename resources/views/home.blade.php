@@ -97,7 +97,7 @@
 }
 
 .cover-img{
-  background-image: url('img/bg/collage.jpg');
+  background-image: url('img/bg/collage.webp');
   height:100%;
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -106,15 +106,24 @@
 .back{
   /* background-image: url('img/bg/bgbg.jpg'); */
   /* background-attachment: fixed; */
-  background-color:#24273b
+  background-color:#24x3b
 }
 @media (max-width: 455px){
   .product-item-img{
   width: 97% !important;
 }
+.main-container {
+    padding: 1% !important;
+    width: 100%% !important;
+}
 .delete{
   margin-left: 8% !important;
 }
+
+/* .tabcontent {
+    padding: 10px 0px;
+    width: 31%;
+} */
 }
 .delete{
   margin-left: 15px;
@@ -127,10 +136,38 @@
 .imghover:hover{
   opacity: 0.7;
 }
+
+.cta .cta-inner {
+    position: relative;
+    padding: 1rem;
+    margin: 0.1rem;
+    background-color: rgb(114 128 193 / 85%);
+}
+
+.rounded {
+    border-radius: 1rem!important;
+}
+
+
+
+
 </style>
   </head>
 
 <body>
+  <style>
+    .modal-content{
+      max-width:100%;
+    }
+  </style>
+
+<!-- <script type="text/javascript">
+
+alert('Welcome to Yearbook Portal');
+
+</script> -->
+
+
 <!-- sd,jhb,jhb -->
      <!-- ==============================================
      Navigation Section
@@ -192,19 +229,21 @@
 
   <div id="modal2" class="modal fade" role="dialog">
 
-      <div class="modal-dialog">
+      <div class="modal-dialog" style="
+    width: fit-content;
+">
 
 
 
         <!-- Modal content-->
 
-        <div class="modal-content" style="text-align: center;">
+        <div class="modal-content" style="text-align: center; margin:15%">
 
-          <div class="modal-header">
+          <div class="modal-header" >
 
 
 
-            <h4 class="modal-title" style="color: white;">Upload Picture and Caption</h4>
+            <h4 class="modal-title" style="color: black;text-align: center;margin-left: 7.5rem;">Upload Picture & Caption</h4>
 
             <button type="button" class="close" data-dismiss="modal">&times;</button>
 
@@ -228,7 +267,7 @@
 
               <input type="file" name="fileToUpload" id="fileToUpload" style="display: none;" onchange="readURL(this);">
 
-              <img src="<?php if (!empty(Auth::user()->pro_pic)){echo Auth::user()->pro_pic; } else { echo 'img/bg/5.jpeg';}?>" alt="abc" class="intro-img img-fluid mb-3 mb-lg-0 rounded" id="OpenImgUpload" style="cursor: pointer;width: 180px;height: 180px;">
+              <img src="<?php if (!empty(Auth::user()->pro_pic)){echo Auth::user()->pro_pic; } else { echo 'img/bg/5.jpeg';}?>" alt="abc" class="intro-img img-fluid mb-3 mb-lg-0 rounded" id="OpenImgUpload" style="cursor: pointer;max-width: 100%;">
 
               <div class="input-field col sm-12 lg-12 md-12">
 
@@ -329,10 +368,10 @@
       <div class="row justify-content-center mt-4 mb-5 postbox">
 <div class="status box p-md-4 p-0  my-md-3 col-lg-10 col-md-11 col-12 ">
         
-        <div  class="">
+        <div  class="">          
         <p>
          @include('writeup2')
-       </p>
+       </p>    
      </div>
 </div>
 </div>
@@ -370,7 +409,10 @@
         </div> 
         <hr>
         <div id="cropp-image-div">
-                <img id="crop-image" style="margin-left: 41%; border-radius: 3px; border-style:none;" src="" class="img-thumbnail">
+                <img id="crop-image" style="margin-left: 10%; border-radius: 3px; border-style:none;
+                
+                
+                " src="" class="img-thumbnail">
               </div>
               
       <div class="box-footer clearfix">
@@ -419,7 +461,15 @@
           @if(file_exists($image['url']))
           <!-- <section class="page-section"> -->
             <div class="col-lg-4 col-md-6" id="img{{$image['id']}}">
-             <div class="explorebox" >
+             <div class="explorebox" style="height:fit-content !important;" >
+             <div class="dropdown pull-right">
+                                  <button class="btn btn-secondary btn-flat btn-flat-icon" title="Click to delete!" type="button" data-toggle="dropdown" aria-expanded="false">
+                                  <i style="float: right;color: #fff" class="material-icons" style="">delete</i>
+                                  </button> 
+                                   <div class="dropdown-menu dropdown-scale dropdown-menu-right" role="menu" style="position: absolute; transform: translate3d(-136px, 28px, 0px); top: 0px; left: 0px; will-change: transform;width: 160px;">
+                                    <a class=" delete" href="#" id="{{$image['id']}}" data-token="{{csrf_token()}}" style="font-weight: 400;color: #212529;text-align: inherit;white-space: nowrap;font-size:18px;text-decoration:none;">Delete</a>
+                                  </div> 
+                                </div>
               <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0 imghover" src="{{$image['thumbnail']}}" id="{{$image['id']}}" data-src="{{$image['url']}}" data-toggle="tooltip" data-placement="top" title="Click the image!" style="cursor: pointer;width: 360px;height: 400px;border-radius: 10px;" >
               <div class=" overlay" onmouseover= "onImageHover({{$image['id']}})" onmouseout="onImageUn({{$image['id']}})" >
                 @php
@@ -441,7 +491,7 @@
         
           @else
 
-        <section class="page-section cta" style="background-color: rgba(76,71,97,0.55);">
+        <section class="page-section cta" style="background-color: rgb(68 73 119 / 89%);">
           <div class="container">
             <div class="row">
               <div class="col-xl-9 mx-auto">
@@ -473,7 +523,7 @@
     </div>
 </div>
    </section><!--/ newsfeed -->
-   <button onclick="topFunction()" id="myBtn" title="Go to top"><i class = "fa fa-chevron-circle-up" style = "font-size : 28px"></i><br><br>Scroll to top!</button>   
+   <!-- <button onclick="topFunction()" id="myBtn" title="Go to top"><i class = "fa fa-chevron-circle-up" style = "font-size : 28px"></i><br><br>Scroll to top!</button>    -->
 
   </div>
 
@@ -484,10 +534,20 @@
    <div id="bootstrap-modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
       <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Selected image : </h4>
+      <div class="modal-content" style="
+    top: 5%;
+    margin: 18%;
+" >
+        <div class="modal-header" style="
+    display: inline-table;
+">
+          <button type="button" class="close" data-dismiss="modal" style="
+    color: darkred;
+">&times;</button>
+          <h4 class="modal-title" style="
+    color: #265986;
+    font-weight: 700;
+" >Selected image : </h4>
         </div>
         <div class="modal-body">
          <div id="image-preview-div" style="display: none">
@@ -559,21 +619,21 @@
 var mybutton = document.getElementById("myBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+// window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
+// function scrollFunction() {
+//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//     mybutton.style.display = "block";
+//   } else {
+//     mybutton.style.display = "none";
+//   }
+// }
 
 // When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+// function topFunction() {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+// }
 </script>
   
   <script>
@@ -639,25 +699,25 @@ document.getElementById("defaultOpen").click();
 
               */
 
-              var back = "<?php if (!empty(Auth::user()->view_self)) echo 1;else echo 0; ?>" ;
+              // var back = "<?php if (!empty(Auth::user()->view_self)) echo 1;else echo 0; ?>" ;
 
-              var back2 = "<?php echo Auth::user()->pro_pic; ?>" ;
+              // var back2 = "<?php echo Auth::user()->pro_pic; ?>" ;
 
-              $(document).ready(function() {
+              // $(document).ready(function() {
 
-                $('#modal2').modal('hide');
+              //   $('#modal2').modal('hide');
 
-                if ( (!back)||!(back2) ) {
+              //   if ( (!back)||!(back2) ) {
 
-                  $("#modal2").modal('show');
+              //     $("#modal2").modal('show');
 
-                } else {
+              //   } else {
 
-                }
+              //   }
 
 
 
-              });
+              // });
               $('#photo').click(function(){
 
                 $('#photo').submit();
@@ -731,7 +791,45 @@ document.getElementById("defaultOpen").click();
       var formdata = new FormData(this); 
       
      //console.log("crop image",originalData);
+
+     /*swal ({ 
+        title: "Are you sure?",
+        icon: "warning",
+        buttons: {
+          cancel: "No",
+          confirm: "Yes",
+        },
+        dangerMode: true,
+        url: "{{ url('/upload1') }}",
+        type: "POST",
+        data: formdata,
+        contentType: false,
+        cache: false,
+        processData: false,
+      }).then(() => {
+       
+          $.ajax({
+            
+
+            success: function(response)
+            {
+             document.getElementById("img"+id).innerHTML = "";
+             $('#loading').hide();
+             $('#cropp-image-div').css("display", "none");
+             $('#cropp-image-div').css("border-style", "none");
+             var $el = $('#image');
+             $el.wrap('<form>').closest('form').get(0).reset();
+             $el.unwrap();
+             console.log(response);
+          
+            
+           },
+          
+         });
+        
+      }); */
      $.ajax({
+      
       url: "{{ url('/upload1') }}",
       type: "POST",
       data: formdata,
@@ -740,7 +838,13 @@ document.getElementById("defaultOpen").click();
       processData: false,
       success: function(response)
       {
-        alert('Your pic has been succesfully added.');
+        // alert('Your pic has been succesfully added.');
+        swal({  
+       title: "Uploaded Successfully ",  
+       
+       icon: "success",  
+       button: "OK",  
+      }).then(() => {
         $('#loading').hide();
         $('#cropp-image-div').css("display", "none");
         $('#cropp-image-div').css("border-style", "none");
@@ -748,15 +852,31 @@ document.getElementById("defaultOpen").click();
         $el.wrap('<form>').closest('form').get(0).reset();
         $el.unwrap();
         console.log(response);
+        
+        location.reload();
+           
+
+       
+        
+          
+        
+      });  
+        
        // document.getElementById('posts').innerHTML += response;
-       location.reload();
+      //  location.reload();
      },
+     
      error: function(data)
-     {
-      alert("Sorry, there was an error uploading image");
-      console.log("error",data);
-      window.location.reload();
-    }
+        {
+          swal({  
+       title: "Failure!",  
+       
+       icon: "error",  
+       button: "OK",  
+      }).then(()=>{
+        location.reload();
+      })
+        }
   });
    });
   $('#image').change(function() {
@@ -863,9 +983,10 @@ document.getElementById("defaultOpen").click();
 
             success: function(response)
             {
-
              document.getElementById("img"+id).innerHTML = "";
-
+            function inner(){
+              location.reload();
+            }inner()
            },
            error: function(data)
            {

@@ -90,9 +90,7 @@ color: #fff;
  color: #5c5d71;
  /* outline: none; */
 }
-textarea{
-    outline:none;
-}
+
 .status-share {
 background-color: #1b86f9;
 border: none;
@@ -129,6 +127,7 @@ margin-right: 20px;
 </head>
 
 <body>
+  
 
   
 
@@ -189,15 +188,16 @@ margin-right: 20px;
     </div>
   </section>
     @foreach($writeups as $writeup)
-     <div class="article box" data-toggle="tooltip" title="Click to edit!" style="padding-top:2vw;padding-right: 6vw;padding-left:2vw ">
+     <div class="article box" data-toggle="tooltip" title="Click to edit!" style="margin-top:3%;padding-top:2vw;padding-right: 6vw;padding-left:2vw; ">
       
       <h2 class="section-heading mb-4 text-center ">
           <a href="writeup/{{ $writeup->id }}"><i style="float: right;color: #fff" class="material-icons">delete</i></a>
           <span class="section-heading-lower">{{ $writeup->topic }} </span>
 
       </h2>
+      
+      <textarea  name="abc"readonly="" rows="5" cols="100" class=" abc no-border status-textarea " style=" overflow:auto;margin-left:7%;margin-top:-1%; font-family: 'Abhaya Libre', serif;font-size : 14 px; font-colo margin-left : 1vw;" style="width:100%;padding: 2vw;text-align: left" onblur="update({{ $writeup->id }})" id="{{ $writeup->id }}" contenteditable >{!!  nl2br($writeup->writeup)!!}</textarea>
 
-      <p style="padding: 2vw;text-align: left" onblur="update({{ $writeup->id }})" id="{{ $writeup->id }}" contenteditable >{!!  nl2br($writeup->writeup)!!}</p>
   </div>
   @endforeach
   
@@ -206,6 +206,79 @@ margin-right: 20px;
 
 
 <script type="text/javascript">
+  window.addEventListener('load', function() {
+   
+
+const abc_names = document.getElementsByName("abc");
+for (var i = 0; i < abc_names.length; i++) {
+  if(screen.width<882){
+  abc_names[i].setAttribute("cols", 30)
+
+}
+else if(screen.width<988){
+  abc_names[i].setAttribute("cols", 50)
+}
+else if(screen.width<1059){
+  abc_names[i].setAttribute("cols", 60)
+}
+else if(screen.width<1152){
+  abc_names[i].setAttribute("cols", 70)
+}
+else if(screen.width<1326){
+  abc_names[i].setAttribute("cols", 80)
+}else{
+  abc_names[i].setAttribute("cols", 100)
+
+
+}
+console.log(screen.width)
+// console.log(abc_names)
+} 
+
+
+    
+    
+})
+  
+
+window.addEventListener("resize", ()=>{
+
+  const abc_names = document.getElementsByName("abc");
+  for (var i = 0; i < abc_names.length; i++) {
+    if(screen.width<882){
+    abc_names[i].setAttribute("cols", 30)
+
+  }
+  else if(screen.width<988){
+    abc_names[i].setAttribute("cols", 50)
+  }
+  else if(screen.width<1059){
+    abc_names[i].setAttribute("cols", 60)
+  }
+  else if(screen.width<1152){
+    abc_names[i].setAttribute("cols", 70)
+  }
+  else if(screen.width<1326){
+    abc_names[i].setAttribute("cols", 80)
+  }else{
+    abc_names[i].setAttribute("cols", 100)
+
+
+  }
+  console.log(screen.width)
+  // console.log(abc_names)
+} 
+
+});
+
+  
+    
+
+   
+  
+ 
+
+  
 
  function update(id){
   var writeupedit=$("#"+id).text();

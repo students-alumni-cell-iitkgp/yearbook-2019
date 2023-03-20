@@ -332,7 +332,13 @@ $(document).ready(function (e) {
       processData: false,
       success: function(response)
       {
-        alert('Your pic has been succesfully added.');
+        // alert('Your pic has been succesfully added.');
+        swal({  
+       title: "Uploaded Succesfully",  
+       
+       icon: "success",  
+       button: "OK",  
+      }).then(() => {
         $('#loading').hide();
         $('#cropp-image-div').css("display", "none");
         var $el = $('#image');
@@ -341,12 +347,26 @@ $(document).ready(function (e) {
         console.log(response);
        // document.getElementById('posts').innerHTML += response;
        location.reload();
+           
+
+       
+        
+          
+        
+      });  
+        
      },
      error: function(data)
      {
-      alert("Sorry, there was an error uploading image");
-      console.log("error",data);
-      window.location.reload();
+      // alert("Sorry, there was an error uploading image");
+      swal({  
+       title: "Failure!",  
+       
+       icon: "error",  
+       button: "OK",  
+      }).then(()=>{
+        location.reload();
+      })
     }
   });
    });

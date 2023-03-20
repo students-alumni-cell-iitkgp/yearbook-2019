@@ -101,7 +101,7 @@ body{
               margin-top: 0px;
               margin-bottom: 0px;
           }
-
+  
           .panel-body .list-group {
               margin-bottom: 0;
           }
@@ -113,7 +113,89 @@ body{
           .panel-body .radio label, .panel-body .checkbox label {
               display: block;
           }
-        }
+
+          .row{
+            margin-left: 0px;
+
+          }
+
+          .modal-meta-top{
+            width: -webkit-fill-available;
+            padding-right:37%;
+          }
+
+          .cardbox {
+           width: 55vw;
+          }
+
+          .cardbox-like {
+           width: 80%;
+           float: none;
+           margin: 18px;
+          }
+
+          .page-section {
+          padding-left: 13vw;
+          }
+
+          .cardbox-like ul {
+          padding: 0px 0px 10px 0px !important;
+          font-size: 0px;
+          text-align: -webkit-left;
+          }
+
+          .cardbox .cardbox-heading {
+            padding: 2%;
+            margin: 0;
+          }
+
+          .modal-image img {
+            width: 300px !important;
+            height: 300px !important;
+          }
+
+          .status-textarea {
+              flex-grow: 1;
+              background-color: transparent;
+              border: none;
+              resize: none;
+              margin-top: 15px;
+              color: #fff;
+              max-width: calc(100% - 10px) !important;
+          }
+
+          .form{
+            width: -webkit-fill-available;
+          }
+
+
+
+          
+
+          @media and (min-width:300px) and (max-width: 820px ){
+            .comment-send{
+              display: flex;
+              flex-flow: row !important;
+            }
+            .comments{
+              width:120% !important;
+            }
+          }
+
+          @media (min-width: 992px){
+.col-md-4 {
+    width: 75.333333%;
+}
+
+.modal-content{
+  width:50% !important;
+}
+          }
+          @media (min-width: 992px){
+.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+    float: none !important;
+  }
+}
         </style>    
         <!-- ==============================================
     Feauture Detection
@@ -143,13 +225,20 @@ body{
    =============================================== -->
    <div id="myModal" class="modal fade">
     <div class="modal-dialog">
-     <div class="modal-content">
-      <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+     <div class="modal-content" style="
+    width: 70%;
+    margin: auto;
+    padding: 0;
+    top:15%;
+" >
+      <div class="modal-body" style="width: 50vw;">
+        <button type="button" style="
+    float: none;
+" class="close" data-dismiss="modal" aria-hidden="true">
          <span aria-hidden="true">×</span>
          <span class="sr-only">Close</span>
        </button>
-       <div class="row">
+       <div class="row" style="word-break: break-all">
          
         <div class="col-md-8 modal-image">
           <img class="img-responsive enlargeImageModalSource" src="" alt="Image"/>
@@ -163,7 +252,9 @@ body{
           </a>
           <span id="created_at"></span><br/>
         </div><!--/ img-poster -->
-        <div id="comments"> 
+        <div id="comments"style="
+    width: 100%;
+"> 
         </div>
         
         <div class="modal-meta-bottom">     
@@ -176,8 +267,8 @@ body{
             <form class="form" id="form-comment" action="{{ url('/comment') }}" method="post">
               {{csrf_field()}}
               <input id="comment-token" type="hidden" name="_token" value="{{ csrf_token() }}">
-              <textarea name="comment" id="textarea" class="form-control input-sm" rows="2" type="text" placeholder="Write your comment..." required></textarea>
-              <div align="right">
+              <textarea style="width: 300px !important;height: 32px;" name="comment" id="textarea" class="form-control input-sm" rows="2" type="text" placeholder="Write your comment..." required ></textarea>
+              <div >
                 <button class="btn" id="submit" style="margin-top: 10px;"><span>Comment</span></button>
               </div>
             </form>
@@ -234,9 +325,9 @@ body{
                                 <!-- START dropdown-->
                                 @if($image['rollno'] == Auth::user()->rollno)
                                 <div class="dropdown pull-right">
-                                  <button class="btn btn-secondary btn-flat btn-flat-icon" title="Click to delete!" type="button" data-toggle="dropdown" aria-expanded="false">
-                                    <em class="fa fa-ellipsis-h"></em>
-                                  </button> -
+                                  <button class="btn bg-transparent" title="Click to delete!" type="button" data-toggle="dropdown" aria-expanded="false">
+                                  <i style="float: right;color: #5C5D71;/* line-height: 63%; */font-size: large;" class="material-icons">delete</i>
+                                  </button> 
                                    <div class="dropdown-menu dropdown-scale dropdown-menu-right" role="menu" style="position: absolute; transform: translate3d(-136px, 28px, 0px); top: 0px; left: 0px; will-change: transform;">
                                     <a class="dropdown-item delete" href="#" id="{{$image['id']}}" data-token="{{csrf_token()}}">Delete</a>
                                   </div> 
@@ -264,13 +355,13 @@ body{
           
                               <div class="row cardbox-item bkg">
                                 <div class="col-md-8 full">
-                                <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0 " src="{{$image['thumbnail']}}" data-src="{{$image['url']}}" id="{{$image['id']}}"  data-toggle="tooltip" data-placement="top" title="Click the image!" style="cursor: pointer; width: 100%;height: 380px;">
+                                <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0 " src="{{$image['thumbnail']}}" data-src="{{$image['url']}}" id="{{$image['id']}}"  data-toggle="tooltip" data-placement="top" title="Click the image!" style="cursor: pointer; width: 145%;height: 380px;">
                                 </div>
                                 <div class="vl"></div>
                                 <div class="col-md-4  cardbox-like"> 
-                                <span class="section-heading-upper colr" style="  font-family: 'Abhaya Libre', serif;font-size : 23px; font-colo margin-left : 1vw">&nbsp {{$image['caption']}}</span><br>
-                              
-                                <ul style="top: 6px; position: relative;">
+                                  <textarea readonly rows="3" cols="65" class="no-border status-textarea " style="  font-family: 'Abhaya Libre', serif;font-size : 18px; font-colo margin-left : 1vw;">&nbsp {{$image['caption']}}</textarea><br>
+
+                                  <ul style="top: 6px; position: relative;">
                                   <li>
                                     <div id="+{{$image['id']}}+" style="border-right:1px solid gray;padding-right:10px" class="like"></div>  <!-- Like Button -->
                                   </li>
@@ -278,7 +369,6 @@ body{
                                     <button type="button" class="com btn comment_btn" id="{{$image['id']}}" style="margin-left:-30px;border: none;background:none" value="{{$image['url']}}">
                                       <i class="far fa-comment"></i> View Comments
                                     </button>
-          
                                   </li>
                                 </ul>
 
@@ -291,22 +381,26 @@ body{
                                     <img class="img-fluid img-circle" src="{{ asset('index.png') }}" style="width: 25px; height: 25px;margin-top:-40px;" alt="Image">  
                                     @endif
                                   </li> -->
-                                  <li style="width: 100%;border-right:none">
-                                    <div class="comment-body">
-                                      <form class="form" id="form-comment" action="{{ url('/comment') }}" method="post">
-                                        {{csrf_field()}}
-                                        <!-- <ul>
-                                          <li > -->
-                                              <input id="comment-token" type="hidden" name="_token" value="{{ csrf_token() }}" style="padding-left:20px;padding-right:20px">
-                                              <textarea name="comment" id="textarea" class="form-control input-sm" rows="1" type="text" placeholder="Write your comment..." required></textarea>
-                                          <!-- </li>
-                                          <li>  -->
-                                              <button class="comment_btn" style="height : 20%;width:30%; margin-right : 15vh;float:left; margin-top : 3vh;color:red;border-radius:3px;border:0px solid white;">	<i class="material-icons" id="submit" style = " font-size:28px;color:gray">send</i> </button>
-                                          <!-- </li>
-                                        </ul>   -->
-                                      </form>
-                                    </div>
-                                  </li>
+                                  <div class="row comment-send">
+                                    <li class="c-s" style="width: 100%;padding: 0px;border-right:none;margin: 0px; display:flex; flex-flow: row;">
+                                      <div class="d-flex justify-content-between col-lg-8 col-md-10 col-sm-12 comment-body" style="width=:fit-content;padding:0px;">
+                                        <form class="form" id="form-comment" action="{{ url('/comment') }}" method="post">
+                                          {{csrf_field()}}
+                                          <!-- <ul>
+                                            <li > -->
+                                                <input id="comment-token" type="hidden" name="_token" value="{{ csrf_token() }}" style="padding-left:20px;padding-right:20px">
+                                                <textarea name="comment" id="textarea" class="form-control input-sm" rows="1" columns="50" type="text" placeholder="Write your comment..." required></textarea>
+                                            <!-- </li>
+                                            <li>  -->
+                                          </form>
+                                      </div>
+                                      <div class="d-flex justify-content-between col-lg-2 col-md-2 col-sm-12 send-body">
+                                        <button class="comment_btn" style="height : 100%; margin-right : 15vh;float:left;color:red;border-radius:3px;border:0px solid white;">	<i class="material-icons" id="submit" style = " font-size:28px;color:gray">send</i> </button>
+                                      </div>      
+                                        <!-- </li>
+                                          </ul>   -->
+                                    </li>
+                                  </div>
                                 </ul>
                                 <script type="text/javascript"> 
                                   $(document).ready(function () {
@@ -363,7 +457,7 @@ body{
                 @endif
           </div>   
     </div>
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class = "fa fa-chevron-circle-up" style = "font-size : 28px"></i><br><br>Scroll to top!</button>   
+    // <button onclick="topFunction()" id="myBtn" title="Go to top"><i class = "fa fa-chevron-circle-up" style = "font-size : 28px"></i><br><br>Scroll to top!</button>   
   </div>       
    <!-- ==============================================
    Modal Section
@@ -435,26 +529,7 @@ body{
   <script src="{{ asset('js/bootstrap.min.js') }}"></script>
   <script src="{{ asset('js/base.js') }}"></script>
   <script src="{{ asset('plugins/slimscroll/jquery.slimscroll.js') }}"></script>
-  <script>
-var mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-</script>
+  
   <script>
   $('#Slim,#Slim2').slimScroll({
           height:"auto",
@@ -634,6 +709,99 @@ function topFunction() {
 
     
   </script>
+  <script type="text/javascript">
+  window.addEventListener('load', function() {
+    const abc_names = document.getElementsByName("comment");
+  for (var i = 0; i < abc_names.length; i++) {
+ if(screen.width<396){
+      abc_names[i].style.width ='103px'
+      abc_names[i].style.height ='51px'
+}else if(screen.width<430){
+      abc_names[i].style.width ='115px'
+      abc_names[i].style.height ='48px'
+
+}else if(screen.width<465){
+      abc_names[i].style.width ='129px'
+      abc_names[i].style.height ='51px'
+
+}else if(screen.width<590){
+      abc_names[i].style.width ='145px'
+      abc_names[i].style.height ='33px'
+
+}else if(screen.width<956){
+      abc_names[i].style.width ='183px'
+      abc_names[i].style.height ='31px'
+
+}
+else{
+  abc_names[i].style.width ='300px'
+  abc_names[i].style.height ='32px'
+
+
+}
+// console.log(screen.width)
+} 
+
+
+
+
+
+
+
+
+
+
+
+  })
+
+   
+
+
+  
+
+window.addEventListener("resize", ()=>{
+
+  const abc_names = document.getElementsByName("comment");
+  for (var i = 0; i < abc_names.length; i++) {
+ if(screen.width<396){
+      abc_names[i].style.width ='103px'
+      abc_names[i].style.height ='51px'
+}else if(screen.width<430){
+      abc_names[i].style.width ='115px'
+      abc_names[i].style.height ='48px'
+
+}else if(screen.width<465){
+      abc_names[i].style.width ='129px'
+      abc_names[i].style.height ='51px'
+
+}else if(screen.width<590){
+      abc_names[i].style.width ='145px'
+      abc_names[i].style.height ='33px'
+
+}else if(screen.width<956){
+      abc_names[i].style.width ='183px'
+      abc_names[i].style.height ='31px'
+
+}
+else{
+  abc_names[i].style.width ='300px'
+  abc_names[i].style.height ='32px'
+
+
+}
+// console.log(screen.width)
+} 
+
+});
+
+  
+    
+
+   
+  
+ 
+
+</script>
   
   @endsection
   </body>
