@@ -389,13 +389,13 @@ body{
                                           <!-- <ul>
                                             <li > -->
                                                 <input id="comment-token" type="hidden" name="_token" value="{{ csrf_token() }}" style="padding-left:20px;padding-right:20px">
-                                                <textarea name="comment" id="textarea" class="form-control input-sm" rows="1" columns="50" type="text" placeholder="Write your comment..." required></textarea>
+                                                <!-- <textarea name="comment" id="textarea" class="form-control input-sm" rows="1" columns="50" type="text" placeholder="Write your comment..." required></textarea> -->
                                             <!-- </li>
                                             <li>  -->
                                           </form>
                                       </div>
                                       <div class="d-flex justify-content-between col-lg-2 col-md-2 col-sm-12 send-body">
-                                        <button class="comment_btn" style="height : 100%; margin-right : 15vh;float:left;color:red;border-radius:3px;border:0px solid white;">	<i class="material-icons" id="submit" style = " font-size:28px;color:gray">send</i> </button>
+                                        <!-- <button class="comment_btn" style="height : 100%; margin-right : 15vh;float:left;color:red;border-radius:3px;border:0px solid white;">	<i class="material-icons" id="submit" style = " font-size:28px;color:gray">send</i> </button> -->
                                       </div>      
                                         <!-- </li>
                                           </ul>   -->
