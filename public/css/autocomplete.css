@@ -455,7 +455,7 @@ body {
   font-size: 14px;
   font-weight: bold;
 }
-@media (max-width:500px){
+ (max-width:500px){
   .notification-list a .hiddenName{
     display:none !important;
   }

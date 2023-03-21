@@ -18,6 +18,8 @@
 			margin:-12% !important;
 		}
 	}
+	</style>
+}}
 
 <header class="tr-header">
 	<nav class="navbar navbar-default">
