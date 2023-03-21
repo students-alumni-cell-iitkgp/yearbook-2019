@@ -495,9 +495,9 @@
                                         list-style: none;
                                         box-shadow: 0px 2px 6px 0 rgba(0, 0, 0, 0.2);
                                         /* position: relative !important; */
-   left: -147px !important;
+   left: -153px !important;
    margin-top: 0px;
-   top: 176px !important;
+   top: -6px !important;
                                         width: 100px !important;
                                         transition: all .3s ease;
                                         background: #f4f4f4 !important;
