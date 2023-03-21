@@ -103,6 +103,10 @@
   background-repeat: no-repeat;
 
 }
+.modal-imagee img {
+    width: fit-content;
+    height: 540px !important;
+}
 .back{
   /* background-image: url('img/bg/bgbg.jpg'); */
   /* background-attachment: fixed; */
@@ -570,7 +574,7 @@ alert('Welcome to Yearbook Portal');
      </button>
      <div class="row">
 
-      <div class="col-md-8 modal-image">
+      <div class="col-md-8 modal-imagee">
         <img class="img-responsive enlargeImageModalSource" src="" alt="Image"/>
       </div><!--/ col-md-8 -->
       <div class="col-md-4 modal-meta">

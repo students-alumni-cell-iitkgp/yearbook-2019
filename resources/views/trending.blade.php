@@ -149,6 +149,11 @@ body{
             margin: 0;
           }
 
+          .modal-image{
+            padding-right: 15px;
+            padding-left: 0px;
+          }
+
           .modal-image img {
             height: 300px !important;
           }
@@ -227,7 +232,9 @@ body{
    Modal Section
    =============================================== -->
    <div id="myModal" class="modal fade">
-    <div class="modal-dialog">
+    <div class="modal-dialog" style="
+    margin: auto;
+    ">
      <div class="modal-content" style="
     width: 70%;
     margin: 0 20%;
@@ -362,16 +369,16 @@ body{
                                 </div>
                                 <div class="vl"></div>
                                 <div class="col-md-4  cardbox-like"> 
-                                  <textarea readonly rows="3" cols="65" class="no-border status-textarea " style="  font-family: 'Abhaya Libre', serif;font-size : 18px; font-colo margin-left : 1vw;">&nbsp {{$image['caption']}}</textarea><br>
+                                  <textarea readonly rows="3" cols="65" class="no-border status-textarea " style="  font-family: 'Abhaya Libre', serif;font-size : 18px; font-colo margin-left : 1vw; margin-top:0px;">&nbsp {{$image['caption']}}</textarea><br>
 
                                   <ul style="top: 6px; position: relative;">
                                   <li>
                                     <div id="+{{$image['id']}}+" style="border-right:1px solid gray;padding-right:10px" class="like"></div>  <!-- Like Button -->
                                   </li>
                                   <li>
-                                    <button type="button" class="com btn comment_btn" id="{{$image['id']}}" style="margin-left:-30px;border: none;background:none" value="{{$image['url']}}">
+                                    <button type="button" class="com btn comment_btn" id="{{$image['id']}}" style="margin-left:-30px;border: none;background:none; margin-top:10px;margin-bottom:10px;" value="{{$image['url']}}">
                                       <i class="far fa-comment"></i> View Comments
-                                    </button>
+                                    </button1
                                   </li>
                                 </ul>
 
