@@ -12,6 +12,15 @@
 		width : 100%;
 		z-index : 1;
 	}
+	@media and (max-width:450px){
+
+		.modal-content{
+			margin:-12% !important;
+		}
+	}
+	</style>
+}}
+
 <header class="tr-header">
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
@@ -200,9 +209,12 @@
 </header> --}}
 
     <div id="modal_test" class="modal fade" role="dialog">
-    	<div class="modal-dialog">
+    	<div class="modal-dialog" style="margin:auto; padding-top:inherit;">
     		<!-- Modal content-->
-    		<div class="modal-content">
+    		<div class="modal-content" style="
+    top: 30%;
+    margin: auto;
+">
     			<div class="modal-header">
 				<div>
     				<h4 class="modal-title text-uppercase" style= "color: #000;text-align:center;">Write Testimonials</h4>

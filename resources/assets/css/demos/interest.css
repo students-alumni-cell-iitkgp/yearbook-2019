@@ -447,10 +447,10 @@ a.navbar-brand:hover {
     padding: 0;
     list-style: none;
     box-shadow: 0px 2px 6px 0 rgba(0,0,0,0.2);
-    position: relative !important;
-    left: -40px !important;
-    margin-top: 0px;
-    top: -50px !important;
+    /* position: relative !important; */
+   left: -153px !important;
+   margin-top: 0px;
+   top: -6px !important;
     width: 100px !important;
     transition: all .3s ease;	
     background: #f4f4f4 !important;	

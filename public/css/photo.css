@@ -450,10 +450,10 @@ a.navbar-brand:hover {
     padding: 0;
     list-style: none;
     box-shadow: 0px 2px 6px 0 rgba(0,0,0,0.2);
-    position: relative !important;
-    left: -40px !important;
-    margin-top: 0px;
-    top: -50px !important;
+   /* position: relative !important; */
+   left: -153px !important;
+   margin-top: 0px;
+   top: -6px !important;
     width: 100px !important;
     transition: all .3s ease;	
 	}	
@@ -766,8 +766,8 @@ a.navbar-brand:hover {
   height: 450px !important;
 }
 .modal-image img{
-  width: 600px !important;	
-  height: 540px !important;	
+  width: inherit !important;	
+  
 }
 
 .img-poster{
@@ -843,7 +843,7 @@ a.navbar-brand:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 5px;
+    padding: 0px;
     border-top: solid 1px;
 	display: block;
 }

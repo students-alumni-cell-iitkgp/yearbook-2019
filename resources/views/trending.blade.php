@@ -121,7 +121,7 @@ body{
 
           .modal-meta-top{
             width: -webkit-fill-available;
-            padding-right:37%;
+            padding-right:0%;
           }
 
           .cardbox {
@@ -149,8 +149,12 @@ body{
             margin: 0;
           }
 
+          .modal-image{
+            padding-right: 15px;
+            padding-left: 0px;
+          }
+
           .modal-image img {
-            width: 300px !important;
             height: 300px !important;
           }
 
@@ -180,6 +184,10 @@ body{
             .comments{
               width:120% !important;
             }
+
+            .modal-content{
+  width:50% !important;
+}
           }
 
           @media (min-width: 992px){
@@ -188,7 +196,7 @@ body{
 }
 
 .modal-content{
-  width:50% !important;
+  width:90% !important;
 }
           }
           @media (min-width: 992px){
@@ -224,14 +232,16 @@ body{
    Modal Section
    =============================================== -->
    <div id="myModal" class="modal fade">
-    <div class="modal-dialog">
+    <div class="modal-dialog" style="
+    margin: auto;
+    ">
      <div class="modal-content" style="
     width: 70%;
-    margin: auto;
+    margin: 0 20%;
     padding: 0;
     top:15%;
 " >
-      <div class="modal-body" style="width: 50vw;">
+      <div class="modal-body" >
         <button type="button" style="
     float: none;
 " class="close" data-dismiss="modal" aria-hidden="true">
@@ -240,7 +250,7 @@ body{
        </button>
        <div class="row" style="word-break: break-all">
          
-        <div class="col-md-8 modal-image">
+        <div class="col-md-12 modal-image">
           <img class="img-responsive enlargeImageModalSource" src="" alt="Image"/>
         </div><!--/ col-md-8 -->
         <div class="col-md-4 modal-meta">
@@ -359,16 +369,16 @@ body{
                                 </div>
                                 <div class="vl"></div>
                                 <div class="col-md-4  cardbox-like"> 
-                                  <textarea readonly rows="3" cols="65" class="no-border status-textarea " style="  font-family: 'Abhaya Libre', serif;font-size : 18px; font-colo margin-left : 1vw;">&nbsp {{$image['caption']}}</textarea><br>
+                                  <textarea readonly rows="3" cols="65" class="no-border status-textarea " style="  font-family: 'Abhaya Libre', serif;font-size : 18px; font-colo margin-left : 1vw; margin-top:0px;">&nbsp {{$image['caption']}}</textarea><br>
 
                                   <ul style="top: 6px; position: relative;">
                                   <li>
                                     <div id="+{{$image['id']}}+" style="border-right:1px solid gray;padding-right:10px" class="like"></div>  <!-- Like Button -->
                                   </li>
                                   <li>
-                                    <button type="button" class="com btn comment_btn" id="{{$image['id']}}" style="margin-left:-30px;border: none;background:none" value="{{$image['url']}}">
+                                    <button type="button" class="com btn comment_btn" id="{{$image['id']}}" style="margin-left:-30px;border: none;background:none; margin-top:10px;margin-bottom:10px;" value="{{$image['url']}}">
                                       <i class="far fa-comment"></i> View Comments
-                                    </button>
+                                    </button1
                                   </li>
                                 </ul>
 
@@ -389,13 +399,13 @@ body{
                                           <!-- <ul>
                                             <li > -->
                                                 <input id="comment-token" type="hidden" name="_token" value="{{ csrf_token() }}" style="padding-left:20px;padding-right:20px">
-                                                <textarea name="comment" id="textarea" class="form-control input-sm" rows="1" columns="50" type="text" placeholder="Write your comment..." required></textarea>
+                                                <!-- <textarea name="comment" id="textarea" class="form-control input-sm" rows="1" columns="50" type="text" placeholder="Write your comment..." required></textarea> -->
                                             <!-- </li>
                                             <li>  -->
                                           </form>
                                       </div>
                                       <div class="d-flex justify-content-between col-lg-2 col-md-2 col-sm-12 send-body">
-                                        <button class="comment_btn" style="height : 100%; margin-right : 15vh;float:left;color:red;border-radius:3px;border:0px solid white;">	<i class="material-icons" id="submit" style = " font-size:28px;color:gray">send</i> </button>
+                                        <!-- <button class="comment_btn" style="height : 100%; margin-right : 15vh;float:left;color:red;border-radius:3px;border:0px solid white;">	<i class="material-icons" id="submit" style = " font-size:28px;color:gray">send</i> </button> -->
                                       </div>      
                                         <!-- </li>
                                           </ul>   -->

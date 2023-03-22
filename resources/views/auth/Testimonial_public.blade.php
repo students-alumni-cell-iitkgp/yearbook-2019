@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Testimonials</title>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="{{ asset('/js/jquery.min.js') }}"></script>
 <script src="{{ asset('/js/autocomplete.js') }}"></script>
 <link rel="stylesheet" type="text/css" href="{{ asset('/css/autocomplete.css') }}">
@@ -41,7 +40,6 @@
    /* textarea placeholder{
       color:black;
     }*/
-
     .dropdown-menu{
       top: 0px;
       left: 0px;
@@ -49,7 +47,6 @@
     .dropdown-item{
       border-bottom: 1px; 
     }
-
     ul {
     display: block;
     list-style-type: disc;
@@ -74,27 +71,21 @@ li{
       font-weight: lighter;
       font-size:small;
     }
-
     #user, #user1, #rollno {
       margin-top: 5px;
     }
-
     h1{
       padding: 1rem 1rem;
     }
-
     @media (max-width: 730px) {
       #user, #user1, #rollno {
       margin-top: 12px;
     
     }
-
     .rollno{
       input-field: 1rem 0;
-
     }
     }
-
     </style>
   
 </head>
@@ -121,14 +112,8 @@ li{
 <b> Write Testimonials</b> </h3><br>
  <!-- <p> The Yearbook Portal has been closed. </p>  -->
 
-   <form action="{{ url('/writetestimonyngb') }}" onSubmit=" 
-Swal.fire({
- 
-  icon: 'success',
-  title: 'The testimonial will be added once it is approved',
-  showConfirmButton: true,
-  
-}).then((result) => {location.reload();});return false" method="POST" class="form main-title center">              
+
+   <form action="{{ url('/writetestimonyngb') }}" onSubmit="alert('Your views will be added in their yearbook after their registration and approval');" method="POST" class="form main-title center">              
                 {{ csrf_field() }}
 
                 <div style="text-align : left">Sender Details:</div>
@@ -148,12 +133,12 @@ Swal.fire({
                 
                 <div style="text-align : left">To:</div>
                 <div class="row" style="margin-bottom: 0px;">
-                    <div class="input-field col s12 l6 m12 " >                   
+                    <!-- <div class="input-field col s12 l6 m12 " >                   
                     <input name="rollno" id="rollno" autofocus placeholder="Roll Number" type="text" style="
     padding-top: 5px;
 " required>
                         <label for="rollno"><h5 style="font-size: 140%;  color: white;">Roll Number (18THXXXXX)</h5></label>
-                    </div> 
+                    </div>  -->
                     
                     <div class="input-field col s12 l6 m12 " >
                         <input type="text" name="rollno" id="rollno" autofocus class="form-control typeahead" placeholder="Search your friend here.....by name" style="
@@ -194,19 +179,14 @@ Swal.fire({
  $('input.typeahead').typeahead({
    source: function(terms,process){
        return $.get(path,{terms:terms},function(data){
-
        for( var i=0;i<data.length;i++){
         name = data[i].name + '|' + data[i].rollno;
         data[i].name = name;
        }
-
          return process(data);
        })
    }
  });
-
-
-
 </script>
 
 </body>

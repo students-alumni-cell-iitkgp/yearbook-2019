@@ -512,10 +512,10 @@ a.navbar-brand:hover {
         padding: 0;
         list-style: none;
         box-shadow: 0px 2px 6px 0 rgba(0, 0, 0, 0.2);
-        position: relative !important;
-        left: -40px !important;
-        margin-top: 0px;
-        top: -50px !important;
+       /* position: relative !important; */
+   left: -153px !important;
+   margin-top: 0px;
+   top: -6px !important;
         width: 100px !important;
         transition: all .3s ease;
         background: #f4f4f4 !important;
@@ -772,7 +772,7 @@ a.navbar-brand:hover {
 
 .img-responsive {
     display: block;
-    max-width: 100%;
+    max-width: inherit !important;
     height: auto;
 }
 
@@ -870,9 +870,17 @@ a.navbar-brand:hover {
 }
 
 .modal-image img {
-    width: 600px !important;
-    height: 540px !important;
+    width: inherit !important;
 }
+
+/* @media only screen and (min-width: 768px) {
+    .img-responsive {
+        display: block;
+        max-width: 130% !important;
+        height: auto;
+    }
+
+} */
 
 .img-poster {
     margin-bottom: 10px;
@@ -956,7 +964,7 @@ a.navbar-brand:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 5px;
+    padding: 0px;
     border-top: solid 1px #f4f4f4;
     display: block;
 }
