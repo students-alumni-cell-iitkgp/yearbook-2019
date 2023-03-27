@@ -212,15 +212,15 @@
     	<div class="modal-dialog" style="margin:auto; padding-top:inherit;">
     		<!-- Modal content-->
     		<div class="modal-content" style="
-    top: 30%;
-    margin: auto;
-">
+		    top: 30%;
+		    margin: auto;
+			">
     			<div class="modal-header">
-				<div>
-    				<h4 class="modal-title text-uppercase" style= "color: #000;text-align:center;">Write Testimonials</h4>
+					<div>
+						<h4 class="modal-title text-uppercase" style= "color: #000;text-align:center;">Write Testimonials</h4>
 					</div>
 					<div>
-					<button type="button" class="close" data-dismiss="modal" style="right:0">&times;</button>
+						<button type="button" class="close" data-dismiss="modal" style="right:0">&times;</button>
 					</div>
     			</div>
     			<div class="modal-body" style='top:10px;'>
@@ -229,14 +229,14 @@
     					<form action="{{ url('/search') }}" method="POST" class="form-inline" style="justify-content:center">
     						{{ csrf_field() }}
 							<div>
-    						<input class="test-search" placeholder="Search Your Friend Here..." type="text" name="search" required="required" id="search1" style="background: none; border: 1px solid; border-radius: 5px; padding-top: 3px; padding-left: 10px; line-height: 40px; cursor: text; font-size: 14px;margin-left: -10%;">
+    							<input class="test-search" placeholder="Search Your Friend Here..." type="text" name="search" required="required" id="search1" style="background: none; border: 1px solid; border-radius: 5px; padding-top: 3px; padding-left: 10px; line-height: 40px; cursor: text; font-size: 14px;margin-left: 10%;">
     						</div>
 							<div style="padding-left:25px">
-							<input type="submit" value="Search" class="kafe-btn kafe-btn-mint testi-btn" style=" color: #fff"></input>
+								<input type="submit" value="Search" class="kafe-btn kafe-btn-mint testi-btn" style=" color: #fff"></input>
     					    </div>
-							</form>
+						</form>
     				</div>
-				
+			
     			</div>
     			<div class="modal-footer">
     			</div>
