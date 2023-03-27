@@ -255,7 +255,8 @@
 	  </div>
 	  <div class="logo side-menu">
 	  <a href="{{ url('/home') }}">
-	  <img class="cell-logo" src="{{ asset('img/navbar/kgplogo1.png') }}" alt="" style="filter:invert();width:20px; margin-left:30px;margin-right:15px;margin-top:-8px"/> 
+	  <img class="cell-logo" src="{{ asset('img/navbar/kgplogo1.png') }}" alt="" style="filter: invert();width: 20px;margin-left: 30px;margin-right: 22px;margin-top: -17px;padding-top: 4%;"/>
+	  <!-- style="filter: invert();width: 20px;margin-left: 30px;margin-right: 22px;margin-top: -17px;transform: rotate(90deg);padding-top: 4%;"  -->
 	  	YEARBOOK
 		</a>
 		</div>
