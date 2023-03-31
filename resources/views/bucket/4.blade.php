@@ -1,6 +1,6 @@
 
 <!--<div class="col-xs-12  col-md-6">-->
-<div class="col-xs-12 col-md-4">
+<div class="col-xs-12 col-md-12">
   @php
   $myview = App\Bucket::where('roll', Auth::user()->rollno)->where('list', 10)->get()->toArray();
   @endphp
@@ -37,7 +37,7 @@
   @endif
 </div> 
 
-<div class="col-xs-12 col-md-4">
+<!-- <div class="col-xs-12 col-md-4">
   @php
   $myview = App\Bucket::where('roll', Auth::user()->rollno)->where('list', 11)->get()->toArray();
   @endphp
@@ -72,9 +72,9 @@
     </div>
   </aside><br>
   @endif
-</div> 
+</div>  -->
 
-<div class="col-xs-12 col-md-4">
+<!-- <div class="col-xs-12 col-md-4">
   @php
   $myview = App\Bucket::where('roll', Auth::user()->rollno)->where('list', 12)->get()->toArray();
   @endphp
@@ -109,7 +109,7 @@
     </div>
   </aside><br>
   @endif
-</div> 
+</div>  -->
 <!--<div class="col-xs-12  col-md-6">
 <div class="col-xs-12  col-md-4">
 @php
