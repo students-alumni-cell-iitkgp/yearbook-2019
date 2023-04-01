@@ -336,7 +336,7 @@
            	      	<i class="material-icons" style = " font-size: 18px;">auto_awesome</i> 
            	       </a> </li>
 
-                    <li id="11">
+                    <!-- <li id="11">
            	       <a href="{{ url('/viewbucket?id=11') }}" class="pmd-floating-action-btn btn pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-light" data-title="Cloud Queue"> 
            	      	<span class="pmd-floating-hidden" style="padding-right:10px">{{$buckets[11]}}</span> 
            	      	<i class="material-icons" style = " font-size: 18px;">military_tech</i> 
@@ -346,25 +346,25 @@
            	       <a href="{{ url('/viewbucket?id=12') }}" class="pmd-floating-action-btn btn pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-light" data-title="Cloud Queue"> 
            	      	<span class="pmd-floating-hidden" style="padding-right:10px">{{$buckets[12]}}</span> 
            	      	<i class="material-icons" style = " font-size: 18px;">coffee</i> 
-           	       </a> </li>
+           	       </a> </li> -->
 
-                    <li id="13">
+                    <!-- <li id="13">
            	       <a href="{{ url('/viewbucket?id=13') }}" class="pmd-floating-action-btn btn pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-light" data-title="Cloud Queue"> 
            	      	<span class="pmd-floating-hidden" style="padding-right:10px">{{$buckets[13]}}</span> 
            	      	<i class="material-icons" style = " font-size: 18px;">school</i> 
-           	       </a> </li>
+           	       </a> </li> -->
 
-                    <li id="14">
+                    <!-- <li id="14">
            	       <a href="{{ url('/viewbucket?id=14') }}" class="pmd-floating-action-btn btn pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-light" data-title="Cloud Queue"> 
            	      	<span class="pmd-floating-hidden" style="padding-right:10px">{{$buckets[14]}}</span> 
            	      	<i class="material-icons" style = " font-size: 18px;">queue_music</i> 
-           	       </a> </li>
+           	       </a> </li> -->
 
-                    <li id="15">
+                    <!-- <li id="15">
            	       <a href="{{ url('/viewbucket?id=15') }}" class="pmd-floating-action-btn btn pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-light" data-title="Cloud Queue"> 
            	      	<span class="pmd-floating-hidden" style="padding-right:10px">{{$buckets[15]}}</span> 
            	      	<i class="material-icons" style = " font-size: 18px;">military_tech</i> 
-           	       </a> </li>
+           	       </a> </li> -->
 
                 </ul>
               </aside>

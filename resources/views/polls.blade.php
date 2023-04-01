@@ -130,18 +130,18 @@
         <?php
          $titles = [
                         '',
-                        'Mr bean',
+                        'Charlie Chaplin',
                         'Johnny Bravo',
                         'Late Lateef',
-                        'Social Butterfly',
+                        'Queen Bee',
                         'Richie Rich',
-                        'Maggu of the batch',
-                        'Nightingale',
-                        'Rancho of the batch',
+                        'Walking Wikipedia',
+                        'Snoop Dog',
+                        'Jugaadu of the batch',
                         'Got\'em Moves',
-                        'Guruji of the batch',
-                        'High on life',
-                        'Neta of the batch',
+                        'Godfather of the batch',
+                        'Mr. Protein Shake',
+                        'Monica Geller',
                         'Chandler Bing',
                         'Chatur of the batch',
                         'Doraemon of the Batch'
@@ -163,7 +163,7 @@
         <div class="container-fluid">
             <div class="row justify-content-around">
                 <?php
-                $polls_size = 14;
+                $polls_size = 12;
                 for ($i = 1; $i <= $polls_size; $i++) :
                     $q = 'q' . $i;
                     $link = '/polls/' . $i;
