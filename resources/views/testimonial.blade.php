@@ -154,13 +154,8 @@
             
                             <div class="row" id="post-review-box" style="display:none;">
                               <div class="col-md-12">
-                                <form action="{{ url('/writetestimony/'.$data[0]["rollno"]) }}" onSubmit="Swal.fire({
- 
- icon: 'success',
- title: 'The testimonial will be added once it is approved',
- showConfirmButton: true,
- 
-}).then((result) => {location.reload();});return false" method="POST" style="padding-top: 0;">
+                              <form action="{{ url('/writetestimony/'.$data[0]["rollno"]) }}" onSubmit="" method="POST" style="padding-top: 0;">
+                              <!-- <form action="{{ url('/writetestimony/'.$data[0]["rollno"]) }}" onSubmit="alert('Your views will be added in his yearbook after his registration and approval');" method="POST" style="padding-top: 0;"> -->
                                   {{csrf_field()}}
                                   <input id="ratings-hidden" name="rating" type="hidden"> 
                                   <textarea class="form-control animated" cols="50" id="new-review" name="viewf" placeholder="Enter your review here...(max 144 character)" rows="5" maxlength="144" ></textarea>
