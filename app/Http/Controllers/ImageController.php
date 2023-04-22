@@ -8,7 +8,10 @@ use Auth;
 use Response;
 use App\User;
 use App\views;
+ 
 use Intervention\Image\Facades\Image as Image1;
+
+
 class ImageController extends Controller
 {
 	public function __construct()
@@ -45,6 +48,8 @@ class ImageController extends Controller
 			$image['filePath'] = $name;
 			$file->move(public_path().'/uploads/', $name);
 			$width = Image1::make('uploads/'.$name)->width();
+			Image1::make('uploads/'.$name)->orientate();
+			Image1::make('uploads/'.$name)->save();
 			if($width < 1000)
 				$thumbnail = Image1::make('uploads/'.$name)->resize($width, 1000);
 			else
