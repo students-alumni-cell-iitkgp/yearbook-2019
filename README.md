@@ -12,7 +12,7 @@
 
 7. php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLaravel5"
 
-Also change the function username() inside  by changing 'email' to 'rollno' for login functionality to work
+Also change the function username() inside AuthenticatesUsers.php by changing 'email' to 'rollno' for login functionality to work
 
 # To allow large file upload edit /etc/php/7.0/cli/php.ini file
 upload_max_filesize = 100M
