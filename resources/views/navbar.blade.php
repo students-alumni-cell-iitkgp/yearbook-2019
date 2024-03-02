@@ -12,15 +12,6 @@
 		width : 100%;
 		z-index : 1;
 	}
-	@media and (max-width:450px){
-
-		.modal-content{
-			margin:-12% !important;
-		}
-	}
-	</style>
-}}
-
 <header class="tr-header">
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
@@ -209,34 +200,31 @@
 </header> --}}
 
     <div id="modal_test" class="modal fade" role="dialog">
-    	<div class="modal-dialog" style="margin:auto; padding-top:inherit;">
+    	<div class="modal-dialog">
     		<!-- Modal content-->
-    		<div class="modal-content" style="
-		    top: 30%;
-		    margin: auto;
-			">
+    		<div class="modal-content">
     			<div class="modal-header">
-					<div>
-						<h4 class="modal-title text-uppercase" style= "color: #000;text-align:center;">Write Testimonials</h4>
+				<div>
+    				<h4 class="modal-title text-uppercase" style="color: #000">Write Testimonials</h4>
 					</div>
 					<div>
-						<button type="button" class="close" data-dismiss="modal" style="right:0">&times;</button>
+					<button type="button" class="close" data-dismiss="modal" style="right:0">&times;</button>
 					</div>
     			</div>
     			<div class="modal-body" style='top:10px;'>
-				
+				/* <center> */
     				<div class="search-dashboard" >
     					<form action="{{ url('/search') }}" method="POST" class="form-inline" style="justify-content:center">
     						{{ csrf_field() }}
 							<div>
-    							<input class="test-search" placeholder="Search Your Friend Here..." type="text" name="search" required="required" id="search1" style="background: none; border: 1px solid; border-radius: 5px; padding-top: 3px; padding-left: 10px; line-height: 40px; cursor: text; font-size: 14px;margin-left: 10%;">
+    						<input class="test-search" placeholder=" Search Your Friend Here..." type="text" name="search" required="required" id="search1" style="background: none; border: 1px solid; border-radius: 5px; padding-top: 3px; padding-left: 10px; line-height: 40px; cursor: text; font-size: 14px;">
     						</div>
 							<div style="padding-left:25px">
-								<input type="submit" value="Search" class="kafe-btn kafe-btn-mint testi-btn" style=" color: #fff"></input>
+							<input type="submit" value="Search" class="kafe-btn kafe-btn-mint testi-btn" style=" color: #fff"></input>
     					    </div>
-						</form>
+							</form>
     				</div>
-			
+					/* </center> */
     			</div>
     			<div class="modal-footer">
     			</div>
@@ -255,8 +243,7 @@
 	  </div>
 	  <div class="logo side-menu">
 	  <a href="{{ url('/home') }}">
-	  <img class="cell-logo" src="{{ asset('img/navbar/kgplogo1.png') }}" alt="" style="filter: invert();width: 20px;margin-left: 30px;margin-right: 22px;margin-top: -17px;padding-top: 4%;"/>
-	  <!-- style="filter: invert();width: 20px;margin-left: 30px;margin-right: 22px;margin-top: -17px;transform: rotate(90deg);padding-top: 4%;"  -->
+	  <img class="cell-logo" src="{{ asset('img/navbar/kgplogo1.png') }}" alt="" style="filter:invert();width:20px; margin-left:30px;margin-right:15px;margin-top:-8px"/> 
 	  	YEARBOOK
 		</a>
 		</div>
@@ -289,9 +276,9 @@
 			<i class="far fa-comments"></i>&nbsp;&nbsp;
 			Testimonial
 		  </a>
-		  <a href="{{ url('/home') }}" >
+		  <a href="{{ url('/polls') }}" >
 		    <i class="fas fa-clipboard-list"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-			Polls-Closed
+			Polls
 		  </a>
 		</div>
 	  </div>
@@ -466,7 +453,6 @@
 
 	if(screen.width < 930){
 		document.getElementsByClassName("cell-logo")[0].style.transform = "rotate(90deg)";
-		
 	}
 
 
