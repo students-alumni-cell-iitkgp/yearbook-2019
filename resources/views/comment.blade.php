@@ -80,14 +80,6 @@
     }
 
 
-
-
-
-
-
-
-
-
 .main-timeline{
     overflow: hidden;
     position: relative;
