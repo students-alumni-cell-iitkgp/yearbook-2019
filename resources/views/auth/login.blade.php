@@ -21,11 +21,18 @@
 
   <style>
     .box{
-      background: #373e57e3;
-      color: white;
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.73);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px);
+border: 1px solid rgba(255, 255, 255, 0.57);
+      
+      color:black;
     }
     .status-share {
-      background-color: #1b86f9;
+      background-color: green;
       border: none;
       color: #fff;
       border-radius: 4px;
@@ -34,6 +41,11 @@
       box-shadow: 0 0 20px #1b86f9;
       cursor: pointer;
       margin-top: 10px;
+    }
+
+    ::placeholder{
+      color: gray;
+      opacity:0.8;
     }
   </style>
 
@@ -71,13 +83,13 @@
 
                 <div class="row" style="margin-bottom: 0px; text-align : center">
                    
-                    <div class="input-field col s12 l6 m12 " >                   
+                    <div class="input-field row s12 l6 m12 " >                   
                         <input name="rollno" id="rollno" autofocus placeholder="Roll Number" type="text" style="margin-top: 20px;" required>
-                        <label for="rollno"><h5 style="font-size: 140%; color:white">Roll Number (19THXXXXX)</h5></label>
+                        <label for="rollno"><h5 style="font-size: 140%; color:black">Roll Number (20THXXXXX)</h5></label>
                     </div>
-                    <div class="input-field col s12 l6 m12 ">                   
+                    <div class="input-field row s12 l6 m12 ">                   
                         <input name="password" id="dob" placeholder="Date of Birth" pattern="\d{1,2}-\d{1,2}-\d{4}" type="text" style="margin-top: 20px;" required>
-                        <label for="dob"><h5 style="font-size: 140%;color:white">Date of Birth (dd-mm-yyyy)</h5></label>
+                        <label for="dob"><h5 style="font-size: 140%;color:black">Date of Birth (dd-mm-yyyy)</h5></label>
                     </div>
                 </div>
                 <div class="row">
@@ -87,8 +99,8 @@
                 </div>
             </form>
 
-        <p class=" center sub-title main-title " style="color:white"><a href="{{ url('/Testimonial_public') }}" style="color:white"> Write Testimonials<a><i class="material-icons" style="color:white">error_outline</i><span class="tooltip" style="background:white;color:black">If you are not graduating this year, but want to write about your friends who are graduating, you can click on this link.</span></a></p> 
-        <p class=" center sub-title main-title" style="color: white">Contact us at:<br> <a style="color: white" href="mailto:Yearbookiitkgp2022@gmail.com"> Yearbookiitkgp2022@gmail.com<a><i style="color: white" class="material-icons">error_outline</i><span class="tooltip">If you are not graduating this year, but want to write about your friends who are graduating, send us the testimonials via mail at Yearbookiitkgp2021@gmail.com</span></a></p>
+        <p class=" center sub-title main-title " style="color:black"><a href="{{ url('/Testimonial_public') }}" style="color:black"> Write Testimonials<a><i class="material-icons" style="color:black">error_outline</i><span class="tooltip" style="background:white;color:black">If you are not graduating this year, but want to write about your friends who are graduating, you can click on this link.</span></a></p> 
+        <p class=" center sub-title main-title" style="color: black">Contact us at:<br> <a style="color: black" href="mailto:Yearbookiitkgp2022@gmail.com"> yearbookandclass.song.2024@gmail.com<a><i style="color: black" class="material-icons">error_outline</i><span class="tooltip">If you are not graduating this year, but want to write about your friends who are graduating, send us the testimonials via mail at yearbookandclass.song.2024@gmail.com</span></a></p>
 
       </small></h1>
   </div>
