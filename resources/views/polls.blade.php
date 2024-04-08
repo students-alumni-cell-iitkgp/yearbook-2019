@@ -160,9 +160,9 @@
             <div class="row justify-content-around">
                 <?php
                 $polls_size = 12;
-                for ($i = 1; $i <= $polls_size; $i++) :
-                    $q = 'q' . $i;
-                    $link = '/polls/' . $i;
+                for ($i = 0; $i < $polls_size; $i++) :
+                    $q = 'q' . ($i + 1);  // Adjusting $q to start from 1
+                    $link = '/polls/' . ($i + 1);
                     ?>
                     <div class="col-xs-11 col-lg-5 col-md-5 media">
                         <!-- <img src="{{ asset('img/ques.png') }}" alt="" class="img-responsive img-circle"> -->
