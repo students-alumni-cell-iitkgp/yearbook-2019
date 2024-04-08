@@ -397,13 +397,15 @@
 
                     <ul style="top: 6px; position: relative;">
                       <li>
-                        <div id="+{{$image['id']}}+" style="border-right:1px solid gray;padding-right:10px" class="like"></div> <!-- Like Button -->
+                        <div id="+{{$image['id']}}+" style="padding:15px; cursor:pointer;" class="like">
+                        <i class='fa fa-heart' style='color: red; font-size: 20px;'></i><small>
+                        </div> <!-- Like Button -->  
                       </li>
                       <li>
                         <button type="button" class="com btn comment_btn" id="{{$image['id']}}" style="margin-left:-30px;border: none;background:none; margin-top:10px;margin-bottom:10px;" value="{{$image['url']}}">
                           <i class="far fa-comment"></i> View Comments
                         </button>
-                      </li>
+    
                     </ul>
 
 
@@ -614,10 +616,10 @@
         data: formData,
         success: function(response) {
           document.getElementById(v).innerHTML = response;
-          // console.log(response);
+          console.log(response);
         },
         error: function(data) {
-          // console.log('Error in likeadd');  
+          console.log('Error in likeadd');  
         }
       });
     });

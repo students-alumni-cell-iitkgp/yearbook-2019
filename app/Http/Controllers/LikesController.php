@@ -31,7 +31,7 @@ class LikesController extends Controller
   }
   if($i==0)
     $content="<button type='button' class='btn' style='border: none; background: none;'>
-  <i class='far fa-heart' style='color: red; font-size: 20px;'></i><small>".$likes."</small></button>";
+  <i class='fa fa-heart' style='color: red; font-size: 20px;'></i><small>".$likes."</small></button>";
   else if ($i==1)
     $content="<button type='button' class='btn' style='border: none; background: none;'>
   <i class='fa fa-heart' style='color: red; font-size: 20px;'></i><small>".$likes."</small></button>";

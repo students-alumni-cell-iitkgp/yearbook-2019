@@ -9,7 +9,7 @@
   }
 </style>
 
-<footer style="background-color:rgb(11 21 35); color:white; text-align:center; padding:5px; position:relative; bottom:0px; width:100%">&copy; 2022 Students' Alumni Cell, IIT Kharagpur
+<footer style="background-color:rgb(11 21 35); color:white; text-align:center; padding:5px; position:relative; bottom:0px; width:100%">&copy; 2024 Students' Alumni Cell, IIT Kharagpur
   {{-- <ul class="soc">
 
     <li><a class="btn btn-social-icon btn-facebook"  href="//www.facebook.com/iitkgp.alumnicell?fref=ts&ref=br_tf" target="_blank">
