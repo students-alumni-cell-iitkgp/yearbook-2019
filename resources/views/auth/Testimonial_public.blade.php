@@ -24,12 +24,19 @@
   <link rel="stylesheet" href="{{ asset('css/style1.css') }}">
   <style>
     .box {
-      background: #373e57e3;
-      color: white;
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.73);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px);
+border: 1px solid rgba(255, 255, 255, 0.57);
+      
+      color:black;
     }
 
     .status-share {
-      background-color: #1b86f9;
+      background-color: green;
       border: none;
       color: #fff;
       border-radius: 4px;
@@ -83,7 +90,7 @@
     #user,
     #user1,
     #rollno {
-      margin-top: 5px;
+      margin-top: 25px;
     }
 
     @media (max-width: 730px) {
@@ -93,6 +100,11 @@
       #rollno {
         margin-top: 18px;
       }
+    }
+
+    ::placeholder{
+      color:grey;
+      opacity:0row
     }
   </style>
 
@@ -130,15 +142,15 @@
 
 
             <div class="input-field col s12 l6 m12 ">
-              <input name="user" id="user" autofocus placeholder="Name" type="text" required>
+              <input name="user" id="user" autofocus type="text" required>
               <label for="user">
-                <h5 style="font-size: 140%;  color: white;">Name</h5>
+                <h5 style="font-size: 140%;  color: black;">Name</h5>
               </label>
             </div>
             <div class="input-field col s12 l6 m12 ">
-              <input name="user1" id="user1" autofocus placeholder="Roll Number" type="text" required>
+              <input name="user1" id="user1" autofocus type="text" required>
               <label for="user1">
-                <h5 style="font-size: 140%;  color: white;">Roll Number (18THXXXXX)</h5>
+                <h5 style="font-size: 140%;  color: black;">Roll Number (21THXXXXX)</h5>
               </label>
             </div>
           </div>
@@ -146,16 +158,16 @@
           <div style="text-align : left">To:</div>
           <div class="row" style="margin-bottom: 0px;">
             <div class="input-field col s12 l6 m12 ">
-              <input name="rollno" id="rollno" autofocus placeholder="Roll Number" type="text" style="margin-top: 5px;" required>
+              <input name="rollno" id="rollno" autofocus type="text" style="margin-top: 25px;" required>
               <label for="rollno">
-                <h5 style="font-size: 140%;  color: white;">Roll Number (17THXXXXX)</h5>
+                <h5 style="font-size: 140%;  color: black;">Roll Number (20THXXXXX)</h5>
               </label>
             </div>
 
             <div class="input-field col s12 l6 m12 ">
               <input type="text" name="rollno" id="rollno" autofocus class="form-control typeahead" placeholder="Search your friend here.....by name" required>
               <label for="rollno">
-                <h5 style="font-size: 140%;  color: white;">Roll Number (17THXXXXX)</h5>
+                <h5 style="font-size: 140%;  color: black;">Roll Number (20THXXXXX)</h5>
               </label>
 
             </div>
@@ -165,7 +177,7 @@
           <br>
           <div class="row">
             <div class="col s12 l4 m12 offset-l4">
-              <button type="submit" id="submit" name="submit" class="status-share" style="font-size: 15px;" required>Submit</button>
+              <button type="submit" id="submit" name="submit" class="status-share" style="font-size: 18px;" required>Submit</button>
             </div>
           </div>
         </form>

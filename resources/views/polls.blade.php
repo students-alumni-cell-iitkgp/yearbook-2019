@@ -128,23 +128,22 @@
     </style>
     <section class = "header">
         <?php
-         $titles = [
-                        '',
-                        'Charlie Chaplin',
-                        'Johnny Bravo',
-                        'Late Lateef',
-                        'Queen Bee',
-                        'Richie Rich',
-                        'Walking Wikipedia',
-                        'Snoop Dog',
-                        'Jugaadu of the batch',
-                        'Got\'em Moves',
-                        'Godfather of the batch',
-                        'Mr. Protein Shake',
-                        'Monica Geller',
-                        'Chandler Bing',
-                        'Chatur of the batch',
-                        'Doraemon of the Batch'
+         $titles = [ 'Campus Cool',
+                    'Charlie Chaplin',
+         'Chatur of the batch',
+         'Gian of the batch',
+         'High on life',
+         'Jugaadu of the batch',
+         'Walking Wikipedia',
+         'Late Lateef',
+         'Michael Jackson',
+         'Neta of the batch',
+         'Nightingale',
+         'Peter Griffin of the batch',
+         'Protein Powerhouse',
+         'Richie Rich',
+         'Social Butterfly',
+         'Swagmaster',
                     ];
         ?>     
         <div class="container-fluid">
