@@ -128,18 +128,15 @@
     </style>
     <section class = "header">
         <?php
-         $titles = [ 'Campus Cool',
+         $titles = [ 
                     'Charlie Chaplin',
-         'Chatur of the batch',
          'Gian of the batch',
          'High on life',
          'Jugaadu of the batch',
          'Walking Wikipedia',
          'Late Lateef',
-         'Michael Jackson',
          'Neta of the batch',
          'Nightingale',
-         'Peter Griffin of the batch',
          'Protein Powerhouse',
          'Richie Rich',
          'Social Butterfly',
