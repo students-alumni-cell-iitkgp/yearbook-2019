@@ -144,14 +144,14 @@ border: 1px solid rgba(255, 255, 255, 0.57);
 
             <div class="input-field col s12 l6 m12 ">
               <input name="user" id="user" autofocus type="text" required>
-              <input name="user" id="user" autofocus type="text" required>
+              <!-- <input name="user" id="user" autofocus type="text" required> -->
               <label for="user">
                 <h5 style="font-size: 140%;  color: black;">Name</h5>
               </label>
             </div>
             <div class="input-field col s12 l6 m12 ">
               <input name="user1" id="user1" autofocus type="text" required>
-              <input name="user1" id="user1" autofocus type="text" required>
+              <!-- <input name="user1" id="user1" autofocus type="text" required> -->
               <label for="user1">
                 <h5 style="font-size: 140%;  color: black;">Roll Number (21THXXXXX)</h5>
               </label>
@@ -162,7 +162,7 @@ border: 1px solid rgba(255, 255, 255, 0.57);
           <div class="row" style="margin-bottom: 0px;">
             <div class="input-field col s12 l6 m12 ">
               <input name="rollno" id="rollno" autofocus type="text" style="margin-top: 25px;" required>
-              <input name="rollno" id="rollno" autofocus type="text" style="margin-top: 25px;" required>
+              <!-- <input name="rollno" id="rollno" autofocus type="text" style="margin-top: 25px;" required> -->
               <label for="rollno">
                 <h5 style="font-size: 140%;  color: black;">Roll Number (20THXXXXX)</h5>
               </label>
@@ -173,7 +173,6 @@ border: 1px solid rgba(255, 255, 255, 0.57);
               <label for="rollno">
                 <h5 style="font-size: 140%;  color: black;">Roll Number (20THXXXXX)</h5>
               </label>
-
             </div>
           </div>
           <div style="text-align : left">Enter your review here:</div>
@@ -182,7 +181,7 @@ border: 1px solid rgba(255, 255, 255, 0.57);
           <div class="row">
             <div class="col s12 l4 m12 offset-l4">
               <button type="submit" id="submit" name="submit" class="status-share" style="font-size: 18px;" required>Submit</button>
-              <button type="submit" id="submit" name="submit" class="status-share" style="font-size: 18px;" required>Submit</button>
+              
             </div>
           </div>
         </form>
