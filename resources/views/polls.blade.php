@@ -134,7 +134,7 @@
          'High on life',
          'Jugaadu of the batch',
          'Walking Wikipedia',
-         'Late Lateef',
+         'Peter Griffin of the Batch',
          'Neta of the batch',
          'Nightingale',
          'Protein Powerhouse',
