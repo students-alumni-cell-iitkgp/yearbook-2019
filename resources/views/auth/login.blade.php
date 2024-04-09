@@ -47,6 +47,17 @@ border: 1px solid rgba(255, 255, 255, 0.57);
       color: gray;
       opacity:0.8;
     }
+
+    @media only screen and (max-width: 600px) {
+    .box {
+        border-radius: 8px; /* Adjust border radius for smaller screens */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adjust box shadow for smaller screens */
+        backdrop-filter: blur(8px); /* Disable backdrop filter for smaller screens */
+        -webkit-backdrop-filter: blur(8px); /* Disable backdrop filter for smaller screens */
+        border: 1px solid rgba(255, 255, 255, 0.2); /* Adjust border for smaller screens */
+        padding: 2px;
+    }
+
   </style>
 
 
