@@ -142,6 +142,7 @@
          'Social Butterfly',
          'Swagmaster',
          'Monica Geller',
+         'Phoebae Buffay',
          
                     ];
         ?>     
@@ -161,7 +162,7 @@
         <div class="container-fluid">
             <div class="row justify-content-around">
                 <?php
-                $polls_size = 13;
+                $polls_size = 14;
                 for ($i = 0; $i < $polls_size; $i++) :
                     $q = 'q' . ($i + 1);  // Adjusting $q to start from 1
                     $link = '/polls/' . ($i + 1);
