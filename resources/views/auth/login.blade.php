@@ -57,7 +57,7 @@ border: 1px solid rgba(255, 255, 255, 0.57);
         border: 1px solid rgba(255, 255, 255, 0.2); /* Adjust border for smaller screens */
         padding: 2px;
     }
-  }
+    }
 
   </style>
 
