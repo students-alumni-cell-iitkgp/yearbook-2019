@@ -88,10 +88,10 @@ border: 1px solid rgba(255, 255, 255, 0.57);
           <br>
           Welcome to<b> Yearbook'24</b> Portal
         </h3><br>
-        <!-- <p> The Yearbook Portal has been closed. </p> -->
-        <form method="post" class="form main-title center"  action="{{ route('login') }}">
-        <!-- <form method="post" class="form main-title center" onSubmit="alert('Kindly reapprove the desired testimonials to be shown in the testimonial timeline!!');" action="{{ route('login') }}"> -->
-                {{ csrf_field() }}
+        <p> The Yearbook Portal has been closed. </p>
+        <!-- <form method="post" class="form main-title center"  action="{{ route('login') }}">
+         <form method="post" class="form main-title center" onSubmit="alert('Kindly reapprove the desired testimonials to be shown in the testimonial timeline!!');" action="{{ route('login') }}"> -->
+                <!-- {{ csrf_field() }}
 
                 <div class="row" style="margin-bottom: 0px; text-align : center">
                    
@@ -109,10 +109,10 @@ border: 1px solid rgba(255, 255, 255, 0.57);
                         <button type="submit" id="submit" name="submit" class="status-share" style="font-size: 15px;" required >Submit</button>
                     </div>
                 </div>
-            </form>
+            </form> -->
 
-        <p class=" center sub-title main-title " style="color:black"><a href="{{ url('/Testimonial_public') }}" style="color:black"> Write Testimonials<a><i class="material-icons" style="color:black">error_outline</i><span class="tooltip" style="background:white;color:black">If you are not graduating this year, but want to write about your friends who are graduating, you can click on this link.</span></a></p> 
-        <p class=" center sub-title main-title" style="color: black">Contact us at:<br> <a style="color: black" href="mailto:Yearbookiitkgp2022@gmail.com"> yearbookandclass.song.2024@gmail.com<a><i style="color: black" class="material-icons">error_outline</i><span class="tooltip">If you are not graduating this year, but want to write about your friends who are graduating, send us the testimonials via mail at yearbookandclass.song.2024@gmail.com</span></a></p>
+        <!-- <p class=" center sub-title main-title " style="color:black"><a href="{{ url('/Testimonial_public') }}" style="color:black"> Write Testimonials<a><i class="material-icons" style="color:black">error_outline</i><span class="tooltip" style="background:white;color:black">If you are not graduating this year, but want to write about your friends who are graduating, you can click on this link.</span></a></p> 
+        <p class=" center sub-title main-title" style="color: black">Contact us at:<br> <a style="color: black" href="mailto:Yearbookiitkgp2022@gmail.com"> yearbookandclass.song.2024@gmail.com<a><i style="color: black" class="material-icons">error_outline</i><span class="tooltip">If you are not graduating this year, but want to write about your friends who are graduating, send us the testimonials via mail at yearbookandclass.song.2024@gmail.com</span></a></p> -->
 
       </small></h1>
   </div>
