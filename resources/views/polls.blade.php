@@ -18,12 +18,12 @@
     <!-- ==============================================
         Favicons
         =============================================== -->
-        <link rel="icon" href="{{asset('img/navbar/kgplogo1.png')}}" sizes="32x32" type="image/gif"/>
+    <link rel="icon" href="{{asset('img/navbar/kgplogo1.png')}}" sizes="32x32" type="image/gif" />
     <link rel="apple-touch-icon" href="{{ asset('img/favicons/apple-touch-icon.png') }}">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     {{-- <script src="{{ asset('js/jquery.min.js') }}"></script> --}}
 
     <!-- ==============================================
@@ -68,89 +68,100 @@
             --primary-color-dark-blue-3: hsl(216, 53%, 9%);
             --primary-color-dark-blue-4: hsl(219, 30%, 18%);
         }
+
         @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Nunito&family=Source+Sans+Pro&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
-        section{
+
+        section {
             background-color: var(--primary-color-dark-blue-2) !important;
             font-family: 'IBM Plex Serif', serif;
         }
+
         .row {
             width: 100%;
         }
+
         .back {
             overflow-y: auto;
             margin-bottom: 20px;
             padding-left: 150px
         }
+
         .media {
             margin-top: 0px;
-            margin-bottom:15px;
+            margin-bottom: 15px;
             margin-right: 10px;
             padding: 20px;
             background-color: var(--primary-color-dark-blue-4) !important;
             border-radius: 6px;
         }
-        .media_body p{
+
+        .media_body p {
             margin-top: 0px;
             font-size: large;
         }
-        .form-group button{
+
+        .form-group button {
             border: none;
             margin-top: 0 !important;
             background-color: var(--primary-color-dark-blue-4) !important;
         }
-        .media p, .header{
+
+        .media p,
+        .header {
             font-family: 'Courier New', Courier, monospace;
         }
-        .polls-input .input-field input{
+
+        .polls-input .input-field input {
             margin-left: 0 !important;
             margin-top: 0 !important;
         }
-        h1, h5{
+
+        h1,
+        h5 {
             text-align: center;
         }
-        @media screen and (max-width:500px){
-        .back {
-           
-            margin-left:0px;
-            padding-left:15px;
-            
-        }
-        .media {
-        
-            margin-right: 0px;
-    
-        }
+
+        @media screen and (max-width:500px) {
+            .back {
+
+                margin-left: 0px;
+                padding-left: 15px;
+
+            }
+
+            .media {
+
+                margin-right: 0px;
+
+            }
         }
     </style>
-    <section class = "header">
+    <section class="header">
         <?php
-         $titles = [ 
-                    'Charlie Chaplin',
-         'Gian of the batch',
-         'High on life',
-         'Jugaadu of the batch',
-         'Walking Wikipedia',
-         'Peter Griffin of the Batch',
-         'Neta of the batch',
-         'Nightingale',
-         'Protein Powerhouse',
-         'Richie Rich',
-         'Social Butterfly',
-         'Swagmaster',
-         'Monica Geller',
-         'Phoebae Buffay',
-         
-                    ];
-        ?>     
+        $titles = [
+            'Richie Rich',
+            'Nightangle of the batch',
+            'The Caffeine Commander',
+            'The Group Chat Ghost',
+            'The Wifi Magnet',
+            'Swag Master',
+            'Harry Potter of the Batch',
+            'The Algorithm Alchemist',
+            'Sleep Scheduler',
+            'The Advice Guru',
+            'Batch Mascot',
+            'Classroom DJ',
+        ];
+        ?>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12 ">
                     <h1>Polls</h1>
-    <hr>
+                    <hr>
                     <h5>
                         Vote for your favourite Batchmates, the really good singer, or the guy/girl who always makes the group laugh
                     </h5>
@@ -162,17 +173,17 @@
         <div class="container-fluid">
             <div class="row justify-content-around">
                 <?php
-                $polls_size = 14;
+                $polls_size = 12;
                 for ($i = 0; $i < $polls_size; $i++) :
                     $q = 'q' . ($i + 1);  // Adjusting $q to start from 1
                     $link = '/polls/' . ($i + 1);
-                    ?>
+                ?>
                     <div class="col-xs-11 col-lg-5 col-md-5 media">
                         <!-- <img src="{{ asset('img/ques.png') }}" alt="" class="img-responsive img-circle"> -->
                         <form action="{{ url($link) }}" method="POST">
                             {{ csrf_field() }}
                             <div class="media_body">
-                            <p><i class="fas fa-poll fa-lg"></i><b> {{ $titles[$i] }} </b></p>
+                                <p><i class="fas fa-poll fa-lg"></i><b> {{ $titles[$i] }} </b></p>
                                 <div class="row" style="display: inline-block;">
                                     <div class="col-sm-10 col-md-12 col-lg-9">
                                         <div class="polls-input">
@@ -187,7 +198,9 @@
                                     </div>
                                     <div class="col-sm-2 col-md-2 col-lg-3">
                                         <div class="form-group" style="margin-left: 20px;">
-                                            <button><submit type="submit" class="btn btn-primary">Submit </button>
+                                            <button>
+                                                <submit type="submit" class="btn btn-primary">Submit
+                                            </button>
                                         </div>
 
                                         <!-- <div class="form-group" style="margin-left: 20px;">
@@ -202,11 +215,11 @@
                                     @endif
                                     @if(!empty($res[$i]))
                                     <?php
-                                        $x[$i] = array_keys($res[$i]);
-                                        $y[$i] = array_values($res[$i]);
-                                        $r = 'r' . $i;
-                                        $mychart = 'mychart' . $i;
-                                        ?>
+                                    $x[$i] = array_keys($res[$i]);
+                                    $y[$i] = array_values($res[$i]);
+                                    $r = 'r' . $i;
+                                    $mychart = 'mychart' . $i;
+                                    ?>
                                     <div class="collapse" id="{{ $r }}" style="width: 300px;height: 300px;">
                                         <canvas id="{{ $mychart }}" width="400" height="400"></canvas>
                                         <script>
