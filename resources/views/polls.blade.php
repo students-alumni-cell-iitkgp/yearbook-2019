@@ -155,6 +155,7 @@
             'The Advice Guru',
             'Batch Mascot',
             'Classroom DJ',
+            'Social Butterfly'
         ];
         ?>
         <div class="container-fluid">
@@ -173,7 +174,7 @@
         <div class="container-fluid">
             <div class="row justify-content-around">
                 <?php
-                $polls_size = 12;
+                $polls_size = 13;
                 for ($i = 0; $i < $polls_size; $i++) :
                     $q = 'q' . ($i + 1);  // Adjusting $q to start from 1
                     $link = '/polls/' . ($i + 1);
