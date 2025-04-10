@@ -145,7 +145,7 @@
         $titles = [
             'Richie Rich',
             'Nightangle of the batch',
-            'The Caffeine Commander',
+            'Protein Master of the batch',
             'The Group Chat Ghost',
             'The Wifi Magnet',
             'Swag Master',
