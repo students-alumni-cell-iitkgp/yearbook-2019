@@ -149,7 +149,7 @@
             'The Group Chat Ghost',
             'The Wifi Magnet',
             'Swag Master',
-            'Harry Potter of the Batch',
+            'High on life',
             'The Algorithm Alchemist',
             'Sleep Scheduler',
             'The Advice Guru',
