@@ -153,9 +153,10 @@
             'The Algorithm Alchemist',
             'Sleep Scheduler',
             'The Advice Guru',
-            'Batch Mascot',
-            'Classroom DJ',
-            'Social Butterfly'
+            'Neta of the Batch',
+            'Maggu of the Batch',
+            'Social Butterfly',
+            'Gym Freak'
         ];
         ?>
         <div class="container-fluid">
