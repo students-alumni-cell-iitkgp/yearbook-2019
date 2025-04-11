@@ -148,15 +148,15 @@
             'Protein Master of the batch',
             'The Group Chat Ghost',
             'The Wifi Magnet',
-            'Swag Master',
+            'Shinchan of the batch',
             'High on life',
             'The Algorithm Alchemist',
             'Sleep Scheduler',
-            'The Advice Guru',
             'Neta of the Batch',
-            'Maggu of the Batch',
             'Social Butterfly',
-            'Gym Freak'
+            'Gym Freak',
+            'Jugaadu of the batch',
+            'Bob Marley of the batch'
         ];
         ?>
         <div class="container-fluid">
